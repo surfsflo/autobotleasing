@@ -32,7 +32,10 @@ namespace ABLeasing.Web
                 ));
 
             bundles.Add(new StyleBundle("~/Content/vendor")
-                .Include("~/Content/themes/bootstrap/bootstrap.css")
+                .Include("~/Content/bootstrap.css")
+            );
+
+            bundles.Add(new StyleBundle("~/Content/fa")
                 .Include("~/Content/fontawesome/font-awesome.css")
             );
 
