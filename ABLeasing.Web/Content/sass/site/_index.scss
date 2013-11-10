@@ -1,7 +1,7 @@
 
 
 #index {
-	.row:first-of-type > .col-sm-12 {
+	.row:first-of-type > .col-sm-12:not(:first-of-type) {
 		.panel {
 			display: none;
 

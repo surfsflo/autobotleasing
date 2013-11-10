@@ -486,7 +486,6 @@
     <Content Include="Images\Index\stumbleupon.png" />
     <Content Include="Images\Index\tractor.png" />
     <Content Include="Images\Index\twitter.png" />
-    <Content Include="Roboto-Regular.woff" />
     <Content Include="Content\sass\site\_index.scss" />
     <Content Include="Content\sass\site\_index.als.scss">
       <Compile>True</Compile>

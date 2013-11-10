@@ -119,13 +119,17 @@ nav .navbar-form {
     padding-right: 15px;
   }
 }
+/* line 21, ../sass/main.scss */
+nav .navbar-form a {
+  margin-left: 5px;
+}
 
 /* line 5, ../sass/site/_index.scss */
-#index .row:first-of-type > .col-sm-12 .panel {
+#index .row:first-of-type > .col-sm-12:not(:first-of-type) .panel {
   display: none;
 }
 /* line 8, ../sass/site/_index.scss */
-#index .row:first-of-type > .col-sm-12 .panel .panel-body {
+#index .row:first-of-type > .col-sm-12:not(:first-of-type) .panel .panel-body {
   height: 140px;
 }
 /* line 13, ../sass/site/_index.scss */

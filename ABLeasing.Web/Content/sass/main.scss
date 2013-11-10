@@ -17,6 +17,10 @@ nav .navbar-form {
 	@include respond-to($tablet-portrait) {
 		padding-right: 15px;
 	}
+
+	a {
+		margin-left: 5px;
+	}
 }
 
 
