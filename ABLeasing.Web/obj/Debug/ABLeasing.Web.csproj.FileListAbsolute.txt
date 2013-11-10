@@ -246,3 +246,7 @@ C:\Development\autobotleasing\ABLeasing.Web\obj\Debug\ABLeasing.Web.Migrations.i
 C:\Development\autobotleasing\ABLeasing.Web\obj\Debug\ABLeasing.Web.csproj.GenerateResource.Cache
 C:\Development\autobotleasing\ABLeasing.Web\bin\MarkdownDeep.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\MarkdownDeep.pdb
+C:\Development\autobotleasing\ABLeasing.Web\bin\Portable.Licensing.dll
+C:\Development\autobotleasing\ABLeasing.Web\bin\T4MVCExtensions.dll
+C:\Development\autobotleasing\ABLeasing.Web\bin\TwitterBootstrapMVC.dll
+C:\Development\autobotleasing\ABLeasing.Web\bin\Portable.Licensing.xml
