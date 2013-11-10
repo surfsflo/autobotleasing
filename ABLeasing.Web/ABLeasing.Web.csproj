@@ -273,6 +273,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SimpleMembership.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -281,7 +282,6 @@
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
-    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -289,9 +289,11 @@
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
+    <Compile Include="Models\Accounts\BaseUser.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
     <Compile Include="Models\Accounts\Contact.cs" />
     <Compile Include="Models\Accounts\Operator.cs" />
+    <Compile Include="Models\Accounts\UserProfile.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Lease.cs" />
     <Compile Include="Models\PurchaseCooperative.cs" />
@@ -932,6 +934,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

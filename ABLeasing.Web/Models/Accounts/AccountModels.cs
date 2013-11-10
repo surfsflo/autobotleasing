@@ -11,36 +11,12 @@ using ABLeasing.Web.Models.Accounts;
 
 namespace ABLeasing.Web.Models
 {
-    public class UsersContext : ABLeasingDB
-    {
-        public UsersContext()
-            : base("DefaultConnection")
-        {
-        }
-
-        public DbSet<UserProfile> UserProfiles { get; set; }
-    }
-
-    [Table("UserProfile")]
-    public class UserProfile
-    {
-        [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int UserId { get; set; }
-        [Email]
-        public string UserName { get; set; } // use this as email address
-        public string Name { get; set; }
-        public string PhoneNumber { get; set; }
-        public bool Status { get; set; }
-        public Contact Contact1 { get; set; }
-        public Contact Contact2 { get; set; }
-    }
 
     public class RegisterExternalLoginModel
     {
         [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
+        [Display(Name = "Email")]
+        public string Email { get; set; }
 
         public string ExternalLoginData { get; set; }
     }
@@ -67,8 +43,8 @@ namespace ABLeasing.Web.Models
     public class LoginModel
     {
         [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
+        [Display(Name = "Email")]
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -82,8 +58,8 @@ namespace ABLeasing.Web.Models
     public class RegisterModel
     {
         [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
+        [Display(Name = "Email")]
+        public string Email { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

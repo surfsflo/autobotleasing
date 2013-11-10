@@ -1,48 +1,109 @@
 ﻿
+<div id="signup">
+    <div class="row">
 
-<div class="row">
+        <div class="col-sm-12">
 
-    <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading text-center">Interested in Low Risk Investmests?</div>
+                <div class="panel-body">
+                    <p>
+                        Good job, you have reached the signup place. You are on your way to owning that piece of machinery 
+                        you have always needed to make your buisness thrive.
+                    </p>
 
-        <div class="panel panel-info">
-            <div class="panel-heading text-center">Interested in Low Risk Investmests?</div>
-            <div class="panel-body">
-                <p>
-                    Good job, you have reached the signup place. You are on your way to owning that piece of machinery 
-                    you have always needed to make your buisness thrive.
-                </p>
-
-                <p>Or, you have reached the right place to join fellow smart investors to start making some money!</p>
+                    <p>Or, you have reached the right place to join fellow smart investors to start making some money!</p>
+                </div>
             </div>
+
         </div>
 
     </div>
 
-</div>
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">Clients</div>
+                <div class="panel-body">
+
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <i class="fa fa-2x fa-usd"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                Clients are an individual or a company that is interested in joining a Puchase Cooperative.
+                                These accounts are the driving force of Autobotleasing.com. They are the fund starters, the lease buyers
+                                and the money makers!
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <i class="fa fa-check-square-o fa-2x"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                The point is to join as many Purchase Cooperatives as possible, this gets you
+                                on the ground floor of that many successfull companies. But what is a Puchase 
+                                Cooperative? It is a group of ABL clients that have pooled financial resources for the purpose of 
+                                purchasing  equipment for lease by operator companies
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-10">
+                                @Html.ActionLink("Client  Signup", "Register", "Account", routeValues: null,
+                                    htmlAttributes: new { id = "registerLink", @class = "btn btn-primary btn-block" })
+                            </div>
+                        </div>
+                    </div>
 
 
-<div class="row">
-
-    <div class="col-sm-6">
-        <div class="panel panel-info">
-            <div class="panel-heading">Clients</div>
-            <div class="panel-body">
-                <i class="fa fa-quote-left fa-2x pull-left fa-border"></i>
-                Clients are an individual or a company that is interested in joining a Puchase Cooperative.
-                These accounts are the driving force of Autobotleasing.com. They are the fund starters, the lease buyers
-                and the money makers!
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-sm-6">
-        <div class="panel panel-info">
-            <div class="panel-heading">Operators</div>
-            <div class="panel-body">
+        <div class="col-sm-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">Operators</div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <i class="fa fa-thumbs-o-up fa-2x"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                Operators are either an individual or company that has leased equipment from ABL for 
+                                direct use in their production processes, or is in the process of a lease application.
+                                Follow the link below to sign up, from there a lease application is at your fingertips.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <i class="fa fa-truck fa-2x"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                Once an operator's lease application has been purchased via a Purchase Cooperative
+                                the equipment is not lost on us. We provider a wide range of monitoring tools and
+                                maintenance employees on hand to make sure your shiny new peice of equipment stays
+                                right where it should, in the field making your company money!
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-10">
+                                @Html.ActionLink("Operator  Signup", "Register", "Account", routeValues: null,
+                                    htmlAttributes: new { id = "registerLink", @class = "btn btn-primary btn-block" })
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
             </div>
+
         </div>
 
     </div>
-
 </div>

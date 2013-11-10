@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ABLeasing.Web.Models.Accounts
 {
-    public class Operator : UserProfile
+    public class Operator : BaseUser
     {
         public int OperatorId { get; set; }
         public int Rating { get; set; }

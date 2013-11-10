@@ -11,7 +11,7 @@ $grey-border: 1px solid #c7c7c7;
 $border: 1px solid #e7e7e7;
 $light-bg: #FCFCFC;
 $red: #bb133e;
-$color-blue: #285e8e;
+$color-blue: #3276b1;
 
 
 
@@ -35,4 +35,8 @@ td.table-buttons {
 
 .panel-heading {
 	font-size: 110%;
+}
+
+.fa {
+	color: $color-blue;
 }

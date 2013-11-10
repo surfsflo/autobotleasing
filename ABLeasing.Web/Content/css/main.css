@@ -94,6 +94,11 @@ td.table-buttons .btn-group {
   font-size: 110%;
 }
 
+/* line 40, ../sass/_constants.scss */
+.fa {
+  color: #3276b1;
+}
+
 /* line 6, ../sass/main.scss */
 body {
   padding-top: 100px;
@@ -206,4 +211,9 @@ nav .navbar-form a {
 /* line 57, ../sass/site/_index.als.scss */
 #index #categories-list .als-item img {
   height: 80px;
+}
+
+/* line 5, ../sass/site/_signup.scss */
+#signup .col-sm-2 {
+  text-align: center;
 }
