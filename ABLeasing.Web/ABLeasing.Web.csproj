@@ -282,7 +282,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UserTestController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -928,11 +927,6 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\UserTest\Index.cshtml" />
-    <Content Include="Views\UserTest\Details.cshtml" />
-    <Content Include="Views\UserTest\Create.cshtml" />
-    <Content Include="Views\UserTest\Edit.cshtml" />
-    <Content Include="Views\UserTest\Delete.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\IndexPartials\_Section2.cshtml" />
     <Content Include="Views\Home\IndexPartials\_Section3.cshtml" />
