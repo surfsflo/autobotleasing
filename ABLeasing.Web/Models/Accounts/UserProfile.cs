@@ -16,6 +16,10 @@ namespace ABLeasing.Web.Models.Accounts
         public int UserId { get; set; }
         [Email]
         public string Email { get; set; }
+        public string Name { get; set; }
+        public bool Status { get; set; }
+        public Contact Contact1 { get; set; }
+        public Contact Contact2 { get; set; }
 
     }
 

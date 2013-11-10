@@ -5,9 +5,8 @@ using System.Web;
 
 namespace ABLeasing.Web.Models.Accounts
 {
-    public class Operator : BaseUser
+    public class Operator : UserProfile
     {
-        public int OperatorId { get; set; }
         public int Rating { get; set; }
         // what is a researcher
         public string TypeOfBuisness { get; set; }

@@ -6,9 +6,8 @@ using System.Web;
 
 namespace ABLeasing.Web.Models.Accounts
 {
-    public class Client : BaseUser
+    public class Client : UserProfile
     {
-        public int ClientId { get; set; }
         public float DepositAmount { get; set; }
         public float PeriodicDepositAmount { get; set; }
         public string Frequency { get; set; }

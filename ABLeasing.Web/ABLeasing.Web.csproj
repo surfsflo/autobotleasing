@@ -287,9 +287,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
+    <Compile Include="Migrations\201311101812139_inher.cs" />
+    <Compile Include="Migrations\201311101812139_inher.Designer.cs">
+      <DependentUpon>201311101812139_inher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
-    <Compile Include="Models\Accounts\BaseUser.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
     <Compile Include="Models\Accounts\Contact.cs" />
     <Compile Include="Models\Accounts\Operator.cs" />
@@ -943,6 +946,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201311101812139_inher.resx">
+      <DependentUpon>201311101812139_inher.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
