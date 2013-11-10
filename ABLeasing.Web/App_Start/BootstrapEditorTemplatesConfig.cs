@@ -31,13 +31,8 @@ namespace ABLeasing.Web
                 "~/Scripts/markdown.js"
                 ));
 
-            bundles.Add(new StyleBundle("~/Content/vendor")
-                .Include("~/Content/bootstrap.css")
-            );
-
-            bundles.Add(new StyleBundle("~/Content/fa")
-                .Include("~/Content/fontawesome/font-awesome.css")
-            );
+            bundles.Add(new StyleBundle("~/Content/site").Include(
+                 "~/Content/themes/bootstrap/bootstrap.css"));
 
             // By default it will exclude the MarkdownDeepLib.min.js file because of its .min.js extension.
             bundles.IgnoreList.Clear();

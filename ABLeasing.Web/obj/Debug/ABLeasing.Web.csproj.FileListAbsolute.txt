@@ -250,3 +250,5 @@ C:\Development\autobotleasing\ABLeasing.Web\obj\Debug\ABLeasing.Web.dll
 C:\Development\autobotleasing\ABLeasing.Web\obj\Debug\ABLeasing.Web.pdb
 C:\Development\autobotleasing\ABLeasing.Web\obj\Debug\ABLeasing.Web.Migrations.inher.resources
 C:\Development\autobotleasing\ABLeasing.Web\obj\Debug\ABLeasing.Web.csproj.GenerateResource.Cache
+C:\Development\autobotleasing\ABLeasing.Web\bin\MarkdownDeep.dll
+C:\Development\autobotleasing\ABLeasing.Web\bin\MarkdownDeep.pdb
