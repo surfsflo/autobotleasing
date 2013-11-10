@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>AttributeRouting.CodeTemplates.MVC4</id>
+    <version>3.5.6</version>
+    <title>AttributeRouting CodeTemplates for MVC 4</title>
+    <authors>Tim McCall</authors>
+    <owners>Tim McCall</owners>
+    <projectUrl>http://attributerouting.net/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AttributeRouting code templates for MVC 4 adds controller templates that use attribute routes on their actions.</description>
+    <releaseNotes />
+    <copyright>© 2012 Tim McCall</copyright>
+    <language />
+    <tags>attribute routing route asp.net webapi web api code templates codetemplates mvc</tags>
+    <dependencies>
+      <dependency id="AttributeRouting" version="3.5.6" />
+      <dependency id="AttributeRouting.WebApi" version="3.5.6" />
+    </dependencies>
+  </metadata>
+</package>

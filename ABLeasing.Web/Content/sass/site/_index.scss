@@ -1,0 +1,40 @@
+
+
+#index {
+	.row:first-of-type > .col-sm-12 {
+		.panel {
+			display: none;
+
+			.panel-body {
+				height: 140px;
+			}
+		}
+	}
+	.panel-heading {
+		text-align: center;
+		font-size: 110%;
+	}	
+
+	.media {
+		margin-bottom: 10px;
+		img {
+			width: 140px;
+		}
+		.media-body {
+			h4 {
+				margin-top: 0;
+			}
+		}
+	}
+
+	#section-2 {
+		.panel-default {
+			min-height: 55px;
+			h4 {
+				text-align: center;
+			}
+		}
+	}
+
+	@import "index.als";
+}

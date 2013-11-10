@@ -1,0 +1,57 @@
+﻿
+<div id="index">
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <div class="cycle-slideshow" 
+                data-cycle-fx="fade" data-cycle-slides="> div" data-cycle-timeout="5000">
+                <div class="panel panel-info">
+                    <div class="panel-heading">What is Autobot?</div>
+                    <div class="panel-body">
+                        ABL uses crowdfunding to provide a vehicle for their clients to increase earnings by:
+				        Pooling small financial resources into large funds used to purchase equipment for lease by operator companies.  
+                        It is expected that such equipment is used directly in their revenue producing processes.
+				        Provide operators (lessees) with high quality equipment under flexible and reasonable lease terms.
+				        Maintain visibility for ABL clients with regard to status of equipment they have purchased and leased 
+                        out (e.g., production data, location, maintenance record, etc.).
+				        Distribute profit shares produced by leased equipment back to participating ABL clients.
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">Why Join?</div>
+                    <div class="panel-body">
+                        ABL uses crowdfunding to provide a vehicle for their clients to increase earnings by:
+				        Pooling small financial resources into large funds used to purchase equipment for lease 
+                        by operator companies.  It is expected that such equipment is used directly in their revenue producing processes.
+				        Provide operators (lessees) with high quality equipment under flexible and reasonable lease terms.
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">A New Way to Earn Income</div>
+                    <div class="panel-body">
+                        ABL uses crowdfunding to provide a vehicle for their clients to increase 
+                        earnings by: Pooling small financial resources into large funds used to 
+                        purchase equipment for lease by operator companies. It is expected that 
+                        such equipment is used directly in their revenue producing processes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Html.Partial("IndexPartials/_Section2")
+
+    @Html.Partial("IndexPartials/_Section3")
+
+    @Html.Partial("IndexPartials/_Section4")
+
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/libs/cycle2.js"></script>
+    <script src="~/Scripts/libs/jquery.alsEN-1.2.js"></script>
+    <script src="~/Scripts/site/index-als.js"></script>
+}
