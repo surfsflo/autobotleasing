@@ -154,7 +154,6 @@ C:\Development\autobotleasing\ABLeasing.Web\bin\IronRuby.Libraries.Yaml.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\Microsoft.Data.Edm.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\Microsoft.Data.OData.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\Microsoft.Dynamic.dll
-C:\Development\autobotleasing\ABLeasing.Web\bin\Microsoft.Practices.ServiceLocation.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\Microsoft.Scripting.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\Microsoft.Scripting.Metadata.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\Microsoft.Web.Infrastructure.dll
@@ -165,7 +164,6 @@ C:\Development\autobotleasing\ABLeasing.Web\bin\SassAndCoffee.AspNet.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\SassAndCoffee.Core.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\SassAndCoffee.JavaScript.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\SassAndCoffee.Ruby.dll
-C:\Development\autobotleasing\ABLeasing.Web\bin\StructureMap.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\System.Net.Http.Formatting.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\System.Spatial.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\System.Web.Helpers.dll
@@ -189,11 +187,7 @@ C:\Development\autobotleasing\ABLeasing.Web\bin\AttributeRouting.Web.Http.xml
 C:\Development\autobotleasing\ABLeasing.Web\bin\AttributeRouting.Web.Http.WebHost.xml
 C:\Development\autobotleasing\ABLeasing.Web\bin\AttributeRouting.Web.Mvc.xml
 C:\Development\autobotleasing\ABLeasing.Web\bin\EntityFramework.xml
-C:\Development\autobotleasing\ABLeasing.Web\bin\Microsoft.Practices.ServiceLocation.pdb
-C:\Development\autobotleasing\ABLeasing.Web\bin\Microsoft.Practices.ServiceLocation.xml
 C:\Development\autobotleasing\ABLeasing.Web\bin\Newtonsoft.Json.xml
-C:\Development\autobotleasing\ABLeasing.Web\bin\StructureMap.pdb
-C:\Development\autobotleasing\ABLeasing.Web\bin\StructureMap.xml
 C:\Development\autobotleasing\ABLeasing.Web\bin\System.Web.Optimization.xml
 C:\Development\autobotleasing\ABLeasing.Web\bin\System.Net.Http.Formatting.xml
 C:\Development\autobotleasing\ABLeasing.Web\bin\System.Web.Helpers.xml
