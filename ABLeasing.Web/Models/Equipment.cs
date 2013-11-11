@@ -27,6 +27,6 @@ namespace ABLeasing.Web.Models
 
 
         public virtual Lease Lease { get; set; }
-        public virtual Location Location { get; set; }
+        //public virtual Location Location { get; set; }
     }
 }

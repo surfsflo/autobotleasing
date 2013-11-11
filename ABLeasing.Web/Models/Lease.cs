@@ -18,7 +18,7 @@ namespace ABLeasing.Web.Models
         public float interestRate{ get; set; }
         public float ProfitShareRate{ get; set; }
 
-        public virtual Location Location { get; set; }
+        //public virtual Location Location { get; set; }
 
 
 

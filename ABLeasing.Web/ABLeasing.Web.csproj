@@ -483,15 +483,27 @@
       <DebugInfo>False</DebugInfo>
     </Content>
     <Content Include="Images\Index\4-5stars.png" />
+    <Content Include="Images\Index\arrowleft.png" />
+    <Content Include="Images\Index\arrowright.png" />
     <Content Include="Images\Index\blogger.png" />
+    <Content Include="Images\Index\close.png" />
+    <Content Include="Images\Index\close1 %28by nikolaob%40gmail.com%29.png" />
+    <Content Include="Images\Index\close1.png" />
+    <Content Include="Images\Index\eye.png" />
     <Content Include="Images\Index\facebook.png" />
     <Content Include="Images\Index\heavy-equipment.png" />
     <Content Include="Images\Index\left-arrow.png" />
     <Content Include="Images\Index\lessee.jpg" />
     <Content Include="Images\Index\lessee2.jpg" />
+    <Content Include="Images\Index\line.png" />
+    <Content Include="Images\Index\line2.png" />
+    <Content Include="Images\Index\loading.gif" />
     <Content Include="Images\Index\mining-equipment-1.jpg" />
     <Content Include="Images\Index\mining-equipment.jpg" />
     <Content Include="Images\Index\mining-icon.png" />
+    <Content Include="Images\Index\next.png" />
+    <Content Include="Images\Index\noise.png" />
+    <Content Include="Images\Index\prev.png" />
     <Content Include="Images\Index\right-arrow.png" />
     <Content Include="Images\Index\rocket.png" />
     <Content Include="Images\Index\space-mining.jpg" />
@@ -519,6 +531,7 @@
     <Content Include="Content\themes\bootstrap\datepicker.less" />
     <Content Include="Content\themes\bootstrap\bootstrap-filebutton.less" />
     <Content Include="Content\themes\bootstrap\bootstrap.less" />
+    <Content Include="Content\sass\site\_section1.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
@@ -881,12 +894,16 @@
     <Content Include="Scripts\globalize\cultures\globalize.cultures.js" />
     <Content Include="Scripts\globalize\globalize.js" />
     <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\init.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.autosize.js" />
+    <Content Include="Scripts\jquery.bxslider.js" />
+    <Content Include="Scripts\jquery.isotope.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -909,6 +926,7 @@
     <Content Include="Scripts\mdd_styles.css" />
     <Content Include="Scripts\mdd_toolbar.png" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\backgroundsize.htc" />
     <Content Include="Scripts\site\index-als.js" />
     <Content Include="Scripts\validation.js" />
     <Content Include="Web.config">
@@ -970,6 +988,7 @@
     <Content Include="Views\PurchaseCooperative\Delete.cshtml" />
     <Content Include="Views\ClientsView\Index.cshtml" />
     <Content Include="Views\Account\_LoginModalPartial.cshtml" />
+    <Content Include="Views\Home\IndexPartials\_Section1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

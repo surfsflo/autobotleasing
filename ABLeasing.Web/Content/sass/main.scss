@@ -4,7 +4,7 @@
 @include declare-font-face2('Roboto', "Roboto-Regular-webfont");
 
 body {
-	padding-top: 100px;
+	padding-top: 20px;
 	@include roboto;
 	overflow-x: hidden;
 	background-color: $light-bg;
@@ -31,3 +31,4 @@ nav .navbar-form {
 
 @import "site/index";
 @import "site/signup";
+@import "site/section1";
