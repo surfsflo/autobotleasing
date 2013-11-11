@@ -307,6 +307,8 @@
     <Compile Include="Models\Accounts\Contact.cs" />
     <Compile Include="Models\Accounts\Operator.cs" />
     <Compile Include="Models\Accounts\UserProfile.cs" />
+    <Compile Include="Models\Accounts\ViewModels\ClientLogin.cs" />
+    <Compile Include="Models\Accounts\ViewModels\OperatorLogin.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Inputs.cs" />
     <Compile Include="Models\Lease.cs" />
@@ -967,6 +969,7 @@
     <Content Include="Views\PurchaseCooperative\Edit.cshtml" />
     <Content Include="Views\PurchaseCooperative\Delete.cshtml" />
     <Content Include="Views\ClientsView\Index.cshtml" />
+    <Content Include="Views\Account\_LoginModalPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

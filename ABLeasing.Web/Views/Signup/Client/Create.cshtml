@@ -1,4 +1,4 @@
-﻿@model ABLeasing.Web.Models.Accounts.Client
+﻿@model ABLeasing.Web.Models.Accounts.ViewModels.ClientLoginViewModel
 
 @{
     ViewBag.Title = "Client Signup";
@@ -16,23 +16,25 @@
 
                     @using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
                     {
-                        @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
-                        @form.FormGroup().TextBoxFor(m => m.Email)
+                        @form.FormGroup().TextBoxFor(m => m.Client.Name).AutoFocus()
+                        @form.FormGroup().TextBoxFor(m => m.Client.Email)
 
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.PhoneNumber)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Alias)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Line1)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Line2)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Line3)
+                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.PhoneNumber)
+                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Alias)
+                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Line1)
+                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Line2)
+                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Line3)
 
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Country)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Postal)
+                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Country)
+                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Postal)
 
-                        
-                        
+                        @form.FormGroup().PasswordFor(m => m.RegisterModel.Password)
+                        @form.FormGroup().PasswordFor(m => m.RegisterModel.ConfirmPassword)
+
                         @(form.FormGroup().CustomControls(
                             Html.Bootstrap().SubmitButton()
                             .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
+
                     }
 
 
