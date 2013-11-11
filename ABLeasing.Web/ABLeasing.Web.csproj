@@ -297,6 +297,10 @@
     <Compile Include="Migrations\201311101812139_inher.Designer.cs">
       <DependentUpon>201311101812139_inher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311110145108_clients.cs" />
+    <Compile Include="Migrations\201311110145108_clients.Designer.cs">
+      <DependentUpon>201311110145108_clients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
@@ -979,6 +983,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201311101812139_inher.resx">
       <DependentUpon>201311101812139_inher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311110145108_clients.resx">
+      <DependentUpon>201311110145108_clients.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

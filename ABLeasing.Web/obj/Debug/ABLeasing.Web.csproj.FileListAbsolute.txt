@@ -250,3 +250,4 @@ C:\Development\autobotleasing\ABLeasing.Web\bin\Portable.Licensing.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\T4MVCExtensions.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\TwitterBootstrapMVC.dll
 C:\Development\autobotleasing\ABLeasing.Web\bin\Portable.Licensing.xml
+C:\Development\autobotleasing\ABLeasing.Web\obj\Debug\ABLeasing.Web.Migrations.clients.resources
