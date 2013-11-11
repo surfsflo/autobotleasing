@@ -308,8 +308,13 @@
     <Compile Include="Models\Accounts\LeaseTransactions.cs" />
     <Compile Include="Models\Accounts\Operator.cs" />
     <Compile Include="Models\Accounts\UserProfile.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\ClientTransactions.cs" />
     <Compile Include="Models\Comments.cs" />
+=======
+    <Compile Include="Models\Accounts\ViewModels\ClientLogin.cs" />
+    <Compile Include="Models\Accounts\ViewModels\OperatorLogin.cs" />
+>>>>>>> 06c003b024e5d92ec76c3aac8a3aadff80949215
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Inputs.cs" />
     <Compile Include="Models\Lease.cs" />
@@ -971,6 +976,7 @@
     <Content Include="Views\PurchaseCooperative\Edit.cshtml" />
     <Content Include="Views\PurchaseCooperative\Delete.cshtml" />
     <Content Include="Views\ClientsView\Index.cshtml" />
+    <Content Include="Views\Account\_LoginModalPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />

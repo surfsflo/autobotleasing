@@ -9,6 +9,10 @@ using AttributeRouting;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models.Accounts;
 using ABLeasing.Web.Infrastructure;
+using ABLeasing.Web.Models;
+using WebMatrix.WebData;
+using System.Web.Security;
+using ABLeasing.Web.Models.Accounts.ViewModels;
 
 namespace ABLeasing.Web.Controllers.Signup
 {
@@ -25,16 +29,28 @@ namespace ABLeasing.Web.Controllers.Signup
         }
 
         [POST("Create")]
-        public ActionResult Create(Client client)
+        public ActionResult Create(ClientLoginViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                db.Clients.Add(client);
+                try
+                {
+                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password);
+                    WebSecurity.Login(viewModel.Client.Email, viewModel.RegisterModel.Password);
+
+                }
+                catch (MembershipCreateUserException e)
+                {
+                    ModelState.AddModelError("", AccountController.ErrorCodeToString(e.StatusCode));
+                }          
+
+                db.Clients.Add(viewModel.Client);
                 db.SaveChanges();
+
                 return RedirectToAction("Index", "ClientsView");
             }
 
-            return View(client);
+            return View(viewModel);
         }
 
         protected override void Dispose(bool disposing)

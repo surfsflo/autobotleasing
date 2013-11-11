@@ -10,9 +10,8 @@
     </text>
 } else {
 
-    @Html.ActionLink("Member Login", "Login", "Account", routeValues: null,
-        htmlAttributes: new { id = "loginLink", @class = "btn btn-default" })
-
+    @Html.Bootstrap().Button().Text("Member Login").TriggerModal("modalId")
+   
     @Html.ActionLink("Join Now", "Signup", "Home", routeValues: null, 
         htmlAttributes: new { @class = "btn btn-primary" })
 

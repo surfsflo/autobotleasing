@@ -1,0 +1,23 @@
+﻿@model ABLeasing.Web.Models.LoginModel
+
+@using (var modal = Html.Bootstrap().Begin(new Modal().Id("modalId").Closeable()))
+{
+    @modal.Header("Member Login")
+    using (modal.BeginBody())
+    {
+        using (var form = Html.Bootstrap().Begin(new Form("login", "Account").Type(FormType.Horizontal).LabelWidthSm(4)))
+        {
+            @Html.AntiForgeryToken()
+            @form.FormGroup().TextBoxFor(m => m.Email).AutoFocus()
+            @form.FormGroup().PasswordFor(m => m.Password)
+
+            @form.FormGroup().CheckBoxFor(m => m.RememberMe)
+     
+
+            @(form.FormGroup().CustomControls(
+                Html.Bootstrap().SubmitButton()
+                .Style(ButtonStyle.Primary).LoadingText("logging...")))
+
+        }
+   }
+}

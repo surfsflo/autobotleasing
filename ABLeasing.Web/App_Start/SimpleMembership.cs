@@ -10,7 +10,10 @@ namespace ABLeasing.Web.App_Start
     {
         public static void Register()
         {
-           // WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "Email", autoCreateTables: true);
+            if (!WebSecurity.Initialized)
+            {
+                //WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "Email", autoCreateTables: true);
+            }
         }
     }
 }

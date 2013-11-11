@@ -160,6 +160,11 @@ nav .navbar-form a {
   margin-left: 5px;
 }
 
+/* line 26, ../sass/main.scss */
+#logoutForm {
+  display: inline-block;
+}
+
 /* line 5, ../sass/site/_index.scss */
 #index .row:first-of-type > .col-sm-12:not(:first-of-type) .panel {
   display: none;

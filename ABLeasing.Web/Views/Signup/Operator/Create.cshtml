@@ -1,4 +1,4 @@
-﻿@model ABLeasing.Web.Models.Accounts.Operator
+﻿@model ABLeasing.Web.Models.Accounts.ViewModels.OperatorLogin
 
 @{
     ViewBag.Title = "Operator Signup";
@@ -16,25 +16,27 @@
 
                     @using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
                     {
-                        @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
-                        @form.FormGroup().TextBoxFor(m => m.Email)
-                        @form.FormGroup().TextBoxFor(m => m.TypeOfBusiness)
-                        @form.FormGroup().TextAreaFor(m => m.Description)
+                        @form.FormGroup().TextBoxFor(m => m.Operator.Name).AutoFocus()
+                        @form.FormGroup().TextBoxFor(m => m.Operator.Email)
+                        @form.FormGroup().TextBoxFor(m => m.Operator.TypeOfBuisness)
+                        @form.FormGroup().TextAreaFor(m => m.Operator.Description)
                         
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.PhoneNumber)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Alias)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Line1)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Line2)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Line3)
+                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.PhoneNumber)
+                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Alias)
+                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Line1)
+                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Line2)
+                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Line3)
 
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Country)
-                        @form.FormGroup().TextBoxFor(m => m.Contact1.Postal)
+                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Country)
+                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Postal)
 
-                        
-                        
+                        @form.FormGroup().PasswordFor(m => m.RegisterModel.Password)
+                        @form.FormGroup().PasswordFor(m => m.RegisterModel.ConfirmPassword)
+
                         @(form.FormGroup().CustomControls(
                             Html.Bootstrap().SubmitButton()
                             .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
+
                     }
 
 
