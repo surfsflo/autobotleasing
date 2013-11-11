@@ -1,7 +1,7 @@
-﻿@model ABLeasing.Web.Models.Accounts.Client
+﻿@model ABLeasing.Web.Models.Accounts.Operator
 
 @{
-    ViewBag.Title = "Client Signup";
+    ViewBag.Title = "Operator Signup";
 }
 
 
@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-info">
-                <div class="panel-heading text-center">Client Signup</div>
+                <div class="panel-heading text-center">Operator Signup</div>
                 <div class="panel-body">
 
 
@@ -18,7 +18,9 @@
                     {
                         @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
                         @form.FormGroup().TextBoxFor(m => m.Email)
-
+                        @form.FormGroup().TextBoxFor(m => m.TypeOfBuisness)
+                        @form.FormGroup().TextAreaFor(m => m.Description)
+                        
                         @form.FormGroup().TextBoxFor(m => m.Contact1.PhoneNumber)
                         @form.FormGroup().TextBoxFor(m => m.Contact1.Alias)
                         @form.FormGroup().TextBoxFor(m => m.Contact1.Line1)

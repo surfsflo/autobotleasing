@@ -285,6 +285,7 @@
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Signup\ClientController.cs" />
+    <Compile Include="Controllers\Signup\OperatorController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -953,6 +954,7 @@
     <Content Include="Views\Shared\_Layout.BootstrapEditorTemplates.cshtml" />
     <Content Include="Views\BootstrapEditorTemplates\Index.cshtml" />
     <Content Include="Views\Signup\Client\Create.cshtml" />
+    <Content Include="Views\Signup\Operator\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

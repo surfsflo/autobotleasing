@@ -19,5 +19,7 @@ namespace ABLeasing.Web.Infrastructure
         public DbSet<Operator> Operators { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
 
+        public DbSet<PurchaseCooperative> PurchaseCooperatives { get; set; }
+
     }
 }

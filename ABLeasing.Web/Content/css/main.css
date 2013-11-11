@@ -99,6 +99,20 @@ td.table-buttons .btn-group {
   color: #3276b1;
 }
 
+/* line 44, ../sass/_constants.scss */
+label {
+  font-weight: inherit;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/Content/custom-fonts/Roboto-Regular-webfont.eot?");
+  src: url("/Content/custom-fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/Content/custom-fonts/Roboto-Regular-webfont.woff?") format("woff"), url("/Content/custom-fonts/Roboto-Regular-webfont.ttf?") format("truetype"), url("/Content/custom-fonts/Roboto-Regular-webfont.svg#Roboto") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
 /* line 6, ../sass/main.scss */
 body {
   padding-top: 100px;

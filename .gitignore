@@ -165,4 +165,7 @@ $RECYCLE.BIN/
 # Mac crap
 .DS_Store
 
+*.scssc*
+*.sass-cache*
+*.sass-cache*
 *.sass-cache*
