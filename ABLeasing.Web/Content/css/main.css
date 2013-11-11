@@ -74,50 +74,50 @@
   padding-right: 48px !important;
 }
 
-/* line 24, ../sass/_constants.scss */
+/* line 25, ../sass/_constants.scss */
 td.table-buttons {
   padding: 4px 12px 0 0 !important;
 }
-/* line 26, ../sass/_constants.scss */
+/* line 27, ../sass/_constants.scss */
 td.table-buttons a {
   margin: 1px 0;
   padding: 3px 10px;
 }
-/* line 30, ../sass/_constants.scss */
+/* line 31, ../sass/_constants.scss */
 td.table-buttons .btn-group {
   margin-left: 0;
   margin-right: 9px;
 }
 
-/* line 36, ../sass/_constants.scss */
+/* line 37, ../sass/_constants.scss */
 .panel-heading {
   font-size: 110%;
 }
 
-/* line 40, ../sass/_constants.scss */
+/* line 41, ../sass/_constants.scss */
 .fa {
   color: #3276b1;
 }
 
-/* line 44, ../sass/_constants.scss */
+/* line 45, ../sass/_constants.scss */
 label {
   font-weight: inherit;
 }
 
-/* line 48, ../sass/_constants.scss */
+/* line 49, ../sass/_constants.scss */
 .media-normal .media {
   margin-bottom: 10px;
 }
-/* line 50, ../sass/_constants.scss */
+/* line 51, ../sass/_constants.scss */
 .media-normal .media img {
   width: 140px;
 }
-/* line 54, ../sass/_constants.scss */
+/* line 55, ../sass/_constants.scss */
 .media-normal .media .media-body h4 {
   margin-top: 0;
 }
 
-/* line 60, ../sass/_constants.scss */
+/* line 61, ../sass/_constants.scss */
 span.badge {
   margin-left: 7px;
   background-color: #3a87ad;
