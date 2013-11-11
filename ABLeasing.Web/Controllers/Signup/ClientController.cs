@@ -31,7 +31,7 @@ namespace ABLeasing.Web.Controllers.Signup
             {
                 db.Clients.Add(client);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "ClientsView");
             }
 
             return View(client);
