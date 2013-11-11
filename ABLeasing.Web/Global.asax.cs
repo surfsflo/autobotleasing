@@ -1,4 +1,5 @@
 ﻿using ABLeasing.Web.App_Start;
+using Glimpse.Mvc.AlternateType;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using TwitterBootstrapMVC;
 using WebMatrix.WebData;
 
 namespace ABLeasing.Web
@@ -19,11 +21,17 @@ namespace ABLeasing.Web
         protected void Application_Start()
         {
 
+            var razorEngine = ViewEngines.Engines.OfType<RazorViewEngine>().First();
+            razorEngine.ViewLocationFormats = razorEngine.ViewLocationFormats.Concat(new string[] { 
+                "~/Views/Signup/{1}/{0}.cshtml"
+            }).ToArray();
+
+            Bootstrap.Configure();
             SimpleMembership.Register();
             AreaRegistration.RegisterAllAreas();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);      
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
             BootstrapEditorTemplatesConfig.RegisterBundles();

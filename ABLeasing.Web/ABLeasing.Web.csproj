@@ -117,7 +117,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Portable.Licensing">
+    <Reference Include="Portable.Licensing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Portable.Licensing.1.1.0\lib\portable-net40+sl4+wp7+win8\Portable.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="SassAndCoffee.AspNet">
@@ -201,10 +202,12 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="T4MVCExtensions">
+    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\T4MVCExtensions.3.6.5\lib\net40\T4MVCExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="TwitterBootstrapMVC">
+    <Reference Include="TwitterBootstrapMVC, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\TwitterBootstrapMVC.3.6.3\lib\net40\TwitterBootstrapMVC.dll</HintPath>
     </Reference>
     <Reference Include="WebActivator">
@@ -277,11 +280,11 @@
     <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SimpleMembership.cs" />
-    <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Signup\ClientController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -949,6 +952,7 @@
     <Content Include="Views\Shared\_NavBar.BootstrapEditorTemplates.cshtml" />
     <Content Include="Views\Shared\_Layout.BootstrapEditorTemplates.cshtml" />
     <Content Include="Views\BootstrapEditorTemplates\Index.cshtml" />
+    <Content Include="Views\Signup\Client\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
