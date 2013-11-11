@@ -799,3 +799,34 @@ body:after {
     width: 100%;
   }
 }
+/* line 1, ../sass/site/_section2.scss */
+#about {
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* line 14, ../sass/site/_section2.scss */
+#about li {
+  padding-top: 40px;
+  border-top: 2px solid #e3e7ec;
+}
+/* line 17, ../sass/site/_section2.scss */
+#about li *:last-child {
+  margin-bottom: 0;
+}
+/* line 20, ../sass/site/_section2.scss */
+#about li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+/* line 24, ../sass/site/_section2.scss */
+#about li span {
+  width: 96px;
+  height: 96px;
+  display: block;
+  margin: 0 auto 35px;
+}
+/* line 30, ../sass/site/_section2.scss */
+#about li + li {
+  margin-top: 40px;
+}

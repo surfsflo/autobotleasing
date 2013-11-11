@@ -532,6 +532,7 @@
     <Content Include="Content\themes\bootstrap\bootstrap-filebutton.less" />
     <Content Include="Content\themes\bootstrap\bootstrap.less" />
     <Content Include="Content\sass\site\_section1.scss" />
+    <Content Include="Content\sass\site\_section2.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
@@ -989,6 +990,7 @@
     <Content Include="Views\ClientsView\Index.cshtml" />
     <Content Include="Views\Account\_LoginModalPartial.cshtml" />
     <Content Include="Views\Home\IndexPartials\_Section1.cshtml" />
+    <Content Include="Views\Home\IndexPartials\_Section12.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
