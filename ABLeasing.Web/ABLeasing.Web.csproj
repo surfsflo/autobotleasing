@@ -305,13 +305,20 @@
     <Compile Include="Models\Accounts\AccountModels.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
     <Compile Include="Models\Accounts\Contact.cs" />
+    <Compile Include="Models\Accounts\LeaseTransactions.cs" />
     <Compile Include="Models\Accounts\Operator.cs" />
     <Compile Include="Models\Accounts\UserProfile.cs" />
+<<<<<<< HEAD
+    <Compile Include="Models\ClientTransactions.cs" />
+    <Compile Include="Models\Comments.cs" />
+=======
     <Compile Include="Models\Accounts\ViewModels\ClientLogin.cs" />
     <Compile Include="Models\Accounts\ViewModels\OperatorLogin.cs" />
+>>>>>>> 06c003b024e5d92ec76c3aac8a3aadff80949215
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Inputs.cs" />
     <Compile Include="Models\Lease.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\PurchaseCooperative.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\DateTimeExtensions.cs" />
@@ -972,7 +979,7 @@
     <Content Include="Views\Account\_LoginModalPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Start\App_Data\" />
     <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>

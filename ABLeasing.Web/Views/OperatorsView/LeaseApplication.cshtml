@@ -1,0 +1,37 @@
+﻿@model ABLeasing.Web.Models.Lease
+
+@{
+    ViewBag.Title = "Lease Application";
+}
+
+<div id="lease-apply">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading text-center">Lease Application</div>
+                <div class="panel-body">
+
+
+                    @using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
+                    {
+                        @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
+                        //@form.FormGroup().TextAreaFor(m => m.Description)
+                        
+                        //@form.FormGroup().TextBoxFor(m => m.Location)
+                        @form.FormGroup().TextBoxFor(m => m.Equipment)
+
+                        
+                        
+                        @(form.FormGroup().CustomControls(
+                            Html.Bootstrap().SubmitButton()
+                            .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
