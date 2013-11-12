@@ -1,11 +1,11 @@
 #team {
-  background: #3e4d5c url('../Images/Index/noise.png') no-repeat 50% 50%;
+  background: #3e4d5c url('/Images/Index/noise.png') no-repeat 50% 50%;
   text-align: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -ms-behavior: url(../Scripts/backgroundsize.htc);
+  -ms-behavior: url('/Scripts/backgroundsize.htc');
   * {
     color: #fff;
   }
@@ -89,7 +89,7 @@
   width: 204px;
   height: 204px;
   display: block;
-  background: rgba(62, 77, 92, 0.5) url('../Images/Index/eye.png') no-repeat 50% 50%;
+  background: rgba(62, 77, 92, 0.5) url('/Images/Index/eye.png') no-repeat 50% 50%;
 }
 .ie8 #team .slide > a i {
   visibility: visible;
@@ -118,7 +118,7 @@
   visibility: hidden;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  background: url('../Images/Index/arrow_up.png') no-repeat 50% 0;
+  background: url('/Images/Index/arrow_up.png') no-repeat 50% 0;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
@@ -135,7 +135,7 @@
 	visibility: hidden;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
-    background: url('../Images/Index/arrow_up.png') no-repeat 50% 0;
+    background: url('/Images/Index/arrow_up.png') no-repeat 50% 0;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -ms-transition: all 0.4s ease;
@@ -202,7 +202,7 @@
   display: inline-block;
   cursor: pointer;
   padding-left: 15px;
-  background: url('../Images/Index/close.png') no-repeat 0 50%;
+  background: url('/Images/Index/close.png') no-repeat 0 50%;
 }
 #team .bx-controls-direction {
   position: absolute;
@@ -233,16 +233,16 @@
 #team .bx-controls-direction a.bx-prev {
   position: absolute;
   left: -65px;
-  background: url('../Images/Index/arrowleft.png') no-repeat 0 0;
+  background: url('/Images/Index/arrowleft.png') no-repeat 0 0;
 }
 #team .bx-controls-direction a.bx-next {
   position: absolute;
   right: -64px;
-  background: url('../Images/Index/arrowright.png') no-repeat 0 0;
+  background: url('/Images/Index/arrowright.png') no-repeat 0 0;
 }
 
 body:after {
-  content: url('../Images/Index/close.png') url('../Images/Index/loading.gif') url('../Images/Index/prev.png') url('../Images/Index/next.png');
+  content: url('/Images/Index/close.png') url('/Images/Index/loading.gif') url('/Images/Index/prev.png') url('/Images/Index/next.png');
   display: none;
 }
 
@@ -253,7 +253,7 @@ body:after {
   left: 0;
   z-index: 9999;
   background-color: black;
-  background: url('../images/mask.png') repeat 0 0;
+  background: url('Images/Index/mask.png') repeat 0 0;
   display: none;
 }
 
@@ -311,7 +311,7 @@ body:after {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url(../images/loading.gif) no-repeat;
+  background: url('/Images/Index/loading.gif') no-repeat;
 }
 
 
@@ -362,13 +362,13 @@ body:after {
 .lb-prev {
   left: 0;
   float: left;
-  background: url(../images/prev.png) 0 50% no-repeat;
+  background: url('/Images/Index/prev.png') 0 50% no-repeat;
 }
 
 .lb-next {
   right: 0;
   float: right;
-  background: url(../images/next.png) 100% 50% no-repeat;
+  background: url('/Images/Index/next.png') 100% 50% no-repeat;
 }
 
 .lb-dataContainer {
@@ -428,7 +428,7 @@ body:after {
   left: 0;
   width: 26px;
   height: 26px;
-  background: url(../Images/Index/close1.png) top right no-repeat;
+  background: url('/Images/Index/close1.png') top right no-repeat;
   text-align: right;
   outline: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
