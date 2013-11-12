@@ -508,6 +508,7 @@
     <Content Include="Images\Index\rocket.png" />
     <Content Include="Images\Index\space-mining.jpg" />
     <Content Include="Images\Index\stumbleupon.png" />
+    <Content Include="Images\Index\team_mask.png" />
     <Content Include="Images\Index\tractor.png" />
     <Content Include="Images\Index\twitter.png" />
     <Content Include="Content\sass\site\_index.scss" />
