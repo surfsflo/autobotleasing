@@ -8,7 +8,7 @@ using AttributeRouting.Web.Mvc;
 
 namespace ABLeasing.Web.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [RouteArea("Admin", Subdomain = "admin")]
     public class IndexController : Controller
     {
