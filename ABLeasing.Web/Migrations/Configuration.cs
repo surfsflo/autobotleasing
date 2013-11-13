@@ -44,7 +44,7 @@ namespace ABLeasing.Web.Migrations
             var roles = (SimpleRoleProvider)Roles.Provider;
             var membership = (SimpleMembershipProvider)Membership.Provider;
 
-            string ADMIN = "admin";
+            string ADMIN = "Admin";
 
             if (!roles.RoleExists(ADMIN))
             {

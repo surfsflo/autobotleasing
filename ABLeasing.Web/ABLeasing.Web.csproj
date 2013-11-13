@@ -282,6 +282,7 @@
     <Compile Include="App_Start\SimpleMembership.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\IndexController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
     <Compile Include="Controllers\Clients\ClientsViewController.cs" />
@@ -397,6 +398,8 @@
     <Content Include="CodeTemplates\AddController\ApiControllerWithContext.tt" />
     <Content Include="CodeTemplates\AddController\ApiController.tt" />
     <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Index\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1002,9 +1005,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
