@@ -511,6 +511,7 @@
     <Content Include="Images\Index\rocket.png" />
     <Content Include="Images\Index\space-mining.jpg" />
     <Content Include="Images\Index\stumbleupon.png" />
+    <Content Include="Images\Index\team_mask.png" />
     <Content Include="Images\Index\tractor.png" />
     <Content Include="Images\Index\twitter.png" />
     <Content Include="Content\sass\site\_index.scss" />
@@ -536,6 +537,8 @@
     <Content Include="Content\themes\bootstrap\bootstrap.less" />
     <Content Include="Content\sass\site\_section1.scss" />
     <Content Include="Content\sass\site\_section2.scss" />
+    <Content Include="Content\sass\site\_new.scss" />
+    <Content Include="Content\sass\site\_trending.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
@@ -994,6 +997,8 @@
     <Content Include="Views\Account\_LoginModalPartial.cshtml" />
     <Content Include="Views\Home\IndexPartials\_Section1.cshtml" />
     <Content Include="Views\Home\IndexPartials\_Section12.cshtml" />
+    <Content Include="Views\Home\IndexPartials\_Trending.cshtml" />
+    <Content Include="Views\Home\IndexPartials\_New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

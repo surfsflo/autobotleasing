@@ -1,4 +1,4 @@
-#team {
+#new {
   background: #3e4d5c url('/Images/Index/noise.png') no-repeat 50% 50%;
   text-align: center;
   -webkit-background-size: cover;
@@ -10,39 +10,39 @@
     color: #fff;
   }
 }
-#team .container {
+#new .container {
 	width: 900px;
     padding: 20px 40px 20px 50px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-#team .container h2 {
+#new .container h2 {
   font-size: 28px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
   line-height: 1.5;
 }
-#team .bx-wrapper {
+#new .bx-wrapper {
   margin: 70px auto 70px;
   position: relative;
 }
-#team .bx-wrapper .bx-pager {
+#new .bx-wrapper .bx-pager {
   display: none;
 }
-#team .bx-viewport {
+#new .bx-viewport {
   overflow: visible;
 }
-#team .slide {
+#new .slide {
   text-align: center;
   margin-top: 29px;
   position: relative;
 }
-#team .slide:first-child {
+#new .slide:first-child {
   margin-top: 0;
 }
-#team .slide > a {
+#new .slide > a {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -60,7 +60,7 @@
   margin: 0 auto 15px;
   cursor: pointer;
 }
-#team .slide > a img {
+#new .slide > a img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -69,7 +69,7 @@
   overflow: hidden;
   width: 204px;
 }
-#team .slide > a i {
+#new .slide > a i {
   visibility: hidden;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -91,25 +91,25 @@
   display: block;
   background: rgba(62, 77, 92, 0.5) url('/Images/Index/eye.png') no-repeat 50% 50%;
 }
-.ie8 #team .slide > a i {
+.ie8 #new .slide > a i {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   display: none;
 }
-#team .slide > a:hover i {
+#new .slide > a:hover i {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   z-index: 400;
 }
-.ie8 #team .slide > a:hover i {
+.ie8 #new .slide > a:hover i {
   display: block;
 }
-#team .slide h5, #team .slide p {
+#new .slide h5, #new .slide p {
   margin-bottom: 75px;
 }
-#team .slide .arrow_up {
+#new .slide .arrow_up {
   position: absolute;
   bottom: -60px;
   left: 0;
@@ -126,7 +126,7 @@
   transition: all 0.4s ease;
   zoom: 1;
 }
-#team .slide .arrow_up1 {
+#new .slide .arrow_up1 {
 	position: absolute;
 	bottom: -60px;
 	left: 0;
@@ -143,15 +143,15 @@
     transition: all 0.4s ease;
     zoom: 1;
 }
-#team .slide .arrow_up.active-arrow {
+#new .slide .arrow_up.active-arrow {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-#team .slider2_popups {
+#new .slider2_popups {
   position: relative;
 }
-#team .popup-item {
+#new .popup-item {
   position: absolute;
   top: 10px;
   left: 50%;
@@ -179,32 +179,32 @@
   box-sizing: border-box;
   zoom: 1;
 }
-#team .popup-item.active-popup {
+#new .popup-item.active-popup {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-#team .popup-item * {
+#new .popup-item * {
   color: #fff;
 }
-#team .popup-item h6 {
+#new .popup-item h6 {
   font-weight: 700;
   font-size: 16px;
   padding-bottom: 15px;
 }
-#team .popup-item p {
+#new .popup-item p {
   padding: 15px 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   margin-bottom: 20px;
 }
-#team .popup-item b {
+#new .popup-item b {
   display: inline-block;
   cursor: pointer;
   padding-left: 15px;
   background: url('/Images/Index/close.png') no-repeat 0 50%;
 }
-#team .bx-controls-direction {
+#new .bx-controls-direction {
   position: absolute;
   left: 0;
   top: 0;
@@ -212,7 +212,7 @@
   height: 26px;
   width: 100%;
 }
-#team .bx-controls-direction a {
+#new .bx-controls-direction a {
   border: 0;
   font: 0/0 a;
   text-shadow: none;
@@ -226,16 +226,16 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-#team .bx-controls-direction a:hover {
+#new .bx-controls-direction a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-#team .bx-controls-direction a.bx-prev {
+#new .bx-controls-direction a.bx-prev {
   position: absolute;
   left: -65px;
   background: url('/Images/Index/arrowleft.png') no-repeat 0 0;
 }
-#team .bx-controls-direction a.bx-next {
+#new .bx-controls-direction a.bx-next {
   position: absolute;
   right: -64px;
   background: url('/Images/Index/arrowright.png') no-repeat 0 0;
