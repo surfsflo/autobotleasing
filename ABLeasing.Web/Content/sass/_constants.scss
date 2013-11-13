@@ -12,6 +12,7 @@ $border: 1px solid #e7e7e7;
 $light-bg: #FCFCFC;
 $red: #bb133e;
 $color-blue: #3276b1;
+$red-error: #b94a48;
 
 
 
@@ -63,4 +64,15 @@ span.badge {
   background-color: #3a87ad;
   padding: 5px 7px;
   vertical-align: middle;
+}
+
+.validation-summary-errors ul {
+	padding-left: 0;
+	list-style: none;
+	color: $red-error;
+}
+
+.field-validation-error {
+	color: $red-error;
+	font-size: 80%;
 }
