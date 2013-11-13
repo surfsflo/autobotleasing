@@ -171,3 +171,8 @@ $RECYCLE.BIN/
 *.sass-cache*
 *.mdf
 *.ldf
+
+bin/
+obj/
+Debug/
+Release/
