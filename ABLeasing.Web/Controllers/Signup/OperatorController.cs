@@ -34,7 +34,7 @@ namespace ABLeasing.Web.Controllers.Signup
             {
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(viewModel.Operator.Email, viewModel.RegisterModel.Password);
+                    WebSecurity.CreateUserAndAccount(viewModel.Operator.Email, viewModel.RegisterModel.Password, new { Discriminator = "Operator" });
                     WebSecurity.Login(viewModel.Operator.Email, viewModel.RegisterModel.Password);
 
                 }
