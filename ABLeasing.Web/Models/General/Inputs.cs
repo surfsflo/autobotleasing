@@ -14,7 +14,7 @@ namespace ABLeasing.Web.Models
         [Description("Enum Value 3")]
         EnumValue3 = 3
     }
-    
+
     public class Inputs
     {
         public bool BoolValue { get; set; }

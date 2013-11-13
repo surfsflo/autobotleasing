@@ -281,6 +281,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SimpleMembership.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
     <Compile Include="Controllers\Clients\ClientsViewController.cs" />
@@ -293,26 +294,27 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
-    <Compile Include="Migrations\201311101812139_inher.cs" />
-    <Compile Include="Migrations\201311101812139_inher.Designer.cs">
-      <DependentUpon>201311101812139_inher.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311110145108_clients.cs" />
-    <Compile Include="Migrations\201311110145108_clients.Designer.cs">
-      <DependentUpon>201311110145108_clients.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
     <Compile Include="Models\Accounts\Contact.cs" />
     <Compile Include="Models\Accounts\Operator.cs" />
+    <Compile Include="Models\Accounts\Staff.cs" />
     <Compile Include="Models\Accounts\UserProfile.cs" />
     <Compile Include="Models\Accounts\ViewModels\ClientLogin.cs" />
     <Compile Include="Models\Accounts\ViewModels\OperatorLogin.cs" />
-    <Compile Include="Models\Equipment.cs" />
-    <Compile Include="Models\Inputs.cs" />
+    <Compile Include="Models\BaseModels\BaseModel.cs" />
+    <Compile Include="Models\BaseModels\BaseModelWithComment.cs" />
+    <Compile Include="Models\Equipment\Category.cs" />
+    <Compile Include="Models\General\Comment.cs" />
+    <Compile Include="Models\Equipment\Equipment.cs" />
+    <Compile Include="Models\General\Inputs.cs" />
     <Compile Include="Models\Lease.cs" />
     <Compile Include="Models\PurchaseCooperative.cs" />
+    <Compile Include="Models\General\Location.cs" />
+    <Compile Include="Models\Transactions\ClientTransaction.cs" />
+    <Compile Include="Models\Transactions\LeaseTransaction.cs" />
+    <Compile Include="Models\Transactions\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\DateTimeExtensions.cs" />
     <Compile Include="Utility\EnumDropDownList.cs" />
@@ -394,6 +396,7 @@
     <Content Include="CodeTemplates\AddController\Controller.tt" />
     <Content Include="CodeTemplates\AddController\ApiControllerWithContext.tt" />
     <Content Include="CodeTemplates\AddController\ApiController.tt" />
+    <Content Include="Areas\Admin\Views\Web.config" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -994,6 +997,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
@@ -1003,14 +1009,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201311101812139_inher.resx">
-      <DependentUpon>201311101812139_inher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311110145108_clients.resx">
-      <DependentUpon>201311110145108_clients.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

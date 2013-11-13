@@ -24,8 +24,12 @@ namespace ABLeasing.Web.Models.Accounts
 
         [Display(Name = "Address Line 3")]
         public string Line3 { get; set; }
+
+        public string City { get; set; }
+        public string State { get; set; }
         public string Country { get; set; }
         public string Postal { get; set; }
+
         [Email]
         public string Email { get; set; }
 
