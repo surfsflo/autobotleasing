@@ -14,7 +14,7 @@
     @Styles.Render("~/Content/app")
 
     @RenderSection("scripts", required: false)
-    @using ABLeasing.Web.HtmlHelpers
+    @Html.Partial("_html5shiv")
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">

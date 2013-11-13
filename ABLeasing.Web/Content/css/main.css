@@ -69,60 +69,73 @@
   top: 11px;
 }
 
-/* line 20, ../sass/_constants.scss */
+/* line 21, ../sass/_constants.scss */
 .table thead > tr > th.table-actions {
   padding-right: 48px !important;
 }
 
-/* line 25, ../sass/_constants.scss */
+/* line 26, ../sass/_constants.scss */
 td.table-buttons {
   padding: 4px 12px 0 0 !important;
 }
-/* line 27, ../sass/_constants.scss */
+/* line 28, ../sass/_constants.scss */
 td.table-buttons a {
   margin: 1px 0;
   padding: 3px 10px;
 }
-/* line 31, ../sass/_constants.scss */
+/* line 32, ../sass/_constants.scss */
 td.table-buttons .btn-group {
   margin-left: 0;
   margin-right: 9px;
 }
 
-/* line 37, ../sass/_constants.scss */
+/* line 38, ../sass/_constants.scss */
 .panel-heading {
   font-size: 110%;
 }
 
-/* line 41, ../sass/_constants.scss */
+/* line 42, ../sass/_constants.scss */
 .fa {
   color: #3276b1;
 }
 
-/* line 45, ../sass/_constants.scss */
+/* line 46, ../sass/_constants.scss */
 label {
   font-weight: inherit;
 }
 
-/* line 49, ../sass/_constants.scss */
+/* line 50, ../sass/_constants.scss */
 .media-normal .media {
   margin-bottom: 10px;
 }
-/* line 51, ../sass/_constants.scss */
+/* line 52, ../sass/_constants.scss */
 .media-normal .media img {
   width: 140px;
 }
-/* line 55, ../sass/_constants.scss */
+/* line 56, ../sass/_constants.scss */
 .media-normal .media .media-body h4 {
   margin-top: 0;
 }
 
-/* line 61, ../sass/_constants.scss */
+/* line 62, ../sass/_constants.scss */
 span.badge {
   margin-left: 7px;
   background-color: #3a87ad;
   padding: 5px 7px;
   vertical-align: middle;
+}
+
+/* line 69, ../sass/_constants.scss */
+.validation-summary-errors ul {
+  padding-left: 0;
+  list-style: none;
+  color: #b94a48;
+}
+
+/* line 75, ../sass/_constants.scss */
+.field-validation-error {
+  color: #b94a48;
+  font-size: 80%;
 }
 
 @font-face {
@@ -134,7 +147,7 @@ span.badge {
   font-stretch: normal;
 }
 
-/* line 6, ../sass/main.scss */
+/* line 8, ../sass/_common.scss */
 body {
   padding-top: 100px;
   font-family: "Roboto", sans-serif;
@@ -144,23 +157,23 @@ body {
   background-color: #fcfcfc;
 }
 
-/* line 13, ../sass/main.scss */
+/* line 15, ../sass/_common.scss */
 nav .navbar-form {
   padding-right: 0;
   margin-right: -13px;
 }
 @media (max-width: 767px) {
-  /* line 13, ../sass/main.scss */
+  /* line 15, ../sass/_common.scss */
   nav .navbar-form {
     padding-right: 15px;
   }
 }
-/* line 21, ../sass/main.scss */
+/* line 23, ../sass/_common.scss */
 nav .navbar-form a {
   margin-left: 5px;
 }
 
-/* line 26, ../sass/main.scss */
+/* line 4, ../sass/main.scss */
 #logoutForm {
   display: inline-block;
 }

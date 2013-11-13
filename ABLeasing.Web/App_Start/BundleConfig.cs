@@ -25,6 +25,8 @@ namespace ABLeasing.Web
 
             bundles.Add(new StyleBundle("~/Content/app").Include("~/Content/css/main.css"));
 
+            bundles.Add(new StyleBundle("~/Content/admin").Include("~/Content/css/admin-main.css"));
+
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
                         "~/Content/themes/base/jquery.ui.resizable.css",

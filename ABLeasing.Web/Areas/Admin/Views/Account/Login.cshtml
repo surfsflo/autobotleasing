@@ -1,0 +1,62 @@
+﻿@model ABLeasing.Web.Models.LoginModel
+
+@{
+    ViewBag.Title = "Admin Log in";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">Administator Login</div>
+            <div class="panel-body">
+
+                @using (var form = Html.Bootstrap().Begin(
+                    new Form("login", "Account").HtmlAttributes(new { ReturnUrl = ViewBag.ReturnUrl })
+                    .Type(FormType.Horizontal).LabelWidthSm(5).InputWidthSm(4).Id("loginForm")))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <div class="col-sm-offset-5 col-sm-7">
+                            @Html.ValidationSummary(true)
+                        </div>
+                    </div>
+
+                    @form.FormGroup().TextBoxFor(m => m.Email).AutoFocus()
+                    @form.FormGroup().PasswordFor(m => m.Password)
+
+                    @form.FormGroup().CheckBoxFor(m => m.RememberMe)
+     
+
+                    @(form.FormGroup().CustomControls(
+                        Html.Bootstrap().SubmitButton()
+                        .Style(ButtonStyle.Primary).LoadingText("logging...")))
+
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<section class="social" id="socialLoginForm">
+    <h2>Use another service to log in.</h2>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+
+        $.validator.setDefaults({
+            highlight: function (element) {
+                $(element).closest(".form-group").addClass("has-error");
+            },
+            unhighlight: function (element) {
+                $(element).closest(".form-group").removeClass("has-error");
+            }
+        });
+    </script>
+}

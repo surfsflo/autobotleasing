@@ -282,6 +282,7 @@
     <Compile Include="App_Start\SimpleMembership.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\IndexController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
@@ -327,6 +328,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\admin-main.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Content\fontawesome\font-awesome.css" />
     <Content Include="Content\fontawesome\font-awesome.min.css" />
@@ -470,6 +472,7 @@
     <Content Include="Content\bootstrap\bootstrap.less" />
     <Content Include="Content\bootstrap\badges.less" />
     <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\sass\admin-main.scss" />
     <None Include="Content\sass\main.scss" />
     <Content Include="Content\sass\_mixins.scss">
       <Compile>True</Compile>
@@ -543,6 +546,7 @@
     <Content Include="Content\sass\site\_section2.scss" />
     <Content Include="Content\sass\site\_new.scss" />
     <Content Include="Content\sass\site\_trending.scss" />
+    <Content Include="Content\sass\_common.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
@@ -954,7 +958,7 @@
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
@@ -1007,6 +1011,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Content\sass\admin\" />
     <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>

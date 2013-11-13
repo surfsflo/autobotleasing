@@ -11,6 +11,12 @@ namespace ABLeasing.Web.Models.Accounts
 
     public class UserProfile : BaseModelWithComment
     {
+
+        public UserProfile()
+        {
+            Status = true;
+        }
+
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
