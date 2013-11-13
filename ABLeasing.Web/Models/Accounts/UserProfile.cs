@@ -12,11 +12,6 @@ namespace ABLeasing.Web.Models.Accounts
     public class UserProfile : BaseModelWithComment
     {
 
-        public UserProfile()
-        {
-            Status = true;
-        }
-
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
@@ -27,7 +22,7 @@ namespace ABLeasing.Web.Models.Accounts
         [Display(Name = "Full Name")]
         public string Name { get; set; }
 
-        public bool Status { get; set; }
+        public bool? Status { get; set; }
         public Contact Contact1 { get; set; }
         public Contact Contact2 { get; set; }
 

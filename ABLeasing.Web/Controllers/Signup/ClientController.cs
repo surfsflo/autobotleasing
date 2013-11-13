@@ -16,7 +16,7 @@ using ABLeasing.Web.Models.Accounts.ViewModels;
 
 namespace ABLeasing.Web.Controllers.Signup
 {
-    [RoutePrefix("Signup/Client")]	
+    [RoutePrefix("Signup/Client")]
     public class ClientController : Controller
     {
         private ABLeasingDB db = new ABLeasingDB();
@@ -35,14 +35,14 @@ namespace ABLeasing.Web.Controllers.Signup
             {
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password);
+                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password, new { Discriminator = "Client" });
                     WebSecurity.Login(viewModel.Client.Email, viewModel.RegisterModel.Password);
 
                 }
                 catch (MembershipCreateUserException e)
                 {
                     ModelState.AddModelError("", AccountController.ErrorCodeToString(e.StatusCode));
-                }          
+                }
 
                 db.Clients.Add(viewModel.Client);
                 db.SaveChanges();
