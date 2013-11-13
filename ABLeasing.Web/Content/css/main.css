@@ -136,7 +136,7 @@ span.badge {
 
 /* line 6, ../sass/main.scss */
 body {
-  padding-top: 20px;
+  padding-top: 100px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -197,6 +197,11 @@ nav .navbar-form a {
 /* line 33, ../sass/site/_index.scss */
 #index #section-2 .panel-default h4 {
   text-align: center;
+}
+/* line 39, ../sass/site/_index.scss */
+#index #myCarousel {
+  margin-top: -30px;
+  margin-bottom: 20px;
 }
 /* line 2, ../sass/site/_index.als.scss */
 #index .als-container {

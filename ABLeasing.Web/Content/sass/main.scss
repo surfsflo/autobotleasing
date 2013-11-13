@@ -4,7 +4,7 @@
 @include declare-font-face2('Roboto', "Roboto-Regular-webfont");
 
 body {
-	padding-top: 20px;
+	padding-top: 100px;
 	@include roboto;
 	overflow-x: hidden;
 	background-color: $light-bg;
