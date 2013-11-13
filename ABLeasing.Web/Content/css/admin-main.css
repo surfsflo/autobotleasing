@@ -172,3 +172,11 @@ nav .navbar-form {
 nav .navbar-form a {
   margin-left: 5px;
 }
+
+@media (min-width: 1200px) and (min-width: 992px) and (min-width: 768px) {
+  /* line 28, ../sass/_common.scss */
+  .container {
+    max-width: none;
+    width: inherit;
+  }
+}
