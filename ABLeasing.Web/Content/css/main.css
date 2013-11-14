@@ -1218,7 +1218,7 @@ nav .navbar-form a {
   overflow: hidden;
   position: relative;
   display: block;
-  margin: 0 auto 15px;
+  margin: 0 0 15px;
   cursor: pointer;
 }
 /* line 63, ../sass/site/_new.scss */
