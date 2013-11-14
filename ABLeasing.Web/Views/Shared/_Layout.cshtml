@@ -32,8 +32,12 @@
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        @Html.MenuLink("How It Works", "HowItWorks", "Home")
-                        @Html.MenuLink("Autobot Info", "Info", "Home")
+
+                        @if (Request.IsAuthenticated) {
+                            @Html.MenuLink("Create Lease", "LeaseApplication", "OperatorsView")
+                            @Html.MenuLink("Clients", "Index", "ClientsView")                            
+                        }
+
 
                     </ul>
                     <div class="navbar-form navbar-right">

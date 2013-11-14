@@ -137,21 +137,26 @@ label {
   margin-top: 0;
 }
 
-/* line 79, ../sass/_constants.scss */
+/* line 78, ../sass/_constants.scss */
+.dropdown-menu li {
+  cursor: pointer;
+}
+
+/* line 84, ../sass/_constants.scss */
 .page-header.header-button {
   padding-top: 15px;
 }
-/* line 81, ../sass/_constants.scss */
+/* line 86, ../sass/_constants.scss */
 .page-header.header-button h1 {
   display: inline;
 }
-/* line 84, ../sass/_constants.scss */
+/* line 89, ../sass/_constants.scss */
 .page-header.header-button .btn {
   float: right;
   margin-bottom: 7px;
 }
 
-/* line 94, ../sass/_constants.scss */
+/* line 99, ../sass/_constants.scss */
 span.badge {
   margin-left: 7px;
   background-color: #3a87ad;
@@ -159,14 +164,14 @@ span.badge {
   vertical-align: middle;
 }
 
-/* line 101, ../sass/_constants.scss */
+/* line 106, ../sass/_constants.scss */
 .validation-summary-errors ul, #login-errors {
   padding-left: 0;
   list-style: none;
   color: #b94a48;
 }
 
-/* line 107, ../sass/_constants.scss */
+/* line 112, ../sass/_constants.scss */
 .field-validation-error {
   color: #b94a48;
   font-size: 80%;

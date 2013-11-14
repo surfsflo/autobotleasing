@@ -8,14 +8,14 @@ using AttributeRouting.Web.Mvc;
 
 namespace ABLeasing.Web.Controllers.Clients
 {
-	[RoutePrefix("ClientsView")]
+    [RoutePrefix("ClientsView")]
     public class ClientsViewController : Controller
     {
-		[GET("")]
+        [GET("")]
         public ActionResult Index()
         {
             return View();
         }
-     
+
     }
 }

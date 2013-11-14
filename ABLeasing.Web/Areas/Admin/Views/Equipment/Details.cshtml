@@ -1,0 +1,120 @@
+﻿@model ABLeasing.Web.Models.Equipment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Equipment</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Rating)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rating)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Manufacturer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Manufacturer)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Model)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Model)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RetailPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RetailPrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PurchasePrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PurchasePrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MaterialType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaterialType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ServiceContactID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ServiceContactID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SupplierContactID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SupplierContactID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LeaseId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LeaseId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Location.CellProvider)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location.CellProvider)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Updated)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Updated)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EquipmentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

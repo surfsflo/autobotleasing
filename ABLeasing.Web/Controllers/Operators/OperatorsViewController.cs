@@ -12,19 +12,29 @@ using ABLeasing.Web.Infrastructure;
 
 namespace ABLeasing.Web.Controllers.Operators
 {
-	[RoutePrefix("OperatorsView")]
+    [RoutePrefix("OperatorsView")]
     public class OperatorsViewController : Controller
     {
         private ABLeasingDB db = new ABLeasingDB();
 
         [GET("LeaseApplication")]
-        public ActionResult LeaseApplication() {
+        public ActionResult LeaseApplication()
+        {
             return View();
         }
 
         [POST("LeaseApplication")]
-        public ActionResult LeaseApplication(Lease lease) {
-            if (ModelState.IsValid) {
+        public ActionResult LeaseApplication(Lease lease)
+        {
+
+            var onlineOrders =
+                from s in db.Operators
+                where s.Email == User.Identity.Name
+                select s;
+            int id = onlineOrders.First().UserId;
+
+            if (ModelState.IsValid)
+            {
                 db.Leases.Add(lease);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -34,11 +44,12 @@ namespace ABLeasing.Web.Controllers.Operators
         }
 
         [GET("LeaseDetails")]
-        public ActionResult LeaseDetails() {
+        public ActionResult LeaseDetails()
+        {
             return View();
         }
 
-		[GET("")]
+        [GET("")]
         public ActionResult Index()
         {
             return View();

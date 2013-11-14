@@ -286,6 +286,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EquipmentController.cs" />
     <Compile Include="Areas\Admin\Controllers\IndexController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
@@ -311,6 +312,18 @@
     <Compile Include="Migrations\201311140833282_whywhywhy.cs" />
     <Compile Include="Migrations\201311140833282_whywhywhy.Designer.cs">
       <DependentUpon>201311140833282_whywhywhy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311141042578_suckgay.cs" />
+    <Compile Include="Migrations\201311141042578_suckgay.Designer.cs">
+      <DependentUpon>201311141042578_suckgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311141046376_pleasestop.cs" />
+    <Compile Include="Migrations\201311141046376_pleasestop.Designer.cs">
+      <DependentUpon>201311141046376_pleasestop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311141058478_nullableagain.cs" />
+    <Compile Include="Migrations\201311141058478_nullableagain.Designer.cs">
+      <DependentUpon>201311141058478_nullableagain.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
@@ -546,6 +559,11 @@
     <Content Include="Areas\Admin\Views\Categories\Index.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Areas\Admin\Views\Equipment\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Equipment\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Equipment\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Equipment\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Equipment\Delete.cshtml" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1104,6 +1122,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\backgroundsize.htc" />
     <Content Include="Scripts\site\index-als.js" />
+    <Content Include="Scripts\site\modal-loader.js" />
     <Content Include="Scripts\site\val.js" />
     <Content Include="Scripts\validation.js" />
     <Content Include="Web.config">
@@ -1192,6 +1211,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201311140833282_whywhywhy.resx">
       <DependentUpon>201311140833282_whywhywhy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311141042578_suckgay.resx">
+      <DependentUpon>201311141042578_suckgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311141046376_pleasestop.resx">
+      <DependentUpon>201311141046376_pleasestop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311141058478_nullableagain.resx">
+      <DependentUpon>201311141058478_nullableagain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
