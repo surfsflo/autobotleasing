@@ -6,24 +6,34 @@
   -o-background-size: cover;
   background-size: cover;
   -ms-behavior: url('/Scripts/backgroundsize.htc');
-  * {
-    color: #fff;
-  }
-
- .container {
-	width: 900px;
-    padding: 20px 40px 20px 50px;
+  padding: 20px 40px 20px 50px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
- .container h2 {
+  h2 {
   font-size: 28px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
   line-height: 1.5;
+  }
+  h5 {
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  //margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+  * {
+    color: #fff;
+  }
  .bx-wrapper {
   margin: 70px auto 70px;
   position: relative;
