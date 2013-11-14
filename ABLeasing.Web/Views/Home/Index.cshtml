@@ -3,94 +3,33 @@
 
 	<div class="row">
 		<div class="col-sm-12">
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-	<!-- Indicators -->
-	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-		<li data-target="#myCarousel" data-slide-to="2" class=""></li>
-	</ol>
-	<div class="carousel-inner">
-		<div class="item active">
-			<img alt="First slide" src="~/images/index/farming-tractor.jpg">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>Example headline.</h1>
-					<p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-					<p>
-						@Html.ActionLink("Join Now", "Signup", "Home", routeValues: null,
-						htmlAttributes: new { @class = "btn btn-lg btn-primary" })
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="item">
-			<img alt="First slide" src="~/images/index/mining-truck.jpg">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>Another example headline.</h1>
-					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="item">
-			<img alt="First slide" src="~/images/index/farming-tractor.jpg">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>One more for good measure.</h1>
-					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					<p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/examples/carousel/#" role="button">Browse gallery</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<a class="left carousel-control" href="http://getbootstrap.com/examples/carousel/#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-	<a class="right carousel-control" href="http://getbootstrap.com/examples/carousel/#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-</div><!-- /.carousel -->
-		</div>
-	</div>
+            <!-- Banner -->
+            <div id="banner" class="clearfix container">
 
-	<div class="row">
-		<div class="col-sm-12">
-
-			<div class="cycle-slideshow" 
-				data-cycle-fx="fade" data-cycle-slides="> div" data-cycle-timeout="5000">
-				<div class="panel panel-info">
-					<div class="panel-heading">What is Autobot?</div>
-					<div class="panel-body">
-						ABL uses crowdfunding to provide a vehicle for their clients to increase earnings by:
-						Pooling small financial resources into large funds used to purchase equipment for lease by operator companies.  
-						It is expected that such equipment is used directly in their revenue producing processes.
-						Provide operators (lessees) with high quality equipment under flexible and reasonable lease terms.
-						Maintain visibility for ABL clients with regard to status of equipment they have purchased and leased 
-						out (e.g., production data, location, maintenance record, etc.).
-						Distribute profit shares produced by leased equipment back to participating ABL clients.
-					</div>
-				</div>
-
-				<div class="panel panel-info">
-					<div class="panel-heading">Why Join?</div>
-					<div class="panel-body">
-						ABL uses crowdfunding to provide a vehicle for their clients to increase earnings by:
-						Pooling small financial resources into large funds used to purchase equipment for lease 
-						by operator companies.  It is expected that such equipment is used directly in their revenue producing processes.
-						Provide operators (lessees) with high quality equipment under flexible and reasonable lease terms.
-					</div>
-				</div>
-
-				<div class="panel panel-info">
-					<div class="panel-heading">A New Way to Earn Income</div>
-					<div class="panel-body">
-						ABL uses crowdfunding to provide a vehicle for their clients to increase 
-						earnings by: Pooling small financial resources into large funds used to 
-						purchase equipment for lease by operator companies. It is expected that 
-						such equipment is used directly in their revenue producing processes.
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                <ul id="sb-slider" class="sb-slider">
+                    <li>
+                        <img src="~/Images/Index/1170x450.gif" alt="image1" />
+                        <div class="sb-description">
+                            <h3>Creative Lifesaver</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="~/Images/Index/1170x450.gif" alt="image1" />
+                        <div class="sb-description">
+                            <h3>Honest Entertainer</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="~/Images/Index/1170x450.gif" alt="image1" />
+                        <div class="sb-description">
+                            <h3>Brave Astronaut</h3>
+                        </div>
+                    </li>
+                </ul>
+                <div id="shadow" class="shadow"></div>
+            </div>
+            </div>
+        </div>
 
 	@Html.Partial("IndexPartials/_HIW")
 
@@ -99,12 +38,6 @@
 	@Html.Partial("IndexPartials/_New")
 
 	@Html.Partial("IndexPartials/_Trending")
-
-	@Html.Partial("IndexPartials/_Section2")
-
-	@Html.Partial("IndexPartials/_Section3")
-
-	@Html.Partial("IndexPartials/_Section4")
 
 </div>
 
@@ -118,6 +51,7 @@
 	<script src="~/Scripts/jquery.bxslider.js"></script>
 	<script src="~/Scripts/jquery.validate.js"></script>
 	<script src="~/Scripts/init.js"></script>
+    <script src="~/Scripts/jquery.slicebox.js">
 
 	<script type="text/javascript">
 		$(function () {
@@ -145,4 +79,46 @@
 			});
 		});
 	</script>
+<script type="text/javascript">
+    $(function () {
+        'use strict';
+        var Page = (function () {
+
+            var $navArrows = $('#nav-arrows').hide(),
+            $shadow = $('#shadow').hide(),
+            slicebox = $('#sb-slider').slicebox({
+                autoplay: true,
+                onReady: function () {
+
+                    $navArrows.show();
+                    $shadow.show();
+
+                },
+                orientation: 'r',
+                cuboidsRandom: true,
+                disperseFactor: 30
+            }),
+
+            init = function () {
+
+                initEvents();
+            },
+            initEvents = function () {
+                // add navigation events
+                $navArrows.children(':first').on('click', function () {
+
+                    slicebox.next();
+                    return false;
+                });
+                $navArrows.children(':last').on('click', function () {
+
+                    slicebox.previous();
+                    return false;
+                });
+            };
+            return { init: init };
+        })();
+        Page.init();
+    });
+</script>
 }
