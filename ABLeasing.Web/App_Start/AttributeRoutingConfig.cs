@@ -19,7 +19,7 @@ namespace ABLeasing.Web
                 {
                     config.AddRoutesFromAssembly(Assembly.GetExecutingAssembly());
                     config.AddRoutesFromControllersOfType<Controller>();
-                    config.UseLowercaseRoutes = true;
+                    //config.UseLowercaseRoutes = true;
                     config.DefaultSubdomain = "admin";
                     config.MapArea("Admin").ToSubdomain("admin");
                 }

@@ -5,9 +5,16 @@
     @modal.Header("Member Login")
     using (modal.BeginBody())
     {
-        using (var form = Html.Bootstrap().Begin(new Form("login", "Account").Type(FormType.Horizontal).LabelWidthSm(4)))
+        using (var form = Html.Bootstrap().Begin(new Form("Login", "Account").Id("SUCK").Type(FormType.Horizontal).LabelWidthSm(4)))
         {
             @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-7">
+                    <div id="login-errors"></div>
+                </div>
+            </div>
+    
             @form.FormGroup().TextBoxFor(m => m.Email).AutoFocus()
             @form.FormGroup().PasswordFor(m => m.Password)
 
@@ -19,5 +26,5 @@
                 .Style(ButtonStyle.Primary).LoadingText("logging...")))
 
         }
-   }
+    }
 }

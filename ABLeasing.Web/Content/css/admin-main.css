@@ -126,7 +126,7 @@ span.badge {
 }
 
 /* line 69, ../sass/_constants.scss */
-.validation-summary-errors ul {
+.validation-summary-errors ul, #login-errors {
   padding-left: 0;
   list-style: none;
   color: #b94a48;

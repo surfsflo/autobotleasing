@@ -119,5 +119,30 @@
 	<script src="~/Scripts/jquery.validate.js"></script>
 	<script src="~/Scripts/init.js"></script>
 
-	
+	<script type="text/javascript">
+		$(function () {
+			$('#modalId').delegate('form', 'submit', function () {
+				$.ajax({
+					url: this.action,
+					type: this.method,
+					data: $(this).serialize(),
+					success: function (result) {
+						if (result.success) {
+						    $('#SUCK').modal("hide");
+						    if (result.url) {
+						        window.location = url;
+						    } else {
+						        window.location = '';
+						    }
+						} else {
+							// We have the partial with errors in case of failure
+							// so all we have to do is update the DOM
+							$('#login-errors').html(result.errors[0]);
+						}
+					}
+				});
+				return false;
+			});
+		});
+	</script>
 }

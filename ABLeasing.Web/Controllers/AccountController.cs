@@ -38,12 +38,20 @@ namespace ABLeasing.Web.Controllers
         {
             if (ModelState.IsValid && WebSecurity.Login(model.Email, model.Password, persistCookie: model.RememberMe))
             {
-                return RedirectToLocal(returnUrl);
+                return Json(new
+                {
+                    success = true,
+                    url = returnUrl
+                });
             }
 
             // If we got this far, something failed, redisplay form
             ModelState.AddModelError("", "The user name or password provided is incorrect.");
-            return View(model);
+            return Json(new
+            {
+                success = false,
+                errors = ModelState.Keys.SelectMany(k => ModelState[k].Errors).Select(m => m.ErrorMessage).ToArray()
+            });
         }
 
         //

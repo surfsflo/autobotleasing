@@ -7,6 +7,8 @@ using AttributeRouting;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models;
 using WebMatrix.WebData;
+using System.Web.Security;
+using System.Diagnostics;
 
 namespace ABLeasing.Web.Areas.Admin.Controllers
 {
@@ -29,14 +31,34 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [POST("login")]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
+            Debug.WriteLine("My debug string here");
             if (ModelState.IsValid && WebSecurity.Login(model.Email, model.Password, persistCookie: model.RememberMe))
             {
+                var roles = (SimpleRoleProvider)Roles.Provider;
+                if (!roles.GetRolesForUser(model.Email).Contains("Admin"))
+                {
+                    ModelState.AddModelError("", "You are not an Admin, invalid credentials.");
+                    return View(model);
+                }
+
                 return RedirectToLocal(returnUrl);
             }
 
             // If we got this far, something failed, redisplay form
             ModelState.AddModelError("", "The user name or password provided is incorrect.");
             return View(model);
+        }
+
+        //
+        // POST: /Account/LogOff
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
+        {
+            WebSecurity.Logout();
+
+            return RedirectToAction("Index", "Home");
         }
 
         private ActionResult RedirectToLocal(string returnUrl)
