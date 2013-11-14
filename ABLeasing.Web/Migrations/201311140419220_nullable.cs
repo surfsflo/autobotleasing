@@ -2,7 +2,7 @@ namespace ABLeasing.Web.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class nullable : DbMigration
     {
         public override void Up()
@@ -12,7 +12,7 @@ namespace ABLeasing.Web.Migrations
             AlterColumn("dbo.Lease", "InterestRate", c => c.Decimal(storeType: "money"));
             AlterColumn("dbo.Lease", "ProfitShareRate", c => c.Decimal(storeType: "money"));
         }
-        
+
         public override void Down()
         {
             AlterColumn("dbo.Lease", "ProfitShareRate", c => c.Decimal(nullable: false, storeType: "money"));
