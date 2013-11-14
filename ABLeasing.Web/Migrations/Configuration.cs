@@ -29,7 +29,6 @@ namespace ABLeasing.Web.Migrations
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-            //
 
 
             SeedMembership(context);
@@ -51,9 +50,8 @@ namespace ABLeasing.Web.Migrations
                 new Staff { Name = "John", Email = "j@j.com"},
                 new Staff { Name = "Matt", Email = "vallicgrr@gmail.com"},
                 new Staff { Name = "John", Email = "mkteagle@gmail.com"},
-                new Staff { Name = "John", Email = "j@j.com"},
+                new Staff { Name = "Frank", Email = "vivoon29@gmail.com"},
             };
-
 
             string ADMIN = "Admin";
 
@@ -62,26 +60,17 @@ namespace ABLeasing.Web.Migrations
                 roles.CreateRole(ADMIN);
             }
 
-            //var admins = new[]
-            //{
-            //    new { email="john.walker.dev@gmail.com", password="123456" },
-            //    new { email="vallicgrr@gmail.com", password="123456" },
-            //    new { email="mkteagle@gmail.com", password="123456" },
-            //    new { email="vivoon29@gmail.com", password="123456" }
-            //};
-
-            //foreach (var admin in admins)
-            //{
-            //    if (membership.GetUser(admin.email, false) == null)
-            //    {
-            //        membership.CreateUserAndAccount(admin.email, admin.password);
-            //    }
-            //    if (!roles.GetRolesForUser(admin.email).Contains(ADMIN))
-            //    {
-            //        roles.AddUsersToRoles(new[] { admin.email }, new[] { ADMIN });
-            //    }
-            //}
+            foreach (Staff admin in admins)
+            {
+                if (membership.GetUser(admin.Email, false) == null)
+                {
+                    WebSecurity.CreateUserAndAccount(admin.Email, "123456", new { Discriminator = "Staff", Name = admin.Name });
+                }
+                if (!roles.GetRolesForUser(admin.Email).Contains(ADMIN))
+                {
+                    roles.AddUsersToRoles(new[] { admin.Email }, new[] { ADMIN });
+                }
+            }
         }
-
     }
 }

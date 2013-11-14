@@ -1,9 +1,8 @@
 ﻿@model ABLeasing.Web.Models.Lease
-
 @{
     ViewBag.Title = "Lease Application";
 }
-
+@using ABLeasing.Web.Models.Accounts;
 <div id="lease-apply">
 
     <div class="row">
@@ -11,17 +10,17 @@
             <div class="panel panel-info">
                 <div class="panel-heading text-center">Lease Application</div>
                 <div class="panel-body">
-
+                     
 
                     @using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
                     {
                         @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
-                        //@form.FormGroup().TextAreaFor(m => m.Description)
-                        
-                        //@form.FormGroup().TextBoxFor(m => m.Location)
-                        @form.FormGroup().TextBoxFor(m => m.Equipment)
+                        @form.FormGroup().TextAreaFor(m => m.Description)
+                        //@form.FormGroup().DropDownListFor(m => m.Equipment);
 
                         
+                        //Model.OperatorId = WebSecurity.CurrentUserId;
+                        //Model.Operator = (Operator)User.Identity;//(Operator)User.Identity;
                         
                         @(form.FormGroup().CustomControls(
                             Html.Bootstrap().SubmitButton()

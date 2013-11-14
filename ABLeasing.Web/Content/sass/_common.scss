@@ -6,8 +6,8 @@
 @include declare-font-face2('Roboto', "Roboto-Regular-webfont");
 
 body {
-	padding-top: 100px;
 	@include roboto;
+	padding-top: 100px;
 	overflow-x: hidden;
 	background-color: $light-bg;
 }
@@ -23,10 +23,27 @@ nav .navbar-form {
 	a {
 		margin-left: 5px;
 	}
+
+	#logoutForm {
+		display: inline-block;
+	}
+
 }
+
+.nav {
+	.fa-fw {
+		margin-right: 5px;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	@include roboto;
+}
+
 @media (min-width: 1200px) and (min-width: 992px) and (min-width: 768px) {
   .container {
-    max-width: none;
-    width: inherit;
+	max-width: none;
+	width: inherit;
   }
 }

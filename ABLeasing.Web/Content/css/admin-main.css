@@ -149,10 +149,10 @@ span.badge {
 
 /* line 8, ../sass/_common.scss */
 body {
-  padding-top: 100px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
+  padding-top: 100px;
   overflow-x: hidden;
   background-color: #fcfcfc;
 }
@@ -172,11 +172,38 @@ nav .navbar-form {
 nav .navbar-form a {
   margin-left: 5px;
 }
+/* line 27, ../sass/_common.scss */
+nav .navbar-form #logoutForm {
+  display: inline-block;
+}
+
+/* line 34, ../sass/_common.scss */
+.nav .fa-fw {
+  margin-right: 5px;
+}
+
+/* line 40, ../sass/_common.scss */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
 
 @media (min-width: 1200px) and (min-width: 992px) and (min-width: 768px) {
-  /* line 28, ../sass/_common.scss */
+  /* line 45, ../sass/_common.scss */
   .container {
     max-width: none;
     width: inherit;
   }
+}
+/* line 4, ../sass/admin-main.scss */
+.page-header {
+  margin: 0 15px;
+  padding: 0 0;
+  font-size: 26px;
+}
+/* line 8, ../sass/admin-main.scss */
+.page-header h1 {
+  color: #4D4D4D;
+  font-size: 80%;
 }
