@@ -32,13 +32,13 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(category);
+            return PartialView(category);
         }
 
         [GET("Create")]
         public ActionResult Create()
         {
-            return View();
+            return PartialView();
         }
 
         [POST("Create")]
@@ -51,7 +51,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(category);
+            return PartialView(category);
         }
 
         [GET("Edit/{id}")]
@@ -62,7 +62,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(category);
+            return PartialView(category);
         }
 
         [POST("Edit/{id}")]
@@ -74,7 +74,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(category);
+            return PartialView(category);
         }
 
         [GET("Delete/{id}")]
@@ -85,7 +85,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(category);
+            return PartialView(category);
         }
 
         [POST("Delete/{id}")]

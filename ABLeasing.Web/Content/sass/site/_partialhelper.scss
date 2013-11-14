@@ -436,10 +436,15 @@ body:after {
 	clear: both;
 	text-align: left;
 }
+.tml-content h6 {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
 
 .tml-content p{
-	color: #525252;
-	font-family: 'Proxima Nova Lt';
+	color: black;
+	font-family: 'Roboto';
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 20px;
