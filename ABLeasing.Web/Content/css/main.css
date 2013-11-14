@@ -1742,3 +1742,318 @@ body:after {
 .nav-dots span.nav-dot-current {
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #cbbfae, inset 0 0 0 8px white;
 }
+
+/* SPRITES contact form */
+/* line 2, ../sass/site/_contact.scss */
+.form-sprite, .form-email, .form-error, .form-message, .form-name, .form-phone {
+  background: url("../images/form-s13b8ee05b4.png") no-repeat;
+}
+
+/* line 6, ../sass/site/_contact.scss */
+.form-email {
+  background-position: 0 0;
+  height: 46px;
+  width: 49px;
+}
+
+/* line 11, ../sass/site/_contact.scss */
+.form-email:hover, .form-email.email_hover, .form-email.email-hover {
+  background-position: 0 -3046px;
+}
+
+/* line 15, ../sass/site/_contact.scss */
+.form-error {
+  background-position: 0 -6092px;
+  height: 48px;
+  width: 49px;
+}
+
+/* line 21, ../sass/site/_contact.scss */
+.form-message {
+  background-position: 0 -9140px;
+  height: 46px;
+  width: 49px;
+}
+
+/* line 26, ../sass/site/_contact.scss */
+.form-message:hover, .form-message.message_hover, .form-message.message-hover {
+  background-position: 0 -12186px;
+}
+
+/* line 30, ../sass/site/_contact.scss */
+.form-name {
+  background-position: 0 -15232px;
+  height: 46px;
+  width: 49px;
+}
+
+/* line 35, ../sass/site/_contact.scss */
+.form-name:hover, .form-name.name_hover, .form-name.name-hover {
+  background-position: 0 -18278px;
+}
+
+/* line 39, ../sass/site/_contact.scss */
+.form-phone {
+  background-position: 0 -21324px;
+  height: 47px;
+  width: 49px;
+}
+
+/* line 44, ../sass/site/_contact.scss */
+.form-phone:hover, .form-phone.phone_hover, .form-phone.phone-hover {
+  background-position: 0 -24371px;
+}
+
+/* --------------------------------------------------------------------------------------
++
++ FORMS
++
+-------------------------------------------------------------------------------------- */
+/* MAIN PART */
+/* line 53, ../sass/site/_contact.scss */
+input[type="text"], input[type="email"], textarea {
+  vertical-align: middle;
+  border: 2px solid #d4d8de;
+  color: #67727e;
+  background-color: white;
+  padding: 0 10px 0 65px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 30px;
+  width: 100%;
+  clear: both;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 74, ../sass/site/_contact.scss */
+input[type="text"]:hover, input[type="text"]:focus, input[type="email"]:hover, input[type="email"]:focus, textarea:hover, textarea:focus {
+  background-color: #fff;
+  border: 2px solid #1ed2d0;
+}
+
+/* line 78, ../sass/site/_contact.scss */
+input[type="text"].error, input[type="email"].error, textarea.error {
+  background: url("../images/form/error.png") no-repeat 0 0;
+  border: 2px solid #ff605a;
+  color: #ff605a;
+}
+
+/* line 83, ../sass/site/_contact.scss */
+input[type="text"].error:hover, input[type="email"].error:hover, textarea.error:hover {
+  background-position: 0 0;
+}
+
+/* line 87, ../sass/site/_contact.scss */
+input[type="text"], input[type="email"] {
+  height: 48px;
+  line-height: 48px;
+}
+
+/* line 91, ../sass/site/_contact.scss */
+.ie8 input[type="text"], .ie8 input[type="email"] {
+  line-height: 43px;
+}
+
+/* line 95, ../sass/site/_contact.scss */
+textarea {
+  resize: none;
+  padding-top: 12px;
+  min-height: 203px;
+}
+
+/* line 100, ../sass/site/_contact.scss */
+textarea.form-message {
+  width: 100%;
+}
+
+/* line 104, ../sass/site/_contact.scss */
+label.error {
+  color: #ff605a;
+  position: absolute;
+  left: 50px;
+  margin-top: -32px;
+}
+
+/* line 110, ../sass/site/_contact.scss */
+#contact {
+  padding-bottom: 0;
+}
+
+/* line 113, ../sass/site/_contact.scss */
+#contact .container {
+  position: relative;
+  z-index: 10;
+}
+
+/* line 117, ../sass/site/_contact.scss */
+#contact form {
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 121, ../sass/site/_contact.scss */
+#contact form .left {
+  width: 100%;
+  position: relative;
+}
+
+/* line 125, ../sass/site/_contact.scss */
+#contact form .btn {
+  border: none;
+}
+
+/* line 128, ../sass/site/_contact.scss */
+#contact #map {
+  width: 100%;
+  height: 250px;
+  display: block;
+  margin-top: 40px;
+}
+
+/* line 134, ../sass/site/_contact.scss */
+#contact .contact_info {
+  width: 280px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(1, 1, 1, 0.2);
+  -moz-box-shadow: 0 1px 1px rgba(1, 1, 1, 0.2);
+  box-shadow: 0 1px 1px rgba(1, 1, 1, 0.2);
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index: 100;
+  left: 50%;
+  top: -220px;
+  padding: 30px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: -140px;
+}
+
+/* line 160, ../sass/site/_contact.scss */
+#contact .contact_info dt {
+  margin-top: 15px;
+}
+
+/* line 163, ../sass/site/_contact.scss */
+#contact .contact_info dt:first-child {
+  margin-top: 0;
+}
+
+/* line 166, ../sass/site/_contact.scss */
+#contact .contact_info dd a {
+  color: #67727e;
+}
+
+/* line 169, ../sass/site/_contact.scss */
+#contact #order_now {
+  background-color: #ff605a;
+  padding: 90px 0 40px;
+  display: block;
+}
+
+/* SPRITES contact form */
+/* line 175, ../sass/site/_contact.scss */
+.form-sprite, .form-email, .form-error, .form-message, .form-name, .form-phone {
+  background: url("../images/form-s13b8ee05b4.png") no-repeat;
+}
+
+/* line 179, ../sass/site/_contact.scss */
+.form-email {
+  background-position: 0 0;
+  height: 46px;
+  width: 49px;
+}
+
+/* line 184, ../sass/site/_contact.scss */
+.form-email:hover, .form-email.email_hover, .form-email.email-hover {
+  background-position: 0 -3046px;
+}
+
+/* line 188, ../sass/site/_contact.scss */
+.form-error {
+  background-position: 0 -6092px;
+  height: 48px;
+  width: 49px;
+}
+
+/* line 194, ../sass/site/_contact.scss */
+.form-message {
+  background-position: 0 -9140px;
+  height: 46px;
+  width: 49px;
+}
+
+/* line 199, ../sass/site/_contact.scss */
+.form-message:hover, .form-message.message_hover, .form-message.message-hover {
+  background-position: 0 -12186px;
+}
+
+/* line 203, ../sass/site/_contact.scss */
+.form-name {
+  background-position: 0 -15232px;
+  height: 46px;
+  width: 49px;
+}
+
+/* line 208, ../sass/site/_contact.scss */
+.form-name:hover, .form-name.name_hover, .form-name.name-hover {
+  background-position: 0 -18278px;
+}
+
+/* line 212, ../sass/site/_contact.scss */
+.form-phone {
+  background-position: 0 -21324px;
+  height: 47px;
+  width: 49px;
+}
+
+/* line 217, ../sass/site/_contact.scss */
+.form-phone:hover, .form-phone.phone_hover, .form-phone.phone-hover {
+  background-position: 0 -24371px;
+}
+
+/* line 220, ../sass/site/_contact.scss */
+#contact form .left {
+  width: 324px;
+}
+
+/* line 223, ../sass/site/_contact.scss */
+#contact form .left.righ {
+  float: right;
+  text-align: right;
+}
+
+/* line 227, ../sass/site/_contact.scss */
+#contact #map {
+  margin-top: 80px;
+}
+
+/* line 230, ../sass/site/_contact.scss */
+#contact .contact_info {
+  width: 460px;
+  margin-left: -230px;
+  top: 50px;
+  bottom: -10px;
+}
+
+/* line 236, ../sass/site/_contact.scss */
+#contact form .left {
+  width: 459px;
+}

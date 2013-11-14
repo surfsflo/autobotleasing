@@ -706,6 +706,7 @@
     <Content Include="Content\sass\_common.scss" />
     <Content Include="Content\sass\site\_partialhelper.scss" />
     <Content Include="Content\sass\site\_slicebox.scss" />
+    <Content Include="Content\sass\site\_contact.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
@@ -1167,6 +1168,7 @@
     <Content Include="Views\OperatorsView\Index.cshtml" />
     <Content Include="Views\OperatorsView\LeaseApplication.cshtml" />
     <Content Include="Views\OperatorsView\LeaseDetails.cshtml" />
+    <Content Include="Views\Home\IndexPartials\_Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
