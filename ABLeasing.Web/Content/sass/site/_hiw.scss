@@ -1,24 +1,37 @@
 #about{
- 	background: #ffffff;
- 	position: relative;
- 	width: 1100px;
- 	height: auto;
- 	padding: 0;
- 	margin: 0 auto;
- 	overflow: hidden;
- 	z-index: 0;
-	text-align: center;
-
- h2 {
-
+ background-color: #e8eef1;
+  //text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -ms-behavior: url('/Scripts/backgroundsize.htc');
+  padding: 20px 40px 20px 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  h2 {
+  text-align: center;
   font-size: 28px;
+  //color: #000;
   font-weight: 700;
-  font-family: 'Roboto';
-  //color: #fff;
   margin-bottom: 10px;
   line-height: 1.5;
+  }
+  h5 {
+  line-height: 1;
+  //color: #000;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
- }
  .working-process{
  	padding: 75px 0 74px;
  }
@@ -58,7 +71,7 @@
 
  .process-arrow{
  	position: absolute;
- 	background: url('../images/blue-arrow.png') no-repeat 0 0;
+ 	background: url('/Images/Index/blue-arrow.png') no-repeat 0 0;
  	top: -43px;
  	left: 41px;
  	width: 43px;
@@ -185,44 +198,9 @@
   }
 
   .proccess-box:hover .process-arrow{
-  	background: url('../images/red-arrow.png') no-repeat 0 0;
+  	background: url('/Images/Index/red-arrow.png') no-repeat 0 0;
   }
-
-
-  .skill-desc, .skill-box-s{
-  	margin-top: 43px;
-  	margin-bottom: 40px;
   }
-
-  .skill-desc-box{
-  	max-width: 600px;
-  	min-height: 30px;
-  	padding: 15px 0 14px;
-  	border-bottom: 1px solid rgba(0,0,0,.15);
-  }
-
-  .skill-desc div:first-child{
-  	padding-top: 0px;
-  }
-
-  .change-image{
-  	background: url('../images/open-arrow.png') no-repeat 0 0;
-  }
-
-  .toggole-content p{
-  	color: #525252;
-  	font-family: 'Roboto';
-  	font-size: 14px;
-  	font-weight: normal;
-  	line-height: 20px;
-  	margin-left: 40px;
-  	margin-bottom: 0;
-  }
-
-  .skill-box-s p:first-child{
-  	margin-top: 3px;
-  }
-
 
 
 

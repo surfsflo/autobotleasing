@@ -1,5 +1,5 @@
-#trending {
-  background-color: #918581;
+#featured {
+  background: #3e4d5c url('/Images/Index/noise.png') no-repeat 50% 50%;
   text-align: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -12,27 +12,33 @@
     box-sizing: border-box;
   h2 {
   font-size: 28px;
-  //color: #000;
   font-weight: 700;
+  color: #fff;
   //margin-bottom: 10px;
-  line-height: 1.5;
+  //line-height: 1.5;
   }
   h5 {
-  line-height: 1;
-  //color: #000;
+  //line-height: 1;
   font-family: "Roboto", sans-serif;
+  color: white;
   //margin-bottom: 20px;
   font-weight: 300;
   font-size: 20px;
   margin: 0;
-  padding: 0;
+  //padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
-}
-#trending {
+  p {
+  margin: 0;
+  }
+  * {
+    color: #fff;
+  }
+  }
+#featured {
 		padding-bottom: 40px;
 		.bx-wrapper {
 			.slider2 {
