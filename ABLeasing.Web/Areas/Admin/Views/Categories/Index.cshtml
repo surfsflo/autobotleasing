@@ -69,14 +69,14 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="@Url.Action("Edit", new { id = item.CategoryID })">
+                                                <a id="do-edit" data-modalid="action-modal" data-url="@Url.Action("Edit", new { id = item.CategoryID })">
                                                     <i class="fa fa-edit fa-fw"></i>
                                                     Edit
                                                 </a>
                                             </li>
                                             <li>
 
-                                                <a id="do-delete" data-url="@Url.Action("Delete", new { id = item.CategoryID })">
+                                                <a id="do-delete" data-modalid="action-modal" data-url="@Url.Action("Delete", new { id = item.CategoryID })">
                                                     <i class="fa fa-power-off fa-fw"></i>
                                                     Delete
                                                 </a>
@@ -96,7 +96,7 @@
     </div>
 </div>
 
-<div id="test"></div>
+<div id="action-modal"></div>
 
 
 
@@ -104,10 +104,12 @@
     <script src="~/Scripts/site/modal-loader.js"></script>
     <script>
         $(function () {
-            $('#do-delete').on('click', function () {
-                $('#test').load($(this).data('url'), function () {
-                    $('#test .modal').modal("show");
-                });
+            $('#do-edit').on('click', function (evt) {
+                openModal(evt);
+                return false;
+            });
+            $('#do-delete').on('click', function (evt) {
+                openModal(evt);
                 return false;
             });
         });

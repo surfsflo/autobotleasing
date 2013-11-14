@@ -4,11 +4,7 @@
 @using (var modal = Html.Bootstrap().Begin(new Modal().Id("deleteModal").Closeable()))
 {
     
-
-    
-
-    
-    @modal.Header("Member Login")
+    @modal.Header("Delete Category")
     using (modal.BeginBody())
     {
         
@@ -19,11 +15,8 @@
         using (Html.BeginForm()) {
             @Html.AntiForgeryToken()
 
-            @Html.Bootstrap().SubmitButton().Text("Delete")
-
+            @Html.Bootstrap().SubmitButton().Text("Delete").Style(ButtonStyle.Primary)
         }
-
-
     }
 }
 

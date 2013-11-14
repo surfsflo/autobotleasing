@@ -9,6 +9,7 @@ using AttributeRouting;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models;
 using ABLeasing.Web.Infrastructure;
+using System.Data.Objects;
 
 namespace ABLeasing.Web.Areas.Admin.Controllers
 {
@@ -55,12 +56,16 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         }
 
         [POST("Edit/{id}")]
-        public ActionResult Edit(Category category)
+        public ActionResult Edit(
+            [Bind(Include = "Description,Name,CategoryID")]Category category)
         {
             if (ModelState.IsValid)
             {
+
                 db.Entry(category).State = EntityState.Modified;
+
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
             return PartialView(category);

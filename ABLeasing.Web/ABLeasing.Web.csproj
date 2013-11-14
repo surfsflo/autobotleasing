@@ -1097,6 +1097,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\backgroundsize.htc" />
     <Content Include="Scripts\site\index-als.js" />
+    <Content Include="Scripts\site\modal-loader.js" />
     <Content Include="Scripts\site\val.js" />
     <Content Include="Scripts\validation.js" />
     <Content Include="Web.config">
