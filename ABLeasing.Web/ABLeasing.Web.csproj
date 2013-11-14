@@ -285,6 +285,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\IndexController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
@@ -306,6 +307,10 @@
     <Compile Include="Migrations\201311140711509_category-required.cs" />
     <Compile Include="Migrations\201311140711509_category-required.Designer.cs">
       <DependentUpon>201311140711509_category-required.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311140833282_whywhywhy.cs" />
+    <Compile Include="Migrations\201311140833282_whywhywhy.Designer.cs">
+      <DependentUpon>201311140833282_whywhywhy.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
@@ -535,6 +540,12 @@
     <Content Include="Areas\Admin\Views\Index\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLogin.cshtml" />
     <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1173,6 +1184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201311140711509_category-required.resx">
       <DependentUpon>201311140711509_category-required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311140833282_whywhywhy.resx">
+      <DependentUpon>201311140833282_whywhywhy.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
