@@ -1,33 +1,228 @@
-#about {
-  padding: 40px 0;
-  text-align: center;
-}
-//#about .container {
-  //margin: 0 auto;
-  //width: 320px;
-  //padding: 0 20px;
-  //-webkit-box-sizing: border-box;
-  //-moz-box-sizing: border-box;
-  //box-sizing: border-box;
-//}
+#about{
+ 	background: #ffffff;
+ 	position: relative;
+ 	width: 1100px;
+ 	height: auto;
+ 	padding: 0;
+ 	margin: 0 auto;
+ 	overflow: hidden;
+ 	z-index: 0;
+	text-align: center;
 
-#about li {
-  padding-top: 40px;
-  border-top: 2px solid #e3e7ec;
-  *:last-child {
-    margin-bottom: 0;
-  }
-  &:first-child {
-    padding-top: 0;
-    border-top: 0;
-  }
-  span {
-    width: 96px;
-    height: 96px;
-    display: block;
-    margin: 0 auto 35px;
-  }
-  + li {
-    margin-top: 40px;
-  }
+ h2 {
+
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Roboto';
+  //color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
+ }
+ .working-process{
+ 	padding: 75px 0 74px;
+ }
+
+ .working-process h4{
+ 	color: #000;
+ 	font-family: 'Roboto';
+ 	font-size: 20px;
+ 	font-weight: normal;
+ 	line-height: 24px;
+ 	margin: 0 0 32px;
+ 	text-align: center;
+ 	text-transform: uppercase;
+ }
+
+ .process-list{
+ 	display: block;
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+ .process-list li{
+ 	float: left;
+ 	list-style-type: none;
+ 	width: 300px;
+ 	margin-top: 43px;
+ 	margin-right: 20px;
+ 	margin-bottom: 40px;
+ }
+
+ .proccess-box{
+ 	width: 300px;
+ 	height: auto;
+ 	position: relative;
+ 	z-index: 2;
+ }
+
+ .process-arrow{
+ 	position: absolute;
+ 	background: url('../images/blue-arrow.png') no-repeat 0 0;
+ 	top: -43px;
+ 	left: 41px;
+ 	width: 43px;
+ 	height: 21px;
+ 	z-index: 3;
+ 	text-indent: -9999px;
+ }
+
+  .process-list li:last-child{
+  	margin-right: 0px;
+  }
+
+  .polygon:after, .polygon:before{
+	position: absolute;
+	content: '';
+	height: 0;
+	top: 0;
+	left: -22px;
+	width: 0px;
+	border-right: 22px solid #4e5670;
+	border-top: 0px solid transparent;
+	border-bottom: 126px solid transparent;
+	z-index: 3;
+  }
+
+  .polygon{
+  	position: relative;
+  	height: 126px;
+  	width: 44px;
+  	float: left;
+  	margin-right: 18px;
+  	margin-left: 22px;
+  	background: #4e5670;
+  	z-index: 3;
+  }
+
+  .ps-circle{
+  	position: absolute;
+  	top: 27px;
+  	left: -18px;
+  	background: #ffffff;
+  	height: 70px;
+  	width: 70px;
+  	border-radius: 50%;
+  	z-index: 4;
+  }
+
+  .ps-circle-text{
+  	position: relative;
+  	height: 100%;
+  	width: 100%;
+  }
+
+  .ps-circle-text .step{
+  	color: #60698a;
+  	display: block;
+  	font-family: 'Proxima Nova Rg';
+  	font-size: 14px;
+  	font-weight: normal;
+  	line-height: 16px;
+  	margin-top: 10px;
+  	text-transform: uppercase;
+  	text-align: center;
+  	vertical-align: middle;
+  }
+
+  .ps-circle-text .number{
+  	color: #60698a;
+  	display: block;
+  	font-family: 'Proxima Nova Bl';
+  	font-size: 40px;
+  	font-weight: normal;
+  	line-height: 46px;
+  	text-align: center;
+  	vertical-align: middle;
+  }
+
+  .process-desc{
+  	float: left;
+  	width: 216px;
+  	height: auto;
+  }
+
+  .process-desc .ps-icon{
+  	font-size: 40px;
+  	line-height: 46px;
+  	color:  #4e5670;
+  }
+
+  .process-desc h5{
+  	color: #000;
+  	font-family: 'Proxima Nova Rg';
+  	font-size: 16px;
+  	line-height: 20px;
+  	margin: 15px 0 5px;
+  	font-weight: normal;
+  	text-transform: uppercase;
+  }
+
+  .process-desc p{
+  	color: #545454;
+  	font-family: 'Proxima Nova Rg';
+  	font-size: 14px;
+  	font-weight: normal;
+  	line-height: 20px;
+  	margin-bottom: 0;
+  }
+
+  .proccess-box:hover .polygon{
+  	background: #dd4322;
+  }
+
+  .proccess-box:hover  .polygon:after{
+  	border-right-color: #dd4322;
+  }
+  .proccess-box:hover  .polygon:before{
+  	border-right-color: #dd4322;
+  }
+
+  .proccess-box:hover .ps-circle-text .step,
+  .proccess-box:hover .ps-circle-text .number,
+  .proccess-box:hover .process-desc .ps-icon{
+  	color: #dd4322;
+  }
+
+  .proccess-box:hover .process-arrow{
+  	background: url('../images/red-arrow.png') no-repeat 0 0;
+  }
+
+
+  .skill-desc, .skill-box-s{
+  	margin-top: 43px;
+  	margin-bottom: 40px;
+  }
+
+  .skill-desc-box{
+  	max-width: 600px;
+  	min-height: 30px;
+  	padding: 15px 0 14px;
+  	border-bottom: 1px solid rgba(0,0,0,.15);
+  }
+
+  .skill-desc div:first-child{
+  	padding-top: 0px;
+  }
+
+  .change-image{
+  	background: url('../images/open-arrow.png') no-repeat 0 0;
+  }
+
+  .toggole-content p{
+  	color: #525252;
+  	font-family: 'Roboto';
+  	font-size: 14px;
+  	font-weight: normal;
+  	line-height: 20px;
+  	margin-left: 40px;
+  	margin-bottom: 0;
+  }
+
+  .skill-box-s p:first-child{
+  	margin-top: 3px;
+  }
+
+
+
+
