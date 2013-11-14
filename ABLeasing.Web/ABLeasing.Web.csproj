@@ -636,6 +636,8 @@
       <CompileStyle>Nested</CompileStyle>
       <DebugInfo>False</DebugInfo>
     </Content>
+    <Content Include="Images\Index\1170x450%402x.gif" />
+    <Content Include="Images\Index\1170x450.gif" />
     <Content Include="Images\Index\4-5stars.png" />
     <Content Include="Images\Index\arrowleft.png" />
     <Content Include="Images\Index\arrowright.png" />
@@ -646,7 +648,6 @@
     <Content Include="Images\Index\close.png" />
     <Content Include="Images\Index\close1 %28by nikolaob%40gmail.com%29.png" />
     <Content Include="Images\Index\close1.png" />
-    <Content Include="Images\Index\down-arrow - Copy.png" />
     <Content Include="Images\Index\down-arrow.png" />
     <Content Include="Images\Index\eye.png" />
     <Content Include="Images\Index\facebook.png" />
@@ -661,13 +662,13 @@
     <Content Include="Images\Index\mining-equipment-1.jpg" />
     <Content Include="Images\Index\mining-equipment.jpg" />
     <Content Include="Images\Index\mining-icon.png" />
+    <Content Include="Images\Index\nav.png" />
     <Content Include="Images\Index\next.png" />
     <Content Include="Images\Index\noise.png" />
     <Content Include="Images\Index\prev.png" />
-    <Content Include="Images\Index\red-arrow - Copy.png" />
+    <Content Include="Images\Index\red-arrow.png" />
     <Content Include="Images\Index\right-arrow.png" />
     <Content Include="Images\Index\rocket.png" />
-    <Content Include="Images\Index\side-arrow - Copy.png" />
     <Content Include="Images\Index\side-arrow.png" />
     <Content Include="Images\Index\space-mining.jpg" />
     <Content Include="Images\Index\stumbleupon.png" />
@@ -701,6 +702,7 @@
     <Content Include="Content\sass\site\_trending.scss" />
     <Content Include="Content\sass\_common.scss" />
     <Content Include="Content\sass\site\_partialhelper.scss" />
+    <Content Include="Content\sass\site\_slicebox.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
@@ -1073,6 +1075,7 @@
     <Content Include="Scripts\jquery.autosize.js" />
     <Content Include="Scripts\jquery.bxslider.js" />
     <Content Include="Scripts\jquery.isotope.min.js" />
+    <Content Include="Scripts\jquery.slicebox.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -1128,9 +1131,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\IndexPartials\_Section2.cshtml" />
-    <Content Include="Views\Home\IndexPartials\_Section3.cshtml" />
-    <Content Include="Views\Home\IndexPartials\_Section4.cshtml" />
     <Content Include="Views\Home\Signup.cshtml" />
     <Content Include="Views\Shared\_html5shiv.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TimeSpan.cshtml" />
