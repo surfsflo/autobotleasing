@@ -1,6 +1,5 @@
 ﻿using ABLeasing.Web.App_Start;
 using ABLeasing.Web.Infrastructure;
-using Glimpse.Mvc.AlternateType;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
