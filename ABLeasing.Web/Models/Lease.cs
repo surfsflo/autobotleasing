@@ -17,17 +17,19 @@ namespace ABLeasing.Web.Models
 
         public string Name { get; set; }
 
-        [DataType(DataType.Currency)]
-        [Column(TypeName = "money")]
-        public decimal PrincipalAmount { get; set; }
+        public string Description {get; set; }
 
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
-        public decimal InterestRate { get; set; }
+        public decimal? PrincipalAmount { get; set; }
 
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
-        public decimal ProfitShareRate { get; set; }
+        public decimal? InterestRate { get; set; }
+
+        [DataType(DataType.Currency)]
+        [Column(TypeName = "money")]
+        public decimal? ProfitShareRate { get; set; }
 
 
         public virtual Equipment Equipment { get; set; }
