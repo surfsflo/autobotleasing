@@ -312,6 +312,14 @@
     <Compile Include="Migrations\201311140833282_whywhywhy.Designer.cs">
       <DependentUpon>201311140833282_whywhywhy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311141042578_suckgay.cs" />
+    <Compile Include="Migrations\201311141042578_suckgay.Designer.cs">
+      <DependentUpon>201311141042578_suckgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311141046376_pleasestop.cs" />
+    <Compile Include="Migrations\201311141046376_pleasestop.Designer.cs">
+      <DependentUpon>201311141046376_pleasestop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
@@ -1188,6 +1196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201311140833282_whywhywhy.resx">
       <DependentUpon>201311140833282_whywhywhy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311141042578_suckgay.resx">
+      <DependentUpon>201311141042578_suckgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311141046376_pleasestop.resx">
+      <DependentUpon>201311141046376_pleasestop.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
