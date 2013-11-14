@@ -1,40 +1,39 @@
-﻿
-<div id="index">
+﻿<div id="index">
 
 	<div class="row">
 		<div class="col-sm-12">
-            <!-- Banner -->
-            <div id="banner" class="clearfix container">
+			<!-- Banner -->
+			<div id="banner" class="clearfix container">
 
-                <ul id="sb-slider" class="sb-slider">
-                    <li>
-                        <img src="~/Images/Index/sample-pic1.jpg" alt="image1" />
-                        <div class="sb-description">
-                            <h3>Creative Lifesaver</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="~/Images/Index/sample-pic3.jpg" alt="image1" />
-                        <div class="sb-description">
-                            <h3>Honest Entertainer</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="~/Images/Index/sample-pic4.jpg" alt="image1" />
-                        <div class="sb-description">
-                            <h3>Brave Astronaut</h3>
-                        </div>
-                    </li>
-                </ul>
-                <div id="shadow" class="shadow"></div>
-            </div>
-            </div>
-        </div>
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<img src="~/Images/Index/sample-pic1.jpg" alt="image1" />
+						<div class="sb-description">
+							<h3>Creative Lifesaver</h3>
+						</div>
+					</li>
+					<li>
+						<img src="~/Images/Index/sample-pic3.jpg" alt="image1" />
+						<div class="sb-description">
+							<h3>Honest Entertainer</h3>
+						</div>
+					</li>
+					<li>
+						<img src="~/Images/Index/sample-pic4.jpg" alt="image1" />
+						<div class="sb-description">
+							<h3>Brave Astronaut</h3>
+						</div>
+					</li>
+				</ul>
+				<div id="shadow" class="shadow"></div>
+			</div>
+		</div>
+	</div>
 
 	@Html.Partial("IndexPartials/_HIW")
 
 	@Html.Partial("IndexPartials/_Featured")
-	
+
 	@Html.Partial("IndexPartials/_New")
 
 	@Html.Partial("IndexPartials/_Trending")
@@ -51,8 +50,7 @@
 	<script src="~/Scripts/jquery.bxslider.js"></script>
 	<script src="~/Scripts/jquery.validate.js"></script>
 	<script src="~/Scripts/init.js"></script>
-    <script src="~/Scripts/jquery.slicebox.js">
-
+	<script src="~/Scripts/jquery.slicebox.js"></script>    
 	<script type="text/javascript">
 		$(function () {
 			$('#modalId').delegate('form', 'submit', function () {
@@ -62,12 +60,12 @@
 					data: $(this).serialize(),
 					success: function (result) {
 						if (result.success) {
-						    $('#SUCK').modal("hide");
-						    if (result.url) {
-						        window.location = url;
-						    } else {
-						        window.location = '';
-						    }
+							$('#SUCK').modal("hide");
+							if (result.url) {
+								window.location = url;
+							} else {
+								window.location = '';
+							}
 						} else {
 							// We have the partial with errors in case of failure
 							// so all we have to do is update the DOM
@@ -77,48 +75,46 @@
 				});
 				return false;
 			});
+
+
+			var Page = (function () {
+
+				var $navArrows = $('#nav-arrows').hide(),
+				$shadow = $('#shadow').hide(),
+				slicebox = $('#sb-slider').slicebox({
+					autoplay: true,
+					onReady: function () {
+
+						$navArrows.show();
+						$shadow.show();
+
+					},
+					orientation: 'r',
+					cuboidsRandom: true,
+					disperseFactor: 30
+				}),
+
+				init = function () {
+
+					initEvents();
+				},
+				initEvents = function () {
+					// add navigation events
+					$navArrows.children(':first').on('click', function () {
+
+						slicebox.next();
+						return false;
+					});
+					$navArrows.children(':last').on('click', function () {
+
+						slicebox.previous();
+						return false;
+					});
+				};
+				return { init: init };
+			})();
+			Page.init();
+
 		});
 	</script>
-<script type="text/javascript">
-    $(function () {
-        'use strict';
-        var Page = (function () {
-
-            var $navArrows = $('#nav-arrows').hide(),
-            $shadow = $('#shadow').hide(),
-            slicebox = $('#sb-slider').slicebox({
-                autoplay: true,
-                onReady: function () {
-
-                    $navArrows.show();
-                    $shadow.show();
-
-                },
-                orientation: 'r',
-                cuboidsRandom: true,
-                disperseFactor: 30
-            }),
-
-            init = function () {
-
-                initEvents();
-            },
-            initEvents = function () {
-                // add navigation events
-                $navArrows.children(':first').on('click', function () {
-
-                    slicebox.next();
-                    return false;
-                });
-                $navArrows.children(':last').on('click', function () {
-
-                    slicebox.previous();
-                    return false;
-                });
-            };
-            return { init: init };
-        })();
-        Page.init();
-    });
-</script>
 }

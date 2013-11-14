@@ -2,12 +2,12 @@
 @model ABLeasing.Web.Models.Equipment
 
 @{
-    ViewBag.Title = "Equipment";
-    ViewBag.Header = "Create";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Equipment";
+	ViewBag.Header = "Create";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-@using (var form = Html.Bootstrap().Begin(new Form("Create", "Equipment").Type(FormType.Horizontal).LabelWidthSm(4)))
+@using (var form = Html.Bootstrap().Begin(new Form("Create", "Equipment").Type(FormType.Horizontal).LabelWidthSm(4).InputWidthSm(6)))
 {
 	@Html.AntiForgeryToken()
 
@@ -19,18 +19,19 @@
 	
 	@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
 	@form.FormGroup().TextBoxFor(m => m.Manufacturer)
-    @form.FormGroup().TextBoxFor(m => m.MonitorAttached)
+	@form.FormGroup().TextBoxFor(m => m.MonitorAttached)
 
 	@form.FormGroup().TextBoxFor(m => m.Model)
-    @form.FormGroup().TextBoxFor(m => m.PartNumber)
+	@form.FormGroup().TextBoxFor(m => m.PartNumber)
 
-    @form.FormGroup().TextBoxFor(m => m.RetailPrice)
-    @form.FormGroup().TextBoxFor(m => m.MaterialType)
-    @form.FormGroup().TextBoxFor(m => m.Category.Name)
-    
+	@form.FormGroup().TextBoxFor(m => m.RetailPrice)
+	@form.FormGroup().TextBoxFor(m => m.MaterialType)
+
+	@form.FormGroup().DropDownListFor(m => m.CategoryId, ViewBag.CategoryId as IEnumerable<SelectListItem>)
+	
 	@(form.FormGroup().CustomControls(
-        Html.Bootstrap().SubmitButton()
-        .Style(ButtonStyle.Primary).LoadingText("logging...")))
+		Html.Bootstrap().SubmitButton()
+		.Style(ButtonStyle.Primary).LoadingText("logging...")))
 
 }
 
