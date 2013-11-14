@@ -211,9 +211,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\T4MVCExtensions.3.6.5\lib\net40\T4MVCExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="TwitterBootstrapMVC, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TwitterBootstrapMVC, Version=3.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\TwitterBootstrapMVC.3.6.3\lib\net40\TwitterBootstrapMVC.dll</HintPath>
+      <HintPath>..\packages\TwitterBootstrapMVC.3.7.1\lib\net40\TwitterBootstrapMVC.dll</HintPath>
     </Reference>
     <Reference Include="WebActivator">
       <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
@@ -303,6 +303,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
+    <Compile Include="Migrations\201311140419220_nullable.cs" />
+    <Compile Include="Migrations\201311140419220_nullable.Designer.cs">
+      <DependentUpon>201311140419220_nullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311140711509_category-required.cs" />
+    <Compile Include="Migrations\201311140711509_category-required.Designer.cs">
+      <DependentUpon>201311140711509_category-required.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
@@ -1077,6 +1085,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\backgroundsize.htc" />
     <Content Include="Scripts\site\index-als.js" />
+    <Content Include="Scripts\site\val.js" />
     <Content Include="Scripts\validation.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1143,6 +1152,7 @@
     <Content Include="Views\OperatorsView\Index.cshtml" />
     <Content Include="Views\OperatorsView\LeaseApplication.cshtml" />
     <Content Include="Views\OperatorsView\LeaseDetails.cshtml" />
+    <Content Include="TwitterBootstrapMvcLicense.lic" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1156,6 +1166,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201311140419220_nullable.resx">
+      <DependentUpon>201311140419220_nullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311140711509_category-required.resx">
+      <DependentUpon>201311140711509_category-required.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

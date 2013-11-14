@@ -84,50 +84,74 @@ td.table-buttons a {
   padding: 3px 10px;
 }
 /* line 32, ../sass/_constants.scss */
-td.table-buttons .btn-group {
-  margin-left: 0;
-  margin-right: 9px;
+td.table-buttons .btn .caret {
+  margin-left: 5px;
 }
 
-/* line 38, ../sass/_constants.scss */
+/* line 37, ../sass/_constants.scss */
+.table > thead tr th.table-buttons {
+  text-align: right;
+  padding-right: 29px;
+}
+
+/* line 42, ../sass/_constants.scss */
+th {
+  font-weight: normal;
+}
+
+/* line 46, ../sass/_constants.scss */
 .panel-heading {
   font-size: 110%;
 }
 
-/* line 42, ../sass/_constants.scss */
+/* line 50, ../sass/_constants.scss */
 .fa {
   color: #3276b1;
 }
 
-/* line 46, ../sass/_constants.scss */
+/* line 54, ../sass/_constants.scss */
 .active .fa {
   color: white;
 }
 
-/* line 50, ../sass/_constants.scss */
+/* line 58, ../sass/_constants.scss */
 .btn-primary .fa {
   color: white;
 }
 
-/* line 54, ../sass/_constants.scss */
+/* line 62, ../sass/_constants.scss */
 label {
   font-weight: inherit;
 }
 
-/* line 58, ../sass/_constants.scss */
+/* line 66, ../sass/_constants.scss */
 .media-normal .media {
   margin-bottom: 10px;
 }
-/* line 60, ../sass/_constants.scss */
+/* line 68, ../sass/_constants.scss */
 .media-normal .media img {
   width: 140px;
 }
-/* line 64, ../sass/_constants.scss */
+/* line 72, ../sass/_constants.scss */
 .media-normal .media .media-body h4 {
   margin-top: 0;
 }
 
-/* line 70, ../sass/_constants.scss */
+/* line 79, ../sass/_constants.scss */
+.page-header.header-button {
+  padding-top: 15px;
+}
+/* line 81, ../sass/_constants.scss */
+.page-header.header-button h1 {
+  display: inline;
+}
+/* line 84, ../sass/_constants.scss */
+.page-header.header-button .btn {
+  float: right;
+  margin-bottom: 7px;
+}
+
+/* line 94, ../sass/_constants.scss */
 span.badge {
   margin-left: 7px;
   background-color: #3a87ad;
@@ -135,14 +159,14 @@ span.badge {
   vertical-align: middle;
 }
 
-/* line 77, ../sass/_constants.scss */
+/* line 101, ../sass/_constants.scss */
 .validation-summary-errors ul, #login-errors {
   padding-left: 0;
   list-style: none;
   color: #b94a48;
 }
 
-/* line 83, ../sass/_constants.scss */
+/* line 107, ../sass/_constants.scss */
 .field-validation-error {
   color: #b94a48;
   font-size: 80%;

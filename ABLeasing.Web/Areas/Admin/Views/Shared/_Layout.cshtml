@@ -58,20 +58,17 @@
             <div class="col-sm-9">
                 <div class="panel panel-default">
 
-                    <div class="page-header">
+                    <div class="page-header clearfix header-button">
+                        @RenderSection("sectionButton", required: false)
                         <h1>@ViewBag.Header</h1>
                     </div>
                     <div class="panel-body">
                         @RenderBody()
                     </div>
 
-
                 </div>
-
             </div>
-
         </div>
     </div>
-
 </body>
 </html>
