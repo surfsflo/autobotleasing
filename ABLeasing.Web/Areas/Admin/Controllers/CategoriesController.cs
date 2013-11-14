@@ -24,17 +24,6 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
             return PartialView(db.Categories.ToList());
         }
 
-        [GET("Details/{id}")]
-        public ActionResult Details(int id = 0)
-        {
-            Category category = db.Categories.Find(id);
-            if (category == null)
-            {
-                return HttpNotFound();
-            }
-            return PartialView(category);
-        }
-
         [GET("Create")]
         public ActionResult Create()
         {
