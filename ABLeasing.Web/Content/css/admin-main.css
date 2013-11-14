@@ -100,24 +100,34 @@ td.table-buttons .btn-group {
 }
 
 /* line 46, ../sass/_constants.scss */
+.active .fa {
+  color: white;
+}
+
+/* line 50, ../sass/_constants.scss */
+.btn-primary .fa {
+  color: white;
+}
+
+/* line 54, ../sass/_constants.scss */
 label {
   font-weight: inherit;
 }
 
-/* line 50, ../sass/_constants.scss */
+/* line 58, ../sass/_constants.scss */
 .media-normal .media {
   margin-bottom: 10px;
 }
-/* line 52, ../sass/_constants.scss */
+/* line 60, ../sass/_constants.scss */
 .media-normal .media img {
   width: 140px;
 }
-/* line 56, ../sass/_constants.scss */
+/* line 64, ../sass/_constants.scss */
 .media-normal .media .media-body h4 {
   margin-top: 0;
 }
 
-/* line 62, ../sass/_constants.scss */
+/* line 70, ../sass/_constants.scss */
 span.badge {
   margin-left: 7px;
   background-color: #3a87ad;
@@ -125,14 +135,14 @@ span.badge {
   vertical-align: middle;
 }
 
-/* line 69, ../sass/_constants.scss */
+/* line 77, ../sass/_constants.scss */
 .validation-summary-errors ul, #login-errors {
   padding-left: 0;
   list-style: none;
   color: #b94a48;
 }
 
-/* line 75, ../sass/_constants.scss */
+/* line 83, ../sass/_constants.scss */
 .field-validation-error {
   color: #b94a48;
   font-size: 80%;

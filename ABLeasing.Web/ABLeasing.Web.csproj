@@ -303,10 +303,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
-    <Compile Include="Migrations\201311140419220_nullable.cs" />
-    <Compile Include="Migrations\201311140419220_nullable.Designer.cs">
-      <DependentUpon>201311140419220_nullable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
@@ -328,9 +324,6 @@
     <Compile Include="Models\Transactions\ClientTransaction.cs" />
     <Compile Include="Models\Transactions\LeaseTransaction.cs" />
     <Compile Include="Models\Transactions\Transaction.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\DateTimeExtensions.cs" />
     <Compile Include="Utility\EnumDropDownList.cs" />
@@ -613,6 +606,7 @@
     <Content Include="Content\bootstrap\badges.less" />
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Content\sass\admin-main.scss" />
+    <Content Include="Content\sass\admin\_equipment.scss" />
     <None Include="Content\sass\main.scss" />
     <Content Include="Content\sass\_mixins.scss">
       <Compile>True</Compile>
@@ -687,13 +681,7 @@
     <Content Include="Content\sass\site\_new.scss" />
     <Content Include="Content\sass\site\_trending.scss" />
     <Content Include="Content\sass\_common.scss" />
-    <Content Include="obj\Debug\ABLeasing.Web.csproj.GenerateResource.Cache" />
-    <Content Include="obj\Debug\ABLeasing.Web.csprojResolveAssemblyReference.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="obj\Debug\ABLeasing.Web.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\ABLeasing.Web.dll" />
-    <Content Include="obj\Debug\ABLeasing.Web.pdb" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1155,14 +1143,11 @@
     <Content Include="Views\OperatorsView\Index.cshtml" />
     <Content Include="Views\OperatorsView\LeaseApplication.cshtml" />
     <Content Include="Views\OperatorsView\LeaseDetails.cshtml" />
-    <Content Include="TwitterBootstrapMvcLicense.lic" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Content\sass\admin\" />
     <Folder Include="Filters\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -1171,13 +1156,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201311140419220_nullable.resx">
-      <DependentUpon>201311140419220_nullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\ABLeasing.Web.Migrations.clients.resources" />
-    <EmbeddedResource Include="obj\Debug\ABLeasing.Web.Migrations.inher.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

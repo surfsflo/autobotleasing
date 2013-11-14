@@ -33,34 +33,6 @@
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
 
-
-
-                @*                    @using (var nav = Html.Bootstrap().Begin(new Nav().Class("navbar-nav")))
-                    {
-                        using (var dd = nav.BeginDropDown(new DropDown("Equipment")))
-                        {
-                            @dd.ActionLink("Categories", "Index", "Equipment")
-                        }
-                    }*@
-
-                @*                    <ul class="nav navbar-nav">
-
-                        <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                        </li>
-
-
-                        @Html.MenuLink()
-                    </ul>*@
                 <div class="navbar-form navbar-right">
                     @Html.Partial("_AdminLogin")
                 </div>
@@ -75,7 +47,7 @@
 
             <div class="col-sm-3">
                 <div class="well">
-                    @using (var nav = Html.Bootstrap().Begin(new Nav().Style(NavType.Pills).Stacked()))
+                    @using (var nav = Html.Bootstrap().Begin(new Nav().Style(NavType.Pills).Stacked().SetLinksActiveByController()))
                     {
                         @nav.ActionLink("Equipment", "Index", "Equipment").PrependIcon("fa fa-truck fa-fw")
                         @nav.ActionLink("Categories", "Index", "Categories").PrependIcon("fa fa-th-list fa-fw")
@@ -90,7 +62,7 @@
                         <h1>@ViewBag.Header</h1>
                     </div>
                     <div class="panel-body">
-                    @RenderBody()
+                        @RenderBody()
                     </div>
 
 

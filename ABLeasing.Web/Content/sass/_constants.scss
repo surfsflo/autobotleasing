@@ -26,12 +26,12 @@ $red-error: #b94a48;
 td.table-buttons {
   padding: 4px 12px 0 0 !important;
   a {
-    margin: 1px 0;
-    padding: 3px 10px;
+	margin: 1px 0;
+	padding: 3px 10px;
   }
   .btn-group {
-    margin-left: 0;
-    margin-right: 9px;
+	margin-left: 0;
+	margin-right: 9px;
   }
 }
 
@@ -41,6 +41,14 @@ td.table-buttons {
 
 .fa {
 	color: $color-blue;
+}
+
+.active .fa {
+	color: white;
+}
+
+.btn-primary .fa {
+	color: white;
 }
 
 label {
