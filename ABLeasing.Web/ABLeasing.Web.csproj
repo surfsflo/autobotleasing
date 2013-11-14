@@ -677,6 +677,9 @@
     <Content Include="Images\Index\red-arrow.png" />
     <Content Include="Images\Index\right-arrow.png" />
     <Content Include="Images\Index\rocket.png" />
+    <Content Include="Images\Index\sample-pic1.jpg" />
+    <Content Include="Images\Index\sample-pic3.jpg" />
+    <Content Include="Images\Index\sample-pic4.jpg" />
     <Content Include="Images\Index\side-arrow.png" />
     <Content Include="Images\Index\space-mining.jpg" />
     <Content Include="Images\Index\stumbleupon.png" />
