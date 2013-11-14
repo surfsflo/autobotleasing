@@ -77,18 +77,29 @@
                 <div class="well">
                     @using (var nav = Html.Bootstrap().Begin(new Nav().Style(NavType.Pills).Stacked()))
                     {
-                        @nav.ActionLink("Equipment", "Index", "Equipment")
-                        @nav.ActionLink("Categories", "Index", "Categories")
+                        @nav.ActionLink("Equipment", "Index", "Equipment").PrependIcon("fa fa-truck fa-fw")
+                        @nav.ActionLink("Categories", "Index", "Categories").PrependIcon("fa fa-th-list fa-fw")
                     }
                 </div>
 
             </div>
             <div class="col-sm-9">
-                @RenderBody()
+                <div class="panel panel-default">
+
+                    <div class="page-header">
+                        <h1>@ViewBag.Header</h1>
+                    </div>
+                    <div class="panel-body">
+                    @RenderBody()
+                    </div>
+
+
+                </div>
+
             </div>
 
         </div>
     </div>
-    @Html.Partial("../Account/_LoginModalPartial")
+
 </body>
 </html>
