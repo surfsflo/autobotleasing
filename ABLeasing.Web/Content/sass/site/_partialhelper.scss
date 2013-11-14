@@ -519,6 +519,10 @@ body:after {
  .copyright {
 	background: #0187a5 url('/Image/Index/copyright-top.png') repeat left top;
 	padding: 13px 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
  .copyright .bottomNav {
 	overflow: hidden;

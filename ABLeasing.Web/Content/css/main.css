@@ -1318,31 +1318,35 @@ body:after {
 .copyright {
   background: #0187a5 url("/Image/Index/copyright-top.png") repeat left top;
   padding: 13px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-/* line 523, ../sass/site/_partialhelper.scss */
+/* line 527, ../sass/site/_partialhelper.scss */
 .copyright .bottomNav {
   overflow: hidden;
 }
 
-/* line 526, ../sass/site/_partialhelper.scss */
+/* line 530, ../sass/site/_partialhelper.scss */
 .copyright .bottomNav ul li {
   border-right: 1px solid #ffffff;
   display: inline-block;
   padding: 0px 15px;
 }
 
-/* line 531, ../sass/site/_partialhelper.scss */
+/* line 535, ../sass/site/_partialhelper.scss */
 .copyright .bottomNav ul li:first-child {
   padding-left: 0;
 }
 
-/* line 534, ../sass/site/_partialhelper.scss */
+/* line 538, ../sass/site/_partialhelper.scss */
 .copyright .bottomNav ul li:last-child {
   border-right: none;
 }
 
-/* line 537, ../sass/site/_partialhelper.scss */
+/* line 541, ../sass/site/_partialhelper.scss */
 .copyright .bottomNav ul li a {
   font-size: 15px;
   float: left;
@@ -1351,24 +1355,24 @@ body:after {
   line-height: 16px;
 }
 
-/* line 544, ../sass/site/_partialhelper.scss */
+/* line 548, ../sass/site/_partialhelper.scss */
 .copyright .bottomNav ul li a:hover {
   color: #0187a5;
 }
 
-/* line 547, ../sass/site/_partialhelper.scss */
+/* line 551, ../sass/site/_partialhelper.scss */
 .copyright p {
   color: #fff;
   margin: 0;
 }
 
-/* line 551, ../sass/site/_partialhelper.scss */
+/* line 555, ../sass/site/_partialhelper.scss */
 .copyright p a {
   color: #fff;
   font-size: 14px;
 }
 
-/* line 555, ../sass/site/_partialhelper.scss */
+/* line 559, ../sass/site/_partialhelper.scss */
 .copyright p a:hover {
   color: #0187a5;
 }
