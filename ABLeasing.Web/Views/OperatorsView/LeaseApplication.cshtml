@@ -16,8 +16,13 @@
                     {
                         @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
                         @form.FormGroup().TextAreaFor(m => m.Description)
-                        //@form.FormGroup().DropDownListFor(m => m.Equipment);
                         
+                        var db = Database.Open("DefaultConnection");
+                        var listItems = new List<string>();
+                        foreach(var row in db.Query("SELECT * FROM Category")) {
+                          listItems.Add(row.Name);
+                        }
+                    @form.FormGroup().DropDownListFor(m => m.Equipment,new SelectList(listItems));
                         
                         //Model.OperatorId = WebSecurity.CurrentUserId;
                         //Model.Operator = (Operator)User.Identity;//(Operator)User.Identity;

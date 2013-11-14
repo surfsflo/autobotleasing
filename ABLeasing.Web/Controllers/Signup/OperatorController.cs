@@ -46,7 +46,7 @@ namespace ABLeasing.Web.Controllers.Signup
                 db.Operators.Add(viewModel.Operator);
                 db.SaveChanges();
 
-                return RedirectToAction("Index", "ClientsView");
+                return RedirectToAction("Index", "OperatorsView");
             }
 
             return View(viewModel);

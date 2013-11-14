@@ -17,7 +17,7 @@ namespace ABLeasing.Web.Models
 
         public string Name { get; set; }
 
-        //public string Description {get; set; }
+        public string Description {get; set; }
 
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
