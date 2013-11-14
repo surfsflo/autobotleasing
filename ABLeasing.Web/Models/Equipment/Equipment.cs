@@ -13,14 +13,16 @@ namespace ABLeasing.Web.Models
         public int EquipmentId { get; set; }
 
         public string Name { get; set; }
-        public int Rating { get; set; }
+        public int? Rating { get; set; }
+
+        [UIHint("Enum")]
         public AttachedMonitorState MonitorAttached { get; set; }
 
         public string Manufacturer { get; set; }
         public string Model { get; set; }
         public string PartNumber { get; set; }
         public decimal RetailPrice { get; set; }
-        public decimal PurchasePrice { get; set; }
+        public decimal? PurchasePrice { get; set; }
 
         public string MaterialType { get; set; }
 
