@@ -48,6 +48,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         public ActionResult Edit(int id = 0)
         {
             Category category = db.Categories.Find(id);
+
             if (category == null)
             {
                 return HttpNotFound();
@@ -57,7 +58,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
 
         [POST("Edit/{id}")]
         public ActionResult Edit(
-            [Bind(Include = "Description,Name,CategoryID")]Category category)
+            [Bind(Include = "Description, Name, CategoryID, Created")]Category category)
         {
             if (ModelState.IsValid)
             {

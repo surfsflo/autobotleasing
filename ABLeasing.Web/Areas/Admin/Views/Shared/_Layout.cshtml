@@ -43,32 +43,43 @@
 
     <div class="container main">
 
-        <div class="row">
+        @if (Request.IsAuthenticated) {
+            <div class="row">
 
-            <div class="col-sm-3">
-                <div class="well">
-                    @using (var nav = Html.Bootstrap().Begin(new Nav().Style(NavType.Pills).Stacked().SetLinksActiveByController()))
-                    {
-                        @nav.ActionLink("Equipment", "Index", "Equipment").PrependIcon("fa fa-truck fa-fw")
-                        @nav.ActionLink("Categories", "Index", "Categories").PrependIcon("fa fa-th-list fa-fw")
-                    }
-                </div>
-
-            </div>
-            <div class="col-sm-9">
-                <div class="panel panel-default">
-
-                    <div class="page-header clearfix header-button">
-                        @RenderSection("sectionButton", required: false)
-                        <h1>@ViewBag.Header</h1>
-                    </div>
-                    <div class="panel-body">
-                        @RenderBody()
+                <div class="col-sm-3">
+                    <div class="well">
+                        @using (var nav = Html.Bootstrap().Begin(new Nav().Style(NavType.Pills).Stacked().SetLinksActiveByController()))
+                        {
+                            @nav.ActionLink("Equipment", "Index", "Equipment").PrependIcon("fa fa-truck fa-fw")
+                            @nav.ActionLink("Categories", "Index", "Categories").PrependIcon("fa fa-th-list fa-fw")
+                        }
                     </div>
 
                 </div>
+                <div class="col-sm-9">
+                    <div class="panel panel-default">
+
+                        <div class="page-header clearfix header-button">
+                            @RenderSection("sectionButton", required: false)
+                            <h1>@ViewBag.Header</h1>
+                        </div>
+                        <div class="panel-body">
+                            @RenderBody()
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
+
+        } else { 
+            <div class="row">
+                <div class="col-sm-12">
+                    @RenderBody()
+                </div>
+            </div>
+        }
+
+
     </div>
 </body>
 </html>

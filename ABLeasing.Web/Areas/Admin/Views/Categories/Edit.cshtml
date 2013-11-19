@@ -18,7 +18,7 @@
             @form.FormGroup().TextBoxFor(x => x.Name)
             @form.FormGroup().TextAreaFor(x => x.Description)
             @Html.HiddenFor(model => model.CategoryID)
-            
+            @Html.HiddenFor(model => model.Created)            
 
             @Html.Bootstrap().SubmitButton().Text("Save").Style(ButtonStyle.Primary)
         }

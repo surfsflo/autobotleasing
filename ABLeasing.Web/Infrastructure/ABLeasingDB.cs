@@ -63,6 +63,10 @@ namespace ABLeasing.Web.Infrastructure
                 {
                     entityBase.Created = currentTime;
                 }
+                else
+                {
+                    entityBase.Created = entityBase.Created;
+                }
 
                 entityBase.Updated = currentTime;
             }
