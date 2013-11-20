@@ -13,7 +13,7 @@
 <div class="row">
     <div class="col-sm-12">
 
-        @if (Model.Count() < 1)
+        @if (!Model.Any())
         {
             using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Info)))
             {
@@ -44,10 +44,59 @@
                                 @Html.DisplayNameFor(model => model.MaterialType)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Category.Name)
+                                Category
+                            </th>
+                            <th class="table-buttons">
+                                Actions
                             </th>
                         </tr>
                     </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Manufacturer)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Model)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PartNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RetailPrice)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MaterialType)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Category.Name)
+                                </td>
+                                
+                                <td class="table-buttons">
+
+                                    <div class="btn-group pull-right">
+                                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                            Actions<span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                @Html.Bootstrap().ActionLink("Edit", "Edit").PrependIcon("fa fa-edit fa-fw")
+                                            </li>
+                                            <li>
+                                                @Html.Bootstrap().ActionLink("Delete", "Delete").PrependIcon("fa fa-power-off fa-fw")
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
         

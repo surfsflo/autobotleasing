@@ -25,7 +25,7 @@
 
 	@form.FormGroup().TextBoxFor(m => m.Model)
 
-	@form.FormGroup().TextBoxFor(m => m.RetailPrice)
+	@form.FormGroup().TextBoxFor(m => m.RetailPrice).Prepend("$")
 	@form.FormGroup().DropDownListFor(m => m.CategoryId, ViewBag.CategoryId as IEnumerable<SelectListItem>)
 
 	@form.FormGroup().TextBoxFor(m => m.MaterialType)

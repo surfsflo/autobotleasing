@@ -17,15 +17,13 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
     [RoutePrefix("Equipment")]
     public class EquipmentController : Controller
     {
-        private ABLeasingDB db = new ABLeasingDB();
+        private readonly ABLeasingDB _db = new ABLeasingDB();
 
         [GET("")]
         public ActionResult Index()
         {
-
-            var sa =
-                from s in db.Equipment
-                select s;
+            var sa = from s in _db.Equipment
+                     select s;
 
             var equipment = sa.ToList();
             return View(equipment);
@@ -34,7 +32,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [GET("Details/{id}")]
         public ActionResult Details(int id = 0)
         {
-            Equipment equipment = db.Equipment.Find(id);
+            Equipment equipment = _db.Equipment.Find(id);
             if (equipment == null)
             {
                 return HttpNotFound();
@@ -45,7 +43,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [GET("Create")]
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryID", "Name");
+            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryID", "Name");
             return View();
         }
 
@@ -54,28 +52,28 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Equipment.Add(equipment);
-                db.SaveChanges();
+                _db.Equipment.Add(equipment);
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryId = new SelectList((IEnumerable<dynamic>)db.Categories, "CategoryID", "Name", equipment.CategoryId);
-            ViewBag.EquipmentId = new SelectList(db.Leases, "LeaseId", "Name", equipment.EquipmentId);
-            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "CellProvider", equipment.LocationId);
+            ViewBag.CategoryId = new SelectList((IEnumerable<dynamic>)_db.Categories, "CategoryID", "Name", equipment.CategoryId);
+            ViewBag.EquipmentId = new SelectList(_db.Leases, "LeaseId", "Name", equipment.EquipmentId);
+            ViewBag.LocationId = new SelectList(_db.Locations, "LocationId", "CellProvider", equipment.LocationId);
             return View(equipment);
         }
 
         [GET("Edit/{id}")]
         public ActionResult Edit(int id = 0)
         {
-            Equipment equipment = db.Equipment.Find(id);
+            Equipment equipment = _db.Equipment.Find(id);
             if (equipment == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryID", "Name", equipment.CategoryId);
-            ViewBag.EquipmentId = new SelectList(db.Leases, "LeaseId", "Name", equipment.EquipmentId);
-            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "CellProvider", equipment.LocationId);
+            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryID", "Name", equipment.CategoryId);
+            ViewBag.EquipmentId = new SelectList(_db.Leases, "LeaseId", "Name", equipment.EquipmentId);
+            ViewBag.LocationId = new SelectList(_db.Locations, "LocationId", "CellProvider", equipment.LocationId);
             return View(equipment);
         }
 
@@ -84,20 +82,20 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(equipment).State = EntityState.Modified;
-                db.SaveChanges();
+                _db.Entry(equipment).State = EntityState.Modified;
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryID", "Name", equipment.CategoryId);
-            ViewBag.EquipmentId = new SelectList(db.Leases, "LeaseId", "Name", equipment.EquipmentId);
-            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "CellProvider", equipment.LocationId);
+            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryID", "Name", equipment.CategoryId);
+            ViewBag.EquipmentId = new SelectList(_db.Leases, "LeaseId", "Name", equipment.EquipmentId);
+            ViewBag.LocationId = new SelectList(_db.Locations, "LocationId", "CellProvider", equipment.LocationId);
             return View(equipment);
         }
 
         [GET("Delete/{id}")]
         public ActionResult Delete(int id = 0)
         {
-            Equipment equipment = db.Equipment.Find(id);
+            Equipment equipment = _db.Equipment.Find(id);
             if (equipment == null)
             {
                 return HttpNotFound();
@@ -108,15 +106,15 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [POST("Delete/{id}")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Equipment equipment = db.Equipment.Find(id);
-            db.Equipment.Remove(equipment);
-            db.SaveChanges();
+            Equipment equipment = _db.Equipment.Find(id);
+            _db.Equipment.Remove(equipment);
+            _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            _db.Dispose();
             base.Dispose(disposing);
         }
     }

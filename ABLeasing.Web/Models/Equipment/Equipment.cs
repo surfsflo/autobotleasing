@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -31,8 +32,13 @@ namespace ABLeasing.Web.Models
         public string PartNumber { get; set; }
 
         [Required]
+        [DataType(DataType.Currency)]
+        [Column(TypeName = "money")]
+        [DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
         public decimal RetailPrice { get; set; }
 
+        [DataType(DataType.Currency)]
+        [Column(TypeName = "money")]
         public decimal? PurchasePrice { get; set; }
 
         public string MaterialType { get; set; }
