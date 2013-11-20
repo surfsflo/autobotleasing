@@ -5,7 +5,7 @@
     @modal.Header("Member Login")
     using (modal.BeginBody())
     {
-        using (var form = Html.Bootstrap().Begin(new Form("Login", "Account").Id("SUCK").Type(FormType.Horizontal).LabelWidthSm(4)))
+        using (var form = Html.Bootstrap().Begin(new Form("Login", "Account").Id("login-modal").Type(FormType.Horizontal).LabelWidthSm(4)))
         {
             @Html.AntiForgeryToken()
 

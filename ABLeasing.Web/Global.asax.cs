@@ -24,7 +24,8 @@ namespace ABLeasing.Web
 
             var razorEngine = ViewEngines.Engines.OfType<RazorViewEngine>().First();
             razorEngine.ViewLocationFormats = razorEngine.ViewLocationFormats.Concat(new string[] { 
-                "~/Views/Signup/{1}/{0}.cshtml"
+                "~/Views/Signup/{1}/{0}.cshtml",
+                "~/Areas/Admin/Users/{1}/{0}.cshtml"
             }).ToArray();
 
             Bootstrap.Configure();

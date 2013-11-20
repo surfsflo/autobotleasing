@@ -22,7 +22,9 @@ namespace ABLeasing.Web.Models.Accounts
         [Display(Name = "Full Name")]
         public string Name { get; set; }
 
+        [Display(Name = "Current Status")]
         public bool? Status { get; set; }
+
         public Contact Contact1 { get; set; }
         public Contact Contact2 { get; set; }
 

@@ -5,13 +5,13 @@ namespace ABLeasing.Web.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class whywhywhy : IMigrationMetadata
+    public sealed partial class StaffNullDateHired : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(whywhywhy));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(StaffNullDateHired));
         
         string IMigrationMetadata.Id
         {
-            get { return "201311140833282_whywhywhy"; }
+            get { return "201311201513058_StaffNullDateHired"; }
         }
         
         string IMigrationMetadata.Source

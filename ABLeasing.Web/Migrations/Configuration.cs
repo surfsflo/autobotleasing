@@ -64,7 +64,13 @@ namespace ABLeasing.Web.Migrations
             {
                 if (membership.GetUser(admin.Email, false) == null)
                 {
-                    WebSecurity.CreateUserAndAccount(admin.Email, "123456", new { Discriminator = "Staff", Name = admin.Name });
+                    WebSecurity.CreateUserAndAccount(admin.Email, "123456", new
+                    {
+                        Discriminator = "Staff",
+                        Name = admin.Name,
+                        SRole = StaffRole.Admin,
+                        SStatus = StaffStatus.Active
+                    });
                 }
                 if (!roles.GetRolesForUser(admin.Email).Contains(ADMIN))
                 {

@@ -5,13 +5,13 @@ namespace ABLeasing.Web.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class suckgay : IMigrationMetadata
+    public sealed partial class fixingerrors : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(suckgay));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(fixingerrors));
         
         string IMigrationMetadata.Id
         {
-            get { return "201311141042578_suckgay"; }
+            get { return "201311201510002_fixing-errors"; }
         }
         
         string IMigrationMetadata.Source

@@ -5,18 +5,18 @@ namespace ABLeasing.Web.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class notsure : IMigrationMetadata
+    public sealed partial class FixingAnotherError : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(notsure));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FixingAnotherError));
         
         string IMigrationMetadata.Id
         {
-            get { return "201311200932474_notsure"; }
+            get { return "201311201511584_FixingAnotherError"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return null; }
+            get { return Resources.GetString("Source"); }
         }
         
         string IMigrationMetadata.Target

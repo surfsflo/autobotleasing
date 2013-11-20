@@ -252,3 +252,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #4D4D4D;
   font-size: 26px;
 }
+
+/* line 3, ../sass/admin/_nav.scss */
+.side-nav .nav .nav > li > a {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 42px;
+  font-size: 90%;
+}

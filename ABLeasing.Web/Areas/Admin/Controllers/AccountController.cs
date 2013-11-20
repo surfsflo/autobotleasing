@@ -31,7 +31,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [POST("login")]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
-            Debug.WriteLine("My debug string here");
+
             if (ModelState.IsValid && WebSecurity.Login(model.Email, model.Password, persistCookie: model.RememberMe))
             {
                 var roles = (SimpleRoleProvider)Roles.Provider;
