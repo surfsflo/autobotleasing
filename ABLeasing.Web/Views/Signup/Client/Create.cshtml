@@ -12,30 +12,53 @@
             <div class="panel panel-info">
                 <div class="panel-heading text-center">Client Signup</div>
                 <div class="panel-body">
+                    
 
-
-                    @using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
+                    @using (var form = Html.Bootstrap().Begin(new Form()))
                     {
-                        @form.FormGroup().TextBoxFor(m => m.Client.Name).AutoFocus()
-                        @form.FormGroup().TextBoxFor(m => m.Client.Email)
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="panel panel-default no-border">
+                                    <div class="panel-heading">
+                                        General Info
+                                    </div>
+                                    <div class="panel-body">
+                                        @form.FormGroup().TextBoxFor(m => m.Client.Name).AutoFocus()
+                                        @form.FormGroup().TextBoxFor(m => m.Client.Email)
+                                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.PhoneNumber)
+                                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Alias)
+                                        @form.FormGroup().PasswordFor(m => m.RegisterModel.Password)
+                                        @form.FormGroup().PasswordFor(m => m.RegisterModel.ConfirmPassword)
 
-                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.PhoneNumber)
-                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Alias)
-                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Line1)
-                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Line2)
-                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Line3)
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="col-sm-6">
+                                <div class="panel panel-default no-border">
+                                    <div class="panel-heading">
+                                        Address
+                                    </div>
+                                    <div class="panel-body">
+                                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Line1)
+                                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Line2)
+                                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Line3)
 
-                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Country)
-                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Postal)
+                                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Country)
+                                        @form.FormGroup().TextBoxFor(m => m.Client.Contact1.Postal)
+                                    </div>
+                                </div>
+                            </div>                     
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                @(form.FormGroup().CustomControls(
+                                        Html.Bootstrap().SubmitButton().Class("pull-right")
+                                            .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
+                            </div>  
+                        </div>
+                        }    
 
-                        @form.FormGroup().PasswordFor(m => m.RegisterModel.Password)
-                        @form.FormGroup().PasswordFor(m => m.RegisterModel.ConfirmPassword)
-
-                        @(form.FormGroup().CustomControls(
-                            Html.Bootstrap().SubmitButton()
-                            .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
-
-                    }
 
 
                 </div>

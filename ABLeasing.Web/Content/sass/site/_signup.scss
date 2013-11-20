@@ -4,7 +4,21 @@
 #signup {
 	.col-sm-2 {
 		text-align: center;
+	}
+}
 
+#user-signup {
+	
+	.no-border {
+		border-color: white;
+		margin-bottom: 0;
+		@include box-shadow(white 0 0 0);
+		.panel-heading {
+			border-color: #f8f8f8;
+		}
+		.panel-body {
+			padding: 15px 5px;
+		}
 	}
 
 }

@@ -339,6 +339,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   text-align: center;
 }
 
+/* line 12, ../sass/site/_signup.scss */
+#user-signup .no-border {
+  border-color: white;
+  margin-bottom: 0;
+  -webkit-box-shadow: white 0 0 0;
+  -moz-box-shadow: white 0 0 0;
+  box-shadow: white 0 0 0;
+}
+/* line 16, ../sass/site/_signup.scss */
+#user-signup .no-border .panel-heading {
+  border-color: #f8f8f8;
+}
+/* line 19, ../sass/site/_signup.scss */
+#user-signup .no-border .panel-body {
+  padding: 15px 5px;
+}
+
 /* line 1, ../sass/site/_featured.scss */
 #featured {
   background: #3e4d5c url("/Images/Index/noise.png") no-repeat 50% 50%;
