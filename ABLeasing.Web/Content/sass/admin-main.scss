@@ -17,6 +17,13 @@
 	}
 }
 
+@media (min-width: 1200px) and (min-width: 992px) and (min-width: 768px) {
+  .container {
+	max-width: none;
+	width: inherit;
+  }
+}
+
 
 
 @import "admin/nav";

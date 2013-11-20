@@ -291,17 +291,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
-    <Compile Include="Migrations\201311201510002_fixing-errors.cs" />
-    <Compile Include="Migrations\201311201510002_fixing-errors.Designer.cs">
-      <DependentUpon>201311201510002_fixing-errors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311201511584_FixingAnotherError.cs" />
-    <Compile Include="Migrations\201311201511584_FixingAnotherError.Designer.cs">
-      <DependentUpon>201311201511584_FixingAnotherError.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311201513058_StaffNullDateHired.cs" />
-    <Compile Include="Migrations\201311201513058_StaffNullDateHired.Designer.cs">
-      <DependentUpon>201311201513058_StaffNullDateHired.cs</DependentUpon>
+    <Compile Include="Migrations\201311201532140_ClientModelFixes.cs" />
+    <Compile Include="Migrations\201311201532140_ClientModelFixes.Designer.cs">
+      <DependentUpon>201311201532140_ClientModelFixes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
@@ -1191,14 +1183,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201311201510002_fixing-errors.resx">
-      <DependentUpon>201311201510002_fixing-errors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311201511584_FixingAnotherError.resx">
-      <DependentUpon>201311201511584_FixingAnotherError.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311201513058_StaffNullDateHired.resx">
-      <DependentUpon>201311201513058_StaffNullDateHired.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201311201532140_ClientModelFixes.resx">
+      <DependentUpon>201311201532140_ClientModelFixes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

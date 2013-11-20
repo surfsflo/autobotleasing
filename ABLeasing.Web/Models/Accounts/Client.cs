@@ -13,13 +13,13 @@ namespace ABLeasing.Web.Models.Accounts
 
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
-        public decimal DepositAmount { get; set; }
+        public decimal? DepositAmount { get; set; }
 
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
-        public decimal PeriodicDepositAmount { get; set; }
+        public decimal? PeriodicDepositAmount { get; set; }
 
         public string Frequency { get; set; }
-        public bool AutoPay { get; set; }
+        public bool? AutoPay { get; set; }
     }
 }

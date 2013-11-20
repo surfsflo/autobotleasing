@@ -1,6 +1,15 @@
 
 @import "common";
 
+
+@media (min-width: 1200px) and (min-width: 992px) and (min-width: 768px) {
+  .container.front {
+	max-width: none;
+	width: inherit;
+  }
+}
+
+
 // here is where we import all of our css pages that map to visibility
 
 @import "site/index";

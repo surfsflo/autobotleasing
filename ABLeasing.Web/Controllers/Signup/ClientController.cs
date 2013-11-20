@@ -35,7 +35,9 @@ namespace ABLeasing.Web.Controllers.Signup
             {
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password, new { Discriminator = "Client" });
+                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password,
+                        new { Discriminator = "Client" }
+                        );
                     WebSecurity.Login(viewModel.Client.Email, viewModel.RegisterModel.Password);
 
                 }
@@ -43,8 +45,8 @@ namespace ABLeasing.Web.Controllers.Signup
                 {
                     ModelState.AddModelError("", AccountController.ErrorCodeToString(e.StatusCode));
                 }
-
-                db.Clients.Add(viewModel.Client);
+                db.Entry(viewModel.Client).State = EntityState.Modified;
+                //db.Clients.Add(viewModel.Client);
                 db.SaveChanges();
 
                 return RedirectToAction("Index", "ClientsView");

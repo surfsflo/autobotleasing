@@ -1,63 +1,40 @@
 ﻿@model IEnumerable<ABLeasing.Web.Models.Accounts.Staff>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Staff";
+    ViewBag.Header = "Staff List";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DateHired)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Created)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Updated)
-        </th>
-        <th></th>
-    </tr>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(m => m.Email)</th>
+                        <th>@Html.DisplayNameFor(m => m.Name)</th>
+                        <th>@Html.DisplayNameFor(m => m.SStatus)</th>
+                        <th>@Html.DisplayNameFor(m => m.SRole)</th>
+                        <th>@Html.DisplayNameFor(m => m.DateHired)</th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateHired)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Created)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Updated)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UserId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UserId })
-        </td>
-    </tr>
-}
-
-</table>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(m => item.Email)</td>
+                            <td>@Html.DisplayFor(m => item.Name)</td>
+                            <td>@Html.DisplayFor(m => item.SStatus)</td>
+                            <td>@Html.DisplayFor(m => item.SRole)</td>
+                            <td>@Html.DisplayFor(m => item.DateHired)</td>
+                        </tr>
+                    }
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

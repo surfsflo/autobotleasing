@@ -234,13 +234,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 300;
 }
 
-@media (min-width: 1200px) and (min-width: 992px) and (min-width: 768px) {
-  /* line 45, ../sass/_common.scss */
-  .container {
-    max-width: none;
-    width: inherit;
-  }
-}
 /* line 4, ../sass/admin-main.scss */
 .page-header {
   margin: 0 15px;
@@ -253,6 +246,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-size: 26px;
 }
 
+@media (min-width: 1200px) and (min-width: 992px) and (min-width: 768px) {
+  /* line 21, ../sass/admin-main.scss */
+  .container {
+    max-width: none;
+    width: inherit;
+  }
+}
 /* line 3, ../sass/admin/_nav.scss */
 .side-nav .nav .nav > li > a {
   padding-top: 3px;

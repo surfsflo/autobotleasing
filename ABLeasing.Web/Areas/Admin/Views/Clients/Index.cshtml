@@ -1,81 +1,42 @@
 ﻿@model IEnumerable<ABLeasing.Web.Models.Accounts.Client>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Client";
+    ViewBag.Header = "Client List";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DepositAmount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PeriodicDepositAmount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Frequency)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AutoPay)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Created)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Updated)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DepositAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PeriodicDepositAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Frequency)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AutoPay)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Created)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Updated)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UserId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UserId })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(m => m.Email)</th>
+                        <th>@Html.DisplayNameFor(m => m.Name)</th>
+                        <th>@Html.DisplayNameFor(m => m.DepositAmount)</th>
+                        <th>@Html.DisplayNameFor(m => m.PeriodicDepositAmount)</th>
+                        <th>@Html.DisplayNameFor(m => m.Frequency)</th>
+                        <th>@Html.DisplayNameFor(m => m.AutoPay)</th>
+                        <th>@Html.DisplayNameFor(m => m.Status)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(m => item.Email)</td>
+                            <td>@Html.DisplayFor(m => item.Name)</td>
+                            <td>@Html.DisplayFor(m => item.DepositAmount)</td>
+                            <td>@Html.DisplayFor(m => item.PeriodicDepositAmount)</td>
+                            <td>@Html.DisplayFor(m => item.AutoPay)</td>
+                            <td>@Html.DisplayFor(m => item.Status)</td>
+                        </tr>
+                    }
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

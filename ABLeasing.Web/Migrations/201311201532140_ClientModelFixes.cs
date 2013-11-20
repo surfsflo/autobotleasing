@@ -2,8 +2,8 @@ namespace ABLeasing.Web.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
-    public partial class fixingerrors : DbMigration
+
+    public partial class ClientModelFixes : DbMigration
     {
         public override void Up()
         {
@@ -16,7 +16,7 @@ namespace ABLeasing.Web.Migrations
             AlterColumn("dbo.Equipment", "ServiceContactId", c => c.Int());
             AlterColumn("dbo.Equipment", "SupplierContactId", c => c.Int());
         }
-        
+
         public override void Down()
         {
             AlterColumn("dbo.Equipment", "SupplierContactID", c => c.Int());
