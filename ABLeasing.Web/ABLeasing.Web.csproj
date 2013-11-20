@@ -555,7 +555,6 @@
     <Content Include="Areas\Admin\Views\Equipment\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Equipment\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Equipment\Delete.cshtml" />
-    <None Include="Areas\Admin\Controllers\balls.sass" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>

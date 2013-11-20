@@ -1,85 +1,89 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>@ViewBag.Title - Admin</title>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width" />
+	<meta charset="utf-8" />
+	<title>@ViewBag.Title - Admin</title>
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width" />
 
-    @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/Scripts/bootstrap")
+	@Scripts.Render("~/bundles/modernizr")
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/Scripts/bootstrap")
+	
+	@Scripts.Render("~/bundles/jqueryval")
 
-    @Styles.Render("~/Content/vendor")
-    @Styles.Render("~/Content/admin")
+	<script src="~/Scripts/site/val.js"></script>
 
-    @RenderSection("scripts", required: false)
-    @Html.Partial("_html5shiv")
+	@Styles.Render("~/Content/vendor")
+	@Styles.Render("~/Content/admin")
+
+	@RenderSection("scripts", required: false)
+	@Html.Partial("_html5shiv")
 
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-target="#navbar-collapse" data-toggle="collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">YourMCo Admin Coolness</a>
-            </div>
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-target="#navbar-collapse" data-toggle="collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">YourMCo Admin Coolness</a>
+			</div>
 
-            <div class="collapse navbar-collapse" id="navbar-collapse">
+			<div class="collapse navbar-collapse" id="navbar-collapse">
 
-                <div class="navbar-form navbar-right">
-                    @Html.Partial("_AdminLogin")
-                </div>
-            </div>
-        </div>
+				<div class="navbar-form navbar-right">
+					@Html.Partial("_AdminLogin")
+				</div>
+			</div>
+		</div>
 
-    </nav>
+	</nav>
 
-    <div class="container main">
+	<div class="container main">
 
-        @if (Request.IsAuthenticated) {
-            <div class="row">
+		@if (Request.IsAuthenticated) {
+			<div class="row">
 
-                <div class="col-sm-3">
-                    <div class="well">
-                        @using (var nav = Html.Bootstrap().Begin(new Nav().Style(NavType.Pills).Stacked().SetLinksActiveByController()))
-                        {
-                            @nav.ActionLink("Equipment", "Index", "Equipment").PrependIcon("fa fa-truck fa-fw")
-                            @nav.ActionLink("Categories", "Index", "Categories").PrependIcon("fa fa-th-list fa-fw")
-                        }
-                    </div>
+				<div class="col-sm-3">
+					<div class="well">
+						@using (var nav = Html.Bootstrap().Begin(new Nav().Style(NavType.Pills).Stacked().SetLinksActiveByController()))
+						{
+							@nav.ActionLink("Equipment", "Index", "Equipment").PrependIcon("fa fa-truck fa-fw")
+							@nav.ActionLink("Categories", "Index", "Categories").PrependIcon("fa fa-th-list fa-fw")
+						}
+					</div>
 
-                </div>
-                <div class="col-sm-9">
-                    <div class="panel panel-default">
+				</div>
+				<div class="col-sm-9">
+					<div class="panel panel-default">
 
-                        <div class="page-header clearfix header-button">
-                            @RenderSection("sectionButton", required: false)
-                            <h1>@ViewBag.Header</h1>
-                        </div>
-                        <div class="panel-body">
-                            @RenderBody()
-                        </div>
+						<div class="page-header clearfix header-button">
+							@RenderSection("sectionButton", required: false)
+							<h1>@ViewBag.Header</h1>
+						</div>
+						<div class="panel-body">
+							@RenderBody()
+						</div>
 
-                    </div>
-                </div>
-            </div>
+					</div>
+				</div>
+			</div>
 
-        } else { 
-            <div class="row">
-                <div class="col-sm-12">
-                    @RenderBody()
-                </div>
-            </div>
-        }
+		} else { 
+			<div class="row">
+				<div class="col-sm-12">
+					@RenderBody()
+				</div>
+			</div>
+		}
 
 
-    </div>
+	</div>
 </body>
 </html>

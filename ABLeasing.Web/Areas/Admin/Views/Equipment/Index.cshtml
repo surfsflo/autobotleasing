@@ -32,6 +32,9 @@
                                 @Html.DisplayNameFor(model => model.Manufacturer)
                             </th>
                             <th>
+                                @Html.DisplayNameFor(model => model.MonitorAttached)
+                            </th>
+                            <th>
                                 @Html.DisplayNameFor(model => model.Model)
                             </th>
                             <th>
@@ -62,6 +65,9 @@
                                     @Html.DisplayFor(modelItem => item.Manufacturer)
                                 </td>
                                 <td>
+                                    @Html.DisplayFor(modelItem => item.MonitorAttached)
+                                </td>
+                                <td>
                                     @Html.DisplayFor(modelItem => item.Model)
                                 </td>
                                 <td>
@@ -85,10 +91,13 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                @Html.Bootstrap().ActionLink("Edit", "Edit").PrependIcon("fa fa-edit fa-fw")
+                                                @Html.Bootstrap().ActionLink("Edit", "Edit").RouteValues(new { id = item.EquipmentId }).PrependIcon("fa fa-edit fa-fw")
                                             </li>
                                             <li>
-                                                @Html.Bootstrap().ActionLink("Delete", "Delete").PrependIcon("fa fa-power-off fa-fw")
+                                                <a class="open-modal" data-modalid="action-modal" data-url="@Url.Action("Delete", new { id = item.EquipmentId })">
+                                                    <i class="fa fa-power-off fa-fw"></i>
+                                                    Delete
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -104,3 +113,19 @@
 
     </div>
 </div>
+
+<div id="action-modal"></div>
+
+
+
+@section scripts {
+    <script src="~/Scripts/site/modal-loader.js"></script>
+    <script>
+        $(function () {
+            $('.open-modal').on('click', function (evt) {
+                openModal(evt);
+                return false;
+            });
+        });
+    </script>
+}
