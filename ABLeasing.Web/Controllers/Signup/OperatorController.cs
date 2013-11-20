@@ -42,8 +42,18 @@ namespace ABLeasing.Web.Controllers.Signup
                 {
                     ModelState.AddModelError("", AccountController.ErrorCodeToString(e.StatusCode));
                 }
+                var cl =
+                    from s in db.Operators
+                    where s.Email == viewModel.Operator.Email
+                    select s;
 
-                db.Operators.Add(viewModel.Operator);
+                var op = cl.First();
+
+                op.Name = viewModel.Operator.Name;
+                op.Contact1 = viewModel.Operator.Contact1;
+                op.TypeOfBusiness = viewModel.Operator.TypeOfBusiness;
+                op.Description = viewModel.Operator.Description;
+                db.Entry(op).State = EntityState.Modified;
                 db.SaveChanges();
 
                 return RedirectToAction("Index", "OperatorsView");

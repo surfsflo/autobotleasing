@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using AttributeRouting;
@@ -35,9 +36,7 @@ namespace ABLeasing.Web.Controllers.Signup
             {
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password,
-                        new { Discriminator = "Client" }
-                        );
+                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password, new { Discriminator = "Client" });
                     WebSecurity.Login(viewModel.Client.Email, viewModel.RegisterModel.Password);
 
                 }
@@ -45,8 +44,17 @@ namespace ABLeasing.Web.Controllers.Signup
                 {
                     ModelState.AddModelError("", AccountController.ErrorCodeToString(e.StatusCode));
                 }
-                db.Entry(viewModel.Client).State = EntityState.Modified;
-                //db.Clients.Add(viewModel.Client);
+
+                var cl =
+                    from s in db.Clients
+                    where s.Email == viewModel.Client.Email
+                    select s;
+
+                var client = cl.First();
+
+                client.Name = viewModel.Client.Name;
+                client.Contact1 = viewModel.Client.Contact1;
+                db.Entry(client).State = EntityState.Modified;
                 db.SaveChanges();
 
                 return RedirectToAction("Index", "ClientsView");
