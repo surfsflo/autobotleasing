@@ -1,9 +1,10 @@
 ﻿@using ABLeasing.Web.Utility
+@using ABLeasing.Web.HtmlHelpers
 @model ABLeasing.Web.Models.Equipment
 
 @{
 	ViewBag.Title = "Equipment";
-	ViewBag.Header = "Create";
+	ViewBag.Header = "New Equipment Item";
 	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -16,18 +17,19 @@
 			@Html.ValidationSummary(true)
 		</div>
 	</div>
-	
+    
 	@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
 	@form.FormGroup().TextBoxFor(m => m.Manufacturer)
-	@form.FormGroup().TextBoxFor(m => m.MonitorAttached)
+
+	@form.FormGroup().DropDownListFromEnumFor(model => model.MonitorAttached)
 
 	@form.FormGroup().TextBoxFor(m => m.Model)
-	@form.FormGroup().TextBoxFor(m => m.PartNumber)
 
 	@form.FormGroup().TextBoxFor(m => m.RetailPrice)
-	@form.FormGroup().TextBoxFor(m => m.MaterialType)
-
 	@form.FormGroup().DropDownListFor(m => m.CategoryId, ViewBag.CategoryId as IEnumerable<SelectListItem>)
+
+	@form.FormGroup().TextBoxFor(m => m.MaterialType)
+	@form.FormGroup().TextBoxFor(m => m.PartNumber)
 	
 	@(form.FormGroup().CustomControls(
 		Html.Bootstrap().SubmitButton()

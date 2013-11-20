@@ -9,6 +9,7 @@ using AttributeRouting;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models;
 using ABLeasing.Web.Infrastructure;
+using ABLeasing.Web.HtmlHelpers;
 
 namespace ABLeasing.Web.Areas.Admin.Controllers
 {
@@ -44,7 +45,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [GET("Create")]
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList((IEnumerable<dynamic>)db.Categories, "CategoryID", "Name");
+            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryID", "Name");
             return View();
         }
 

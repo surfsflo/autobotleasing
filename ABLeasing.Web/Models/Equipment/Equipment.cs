@@ -9,29 +9,41 @@ namespace ABLeasing.Web.Models
 {
     public class Equipment : BaseModelWithComment
     {
+
         [Key]
         public int EquipmentId { get; set; }
 
+        [Display(Name = "Item Name")]
+        [Required]
         public string Name { get; set; }
+
         public int? Rating { get; set; }
 
         [UIHint("Enum")]
         public AttachedMonitorState MonitorAttached { get; set; }
 
+        [Required]
         public string Manufacturer { get; set; }
+
+        [Required]
         public string Model { get; set; }
+
         public string PartNumber { get; set; }
+
+        [Required]
         public decimal RetailPrice { get; set; }
+
         public decimal? PurchasePrice { get; set; }
 
         public string MaterialType { get; set; }
 
-        public int? ServiceContactID { get; set; }
+        public int? ServiceContactId { get; set; }
         public Contact ServiceContact { get; set; }
 
-        public int? SupplierContactID { get; set; }
+        public int? SupplierContactId { get; set; }
         public Contact SupplierContact { get; set; }
 
+        [Display(Name = "Cateogory")]
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
@@ -47,6 +59,7 @@ namespace ABLeasing.Web.Models
         Approved,
         Unapproved,
         Installed,
-        Offline
+        Offline,
+        None
     }
 }

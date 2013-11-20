@@ -70,93 +70,99 @@
 }
 
 /* line 21, ../sass/_constants.scss */
+span.required {
+  color: #b94a48;
+  margin-left: 2px;
+}
+
+/* line 26, ../sass/_constants.scss */
 .table thead > tr > th.table-actions {
   padding-right: 48px !important;
 }
 
-/* line 26, ../sass/_constants.scss */
+/* line 31, ../sass/_constants.scss */
 td.table-buttons {
   padding: 4px 12px 0 0 !important;
 }
-/* line 28, ../sass/_constants.scss */
+/* line 33, ../sass/_constants.scss */
 td.table-buttons a {
   margin: 1px 0;
   padding: 3px 10px;
 }
-/* line 32, ../sass/_constants.scss */
+/* line 37, ../sass/_constants.scss */
 td.table-buttons .btn .caret {
   margin-left: 5px;
 }
 
-/* line 37, ../sass/_constants.scss */
+/* line 42, ../sass/_constants.scss */
 .table > thead tr th.table-buttons {
   text-align: right;
   padding-right: 29px;
 }
 
-/* line 42, ../sass/_constants.scss */
+/* line 47, ../sass/_constants.scss */
 th {
   font-weight: normal;
 }
 
-/* line 46, ../sass/_constants.scss */
+/* line 51, ../sass/_constants.scss */
 .panel-heading {
   font-size: 110%;
 }
 
-/* line 50, ../sass/_constants.scss */
+/* line 55, ../sass/_constants.scss */
 .fa {
   color: #3276b1;
 }
 
-/* line 54, ../sass/_constants.scss */
+/* line 59, ../sass/_constants.scss */
 .active .fa {
   color: white;
 }
 
-/* line 58, ../sass/_constants.scss */
+/* line 63, ../sass/_constants.scss */
 .btn-primary .fa {
   color: white;
 }
 
-/* line 62, ../sass/_constants.scss */
+/* line 67, ../sass/_constants.scss */
 label {
   font-weight: inherit;
 }
 
-/* line 66, ../sass/_constants.scss */
+/* line 71, ../sass/_constants.scss */
 .media-normal .media {
   margin-bottom: 10px;
 }
-/* line 68, ../sass/_constants.scss */
+/* line 73, ../sass/_constants.scss */
 .media-normal .media img {
   width: 140px;
 }
-/* line 72, ../sass/_constants.scss */
+/* line 77, ../sass/_constants.scss */
 .media-normal .media .media-body h4 {
   margin-top: 0;
 }
 
-/* line 78, ../sass/_constants.scss */
+/* line 83, ../sass/_constants.scss */
 .dropdown-menu li {
   cursor: pointer;
 }
 
-/* line 84, ../sass/_constants.scss */
+/* line 89, ../sass/_constants.scss */
 .page-header.header-button {
   padding-top: 15px;
 }
-/* line 86, ../sass/_constants.scss */
+/* line 91, ../sass/_constants.scss */
 .page-header.header-button h1 {
   display: inline;
 }
-/* line 89, ../sass/_constants.scss */
+/* line 94, ../sass/_constants.scss */
 .page-header.header-button .btn {
   float: right;
   margin-bottom: 7px;
 }
 
-/* line 99, ../sass/_constants.scss */
+/* line 104, ../sass/_constants.scss */
 span.badge {
   margin-left: 7px;
   background-color: #3a87ad;
@@ -164,14 +170,14 @@ span.badge {
   vertical-align: middle;
 }
 
-/* line 106, ../sass/_constants.scss */
+/* line 111, ../sass/_constants.scss */
 .validation-summary-errors ul, #login-errors {
   padding-left: 0;
   list-style: none;
   color: #b94a48;
 }
 
-/* line 112, ../sass/_constants.scss */
+/* line 117, ../sass/_constants.scss */
 .field-validation-error {
   color: #b94a48;
   font-size: 80%;

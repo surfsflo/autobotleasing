@@ -110,8 +110,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Portable.Licensing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Portable.Licensing">
       <HintPath>..\packages\Portable.Licensing.1.1.0\lib\portable-net40+sl4+wp7+win8\Portable.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="SassAndCoffee.AspNet">
@@ -195,13 +194,11 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="T4MVCExtensions">
       <HintPath>..\packages\T4MVCExtensions.3.6.5\lib\net40\T4MVCExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="TwitterBootstrapMVC, Version=3.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\TwitterBootstrapMVC.3.7.1\lib\net40\TwitterBootstrapMVC.dll</HintPath>
+    <Reference Include="TwitterBootstrapMVC">
+      <HintPath>..\packages\TwitterBootstrapMVC.3.7.4\lib\net40\TwitterBootstrapMVC.dll</HintPath>
     </Reference>
     <Reference Include="WebActivator">
       <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
@@ -315,6 +312,14 @@
     <Compile Include="Migrations\201311141058478_nullableagain.Designer.cs">
       <DependentUpon>201311141058478_nullableagain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311200932474_notsure.cs" />
+    <Compile Include="Migrations\201311200932474_notsure.Designer.cs">
+      <DependentUpon>201311200932474_notsure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311201000576_required.cs" />
+    <Compile Include="Migrations\201311201000576_required.Designer.cs">
+      <DependentUpon>201311201000576_required.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
@@ -417,8 +422,6 @@
     <Content Include="bin\Microsoft.Web.WebPages.OAuth.xml" />
     <Content Include="bin\Newtonsoft.Json.dll" />
     <Content Include="bin\Newtonsoft.Json.xml" />
-    <Content Include="bin\Portable.Licensing.dll" />
-    <Content Include="bin\Portable.Licensing.xml" />
     <Content Include="bin\ru-ru\BundleTransformer.Core.resources.dll" />
     <Content Include="bin\ru\Microsoft.Data.Edm.resources.dll" />
     <Content Include="bin\ru\Microsoft.Data.OData.resources.dll" />
@@ -451,8 +454,6 @@
     <Content Include="bin\System.Web.WebPages.Razor.dll" />
     <Content Include="bin\System.Web.WebPages.Razor.xml" />
     <Content Include="bin\System.Web.WebPages.xml" />
-    <Content Include="bin\T4MVCExtensions.dll" />
-    <Content Include="bin\TwitterBootstrapMVC.dll" />
     <Content Include="bin\WebActivator.dll" />
     <Content Include="bin\WebGrease.dll" />
     <Content Include="bin\WebMatrix.Data.dll" />
@@ -554,6 +555,7 @@
     <Content Include="Areas\Admin\Views\Equipment\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Equipment\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Equipment\Delete.cshtml" />
+    <None Include="Areas\Admin\Controllers\balls.sass" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1210,6 +1212,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201311141058478_nullableagain.resx">
       <DependentUpon>201311141058478_nullableagain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311200932474_notsure.resx">
+      <DependentUpon>201311200932474_notsure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311201000576_required.resx">
+      <DependentUpon>201311201000576_required.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

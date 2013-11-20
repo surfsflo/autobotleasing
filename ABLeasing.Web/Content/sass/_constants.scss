@@ -18,6 +18,11 @@ $red-error: #b94a48;
 
 // style constants
 
+span.required {
+	color: $red-error;
+	margin-left: 2px;
+}
+
 .table thead > tr > th.table-actions {
   padding-right: 48px !important;
  
