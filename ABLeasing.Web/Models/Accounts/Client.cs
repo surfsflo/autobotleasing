@@ -19,7 +19,17 @@ namespace ABLeasing.Web.Models.Accounts
         [Column(TypeName = "money")]
         public decimal? PeriodicDepositAmount { get; set; }
 
-        public string Frequency { get; set; }
+        public DepositFrequency? Frequency { get; set; }
         public bool? AutoPay { get; set; }
+    }
+
+    public enum DepositFrequency
+    {
+        Weekly,
+        Monthly,
+        MidMonth,
+        EndOfMonth,
+        SemiWeekly,
+        NotSet
     }
 }

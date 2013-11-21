@@ -12,33 +12,54 @@
             <div class="panel panel-info">
                 <div class="panel-heading text-center">Operator Signup</div>
                 <div class="panel-body">
-
-
-                    @using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
+                    
+                    
+                    @using (var form = Html.Bootstrap().Begin(new Form()))
                     {
-                        @form.FormGroup().TextBoxFor(m => m.Operator.Name).AutoFocus()
-                        @form.FormGroup().TextBoxFor(m => m.Operator.Email)
-                        @form.FormGroup().TextBoxFor(m => m.Operator.TypeOfBusiness)
-                        @form.FormGroup().TextAreaFor(m => m.Operator.Description)
-                        
-                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.PhoneNumber)
-                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Alias)
-                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Line1)
-                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Line2)
-                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Line3)
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="panel panel-default no-border">
+                                    <div class="panel-heading">
+                                        General Info
+                                    </div>
+                                    <div class="panel-body">
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.Name).AutoFocus()
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.Email)
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.TypeOfBusiness)
+                                        @form.FormGroup().TextAreaFor(m => m.Operator.Description)
+                                        @form.FormGroup().PasswordFor(m => m.RegisterModel.Password)
+                                        @form.FormGroup().PasswordFor(m => m.RegisterModel.ConfirmPassword)
 
-                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Country)
-                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Postal)
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="col-sm-6">
+                                <div class="panel panel-default no-border">
+                                    <div class="panel-heading">
+                                        Contact Info
+                                    </div>
+                                    <div class="panel-body">
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.PhoneNumber)
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Alias)
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Line1)
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Line2)
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Line3)
 
-                        @form.FormGroup().PasswordFor(m => m.RegisterModel.Password)
-                        @form.FormGroup().PasswordFor(m => m.RegisterModel.ConfirmPassword)
-
-                        @(form.FormGroup().CustomControls(
-                            Html.Bootstrap().SubmitButton()
-                            .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
-
-                    }
-
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Country)
+                                        @form.FormGroup().TextBoxFor(m => m.Operator.Contact1.Postal)
+                                    </div>
+                                </div>
+                            </div>                     
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                @(form.FormGroup().CustomControls(
+                                        Html.Bootstrap().SubmitButton().Class("pull-right")
+                                            .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
+                            </div>  
+                        </div>
+                        }  
 
                 </div>
             </div>
@@ -46,20 +67,3 @@
     </div>
 
 </div>
-
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-
-    <script>
-
-        $.validator.setDefaults({
-            highlight: function (element) {
-                $(element).closest(".form-group").addClass("has-error");
-            },
-            unhighlight: function (element) {
-                $(element).closest(".form-group").removeClass("has-error");
-            }
-        });
-    </script>
-}

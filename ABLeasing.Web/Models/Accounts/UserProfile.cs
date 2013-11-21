@@ -17,9 +17,11 @@ namespace ABLeasing.Web.Models.Accounts
         public int UserId { get; set; }
 
         [Email]
+        [Required]
         public string Email { get; set; }
 
         [Display(Name = "Full Name")]
+        [Required]
         public string Name { get; set; }
 
         [Display(Name = "Current Status")]

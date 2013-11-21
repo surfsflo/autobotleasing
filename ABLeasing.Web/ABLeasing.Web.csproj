@@ -295,6 +295,18 @@
     <Compile Include="Migrations\201311201532140_ClientModelFixes.Designer.cs">
       <DependentUpon>201311201532140_ClientModelFixes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311210236426_ClientModelUpdates.cs" />
+    <Compile Include="Migrations\201311210236426_ClientModelUpdates.Designer.cs">
+      <DependentUpon>201311210236426_ClientModelUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311210315449_ClientModelUpdates1.cs" />
+    <Compile Include="Migrations\201311210315449_ClientModelUpdates1.Designer.cs">
+      <DependentUpon>201311210315449_ClientModelUpdates1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311210439086_UserProfileModelUpdates.cs" />
+    <Compile Include="Migrations\201311210439086_UserProfileModelUpdates.Designer.cs">
+      <DependentUpon>201311210439086_UserProfileModelUpdates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
     <Compile Include="Models\Accounts\Client.cs" />
@@ -1184,6 +1196,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201311201532140_ClientModelFixes.resx">
       <DependentUpon>201311201532140_ClientModelFixes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311210236426_ClientModelUpdates.resx">
+      <DependentUpon>201311210236426_ClientModelUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311210315449_ClientModelUpdates1.resx">
+      <DependentUpon>201311210315449_ClientModelUpdates1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311210439086_UserProfileModelUpdates.resx">
+      <DependentUpon>201311210439086_UserProfileModelUpdates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

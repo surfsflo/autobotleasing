@@ -227,7 +227,19 @@ nav .navbar-form #logoutForm {
   margin-right: 5px;
 }
 
-/* line 40, ../sass/_common.scss */
+@media (min-width: 768px) {
+  /* line 48, ../sass/_common.scss */
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* line 56, ../sass/_common.scss */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Roboto", sans-serif;
   font-style: normal;

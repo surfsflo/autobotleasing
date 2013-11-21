@@ -54,6 +54,9 @@ namespace ABLeasing.Web.Controllers.Signup
 
                 client.Name = viewModel.Client.Name;
                 client.Contact1 = viewModel.Client.Contact1;
+                client.Status = true;
+                client.Frequency = DepositFrequency.NotSet;
+                client.AutoPay = false;
                 db.Entry(client).State = EntityState.Modified;
                 db.SaveChanges();
 
