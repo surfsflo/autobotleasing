@@ -36,7 +36,11 @@ namespace ABLeasing.Web.Controllers.Signup
             {
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password, new { Discriminator = "Client" });
+                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password, new
+                    {
+                        Discriminator = "Client",
+                        Name = viewModel.Client.Name
+                    });
                     WebSecurity.Login(viewModel.Client.Email, viewModel.RegisterModel.Password);
 
                 }

@@ -34,7 +34,11 @@ namespace ABLeasing.Web.Controllers.Signup
             {
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(viewModel.Operator.Email, viewModel.RegisterModel.Password, new { Discriminator = "Operator" });
+                    WebSecurity.CreateUserAndAccount(viewModel.Operator.Email, viewModel.RegisterModel.Password, new
+                    {
+                        Discriminator = "Operator",
+                        Name = viewModel.Operator.Name
+                    });
                     WebSecurity.Login(viewModel.Operator.Email, viewModel.RegisterModel.Password);
 
                 }
@@ -49,7 +53,6 @@ namespace ABLeasing.Web.Controllers.Signup
 
                 var op = cl.First();
 
-                op.Name = viewModel.Operator.Name;
                 op.Contact1 = viewModel.Operator.Contact1;
                 op.TypeOfBusiness = viewModel.Operator.TypeOfBusiness;
                 op.Description = viewModel.Operator.Description;

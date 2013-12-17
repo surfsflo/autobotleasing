@@ -15,9 +15,10 @@ namespace ABLeasing.Web.Models
         [ForeignKey("Equipment")]
         public int LeaseId { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
-        public string Description {get; set; }
+        public string Description { get; set; }
 
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
