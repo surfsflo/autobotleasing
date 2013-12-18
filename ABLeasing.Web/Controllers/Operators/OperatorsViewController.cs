@@ -15,11 +15,12 @@ namespace ABLeasing.Web.Controllers.Operators
     [RoutePrefix("OperatorsView")]
     public class OperatorsViewController : Controller
     {
-        private ABLeasingDB db = new ABLeasingDB();
+        private readonly ABLeasingDB _db = new ABLeasingDB();
 
         [GET("LeaseApplication")]
         public ActionResult LeaseApplication()
         {
+            ViewBag.EquipmentId
             return View();
         }
 
@@ -28,15 +29,15 @@ namespace ABLeasing.Web.Controllers.Operators
         {
 
             var onlineOrders =
-                from s in db.Operators
+                from s in _db.Operators
                 where s.Email == User.Identity.Name
                 select s;
             int id = onlineOrders.First().UserId;
 
             if (ModelState.IsValid)
             {
-                db.Leases.Add(lease);
-                db.SaveChanges();
+                _db.Leases.Add(lease);
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
 

@@ -1,41 +1,46 @@
 ﻿@model ABLeasing.Web.Models.Lease
 @{
-    ViewBag.Title = "Lease Application";
+	ViewBag.Title = "Lease Application";
 }
 @using ABLeasing.Web.Models.Accounts;
 <div id="lease-apply">
 
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="panel panel-info">
-                <div class="panel-heading text-center">Lease Application</div>
-                <div class="panel-body">
-                     
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-info">
+				<div class="panel-heading text-center">Lease Application</div>
+				<div class="panel-body">
+					
+					@using (var form = Html.Bootstrap().Begin(new Form()))
+					{
+						@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
+						@form.FormGroup().TextAreaFor(m => m.Description)
+					}
 
-                    @using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
-                    {
-                        @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
-                        @form.FormGroup().TextAreaFor(m => m.Description)
-                        
-                        var db = Database.Open("DefaultConnection");
-                        var listItems = new List<string>();
-                        foreach(var row in db.Query("SELECT * FROM Category")) {
-                          listItems.Add(row.Name);
-                        }
-                    @form.FormGroup().DropDownListFor(m => m.Equipment,new SelectList(listItems));
-                        
-                        //Model.OperatorId = WebSecurity.CurrentUserId;
-                        //Model.Operator = (Operator)User.Identity;//(Operator)User.Identity;
-                        
-                        @(form.FormGroup().CustomControls(
-                            Html.Bootstrap().SubmitButton()
-                            .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
-                    }
+					@using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
+					{
+						@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
+						@form.FormGroup().TextAreaFor(m => m.Description)
+						
+						var db = Database.Open("DefaultConnection");
+						var listItems = new List<string>();
+						foreach(var row in db.Query("SELECT * FROM Category")) {
+							listItems.Add(row.Name);
+						}
+						@form.FormGroup().DropDownListFor(m => m.Equipment,new SelectList(listItems));
+						
+						//Model.OperatorId = WebSecurity.CurrentUserId;
+						//Model.Operator = (Operator)User.Identity;//(Operator)User.Identity;
+						
+						@(form.FormGroup().CustomControls(
+							  Html.Bootstrap().SubmitButton()
+								  .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
+					}
 
 
-                </div>
-            </div>
-        </div>
-    </div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </div>

@@ -9,7 +9,7 @@ namespace ABLeasing.Web.Models
     public class Category : BaseModel
     {
         [Key]
-        public int CategoryID { get; set; }
+        public int CategoryId { get; set; }
 
         [Required]
         public string Name { get; set; }

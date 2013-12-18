@@ -183,6 +183,11 @@ span.badge {
   font-size: 80%;
 }
 
+/* line 122, ../sass/_constants.scss */
+.table-responsive {
+  padding-bottom: 50px;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("/Content/custom-fonts/Roboto-Regular-webfont.eot?");

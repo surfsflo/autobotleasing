@@ -43,7 +43,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [GET("Create")]
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryID", "Name");
+            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryId = new SelectList((IEnumerable<dynamic>)_db.Categories, "CategoryID", "Name", equipment.CategoryId);
+            ViewBag.CategoryId = new SelectList((IEnumerable<dynamic>)_db.Categories, "CategoryId", "Name", equipment.CategoryId);
             ViewBag.EquipmentId = new SelectList(_db.Leases, "LeaseId", "Name", equipment.EquipmentId);
             ViewBag.LocationId = new SelectList(_db.Locations, "LocationId", "CellProvider", equipment.LocationId);
             return View(equipment);
@@ -71,7 +71,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryID", "Name", equipment.CategoryId);
+            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name", equipment.CategoryId);
             return View(equipment);
         }
 
@@ -84,7 +84,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryID", "Name", equipment.CategoryId);
+            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name", equipment.CategoryId);
             ViewBag.EquipmentId = new SelectList(_db.Leases, "LeaseId", "Name", equipment.EquipmentId);
             ViewBag.LocationId = new SelectList(_db.Locations, "LocationId", "CellProvider", equipment.LocationId);
             return View(equipment);

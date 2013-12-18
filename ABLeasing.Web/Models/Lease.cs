@@ -15,9 +15,12 @@ namespace ABLeasing.Web.Models
         [ForeignKey("Equipment")]
         public int LeaseId { get; set; }
 
+        public bool Pending { get; set; }
+
         [Required]
         public string Name { get; set; }
 
+        [Required]
         public string Description { get; set; }
 
         [DataType(DataType.Currency)]
@@ -32,14 +35,15 @@ namespace ABLeasing.Web.Models
         [Column(TypeName = "money")]
         public decimal? ProfitShareRate { get; set; }
 
-
+        [Required]
+        public int EquipmentId { get; set; }
         public virtual Equipment Equipment { get; set; }
 
         [ForeignKey("Operator")]
         public int OperatorId { get; set; }
         public virtual Operator Operator { get; set; }
 
-        public int? PurchaseCooperativeID { get; set; }
+        public int? PurchaseCooperativeId { get; set; }
         public virtual PurchaseCooperative PurchaseCooperative { get; set; }
 
         public int? LocationId { get; set; }
