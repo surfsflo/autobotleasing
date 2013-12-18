@@ -32,6 +32,41 @@ namespace ABLeasing.Web.Migrations
 
 
             SeedMembership(context);
+            SeedOperator(context);
+        }
+
+        private void SeedOperator(ABLeasing.Web.Infrastructure.ABLeasingDB context)
+        {
+
+            if (!WebSecurity.Initialized)
+            {
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection",
+                    "UserProfile", "UserId", "Email", autoCreateTables: true);
+            }
+
+            var op = new Operator
+            {
+                Name = "John Op",
+                Email = "j@op.com",
+                TypeOfBusiness = "Awesome",
+                Description = "Awesome Description"
+            };
+
+            var roles = (SimpleRoleProvider)Roles.Provider;
+            var membership = (SimpleMembershipProvider)Membership.Provider;
+
+            if (membership.GetUser(op.Email, false) == null)
+            {
+                WebSecurity.CreateUserAndAccount(op.Email, "12341234", new
+                {
+                    Discrimiator = "Operator",
+                    Name = op.Email,
+                    TypeOfBusiness = op.TypeOfBusiness,
+                    Description = op.Description
+                });
+            }
+
+
         }
 
         private void SeedMembership(ABLeasing.Web.Infrastructure.ABLeasingDB context)

@@ -12,7 +12,6 @@ namespace ABLeasing.Web.Models
     {
 
         [Key]
-        [ForeignKey("Equipment")]
         public int LeaseId { get; set; }
 
         public bool Pending { get; set; }
@@ -35,7 +34,6 @@ namespace ABLeasing.Web.Models
         [Column(TypeName = "money")]
         public decimal? ProfitShareRate { get; set; }
 
-        [Required]
         [Display(Name = "Equipment")]
         public int EquipmentId { get; set; }
         public virtual Equipment Equipment { get; set; }

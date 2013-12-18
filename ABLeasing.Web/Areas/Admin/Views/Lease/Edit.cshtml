@@ -1,110 +1,42 @@
-﻿@model ABLeasing.Web.Models.Lease
+﻿@using Glimpse.Mvc.AlternateType
+@model ABLeasing.Web.Models.Lease
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Lease Edit";
+    ViewBag.Header = "Edit Lease " + @Model.Name;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+@using (var form = Html.Bootstrap().Begin(new Form("Edit", "Lease")))
+{
+	@Html.AntiForgeryToken()
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+    <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-7">
+            @Html.ValidationSummary(true)
+        </div>
+    </div>
+    
+    
+    
+	@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
+	@form.FormGroup().TextBoxFor(m => m.Manufacturer)
 
-    <fieldset>
-        <legend>Lease</legend>
+	@form.FormGroup().DropDownListFromEnumFor(model => model.MonitorAttached)
 
-        @Html.HiddenFor(model => model.LeaseId)
+	@form.FormGroup().TextBoxFor(m => m.Model)
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
-            @Html.ValidationMessageFor(model => model.Name)
-        </div>
+	@form.FormGroup().TextBoxFor(m => m.RetailPrice).Prepend("$")
+	@form.FormGroup().DropDownListFor(m => m.CategoryId, ViewBag.CategoryId as IEnumerable<SelectListItem>)
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Description)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Description)
-            @Html.ValidationMessageFor(model => model.Description)
-        </div>
+	@form.FormGroup().TextBoxFor(m => m.MaterialType)
+	@form.FormGroup().TextBoxFor(m => m.PartNumber)
+	
+	@(form.FormGroup().CustomControls(
+		Html.Bootstrap().SubmitButton()
+		    .Style(ButtonStyle.Primary).LoadingText("logging...")))
+    
+    @Html.HiddenFor(m => m.EquipmentId)
+    @Html.HiddenFor(m => m.Created)
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PrincipalAmount)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PrincipalAmount)
-            @Html.ValidationMessageFor(model => model.PrincipalAmount)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.InterestRate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.InterestRate)
-            @Html.ValidationMessageFor(model => model.InterestRate)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ProfitShareRate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ProfitShareRate)
-            @Html.ValidationMessageFor(model => model.ProfitShareRate)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.OperatorId)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.OperatorId)
-            @Html.ValidationMessageFor(model => model.OperatorId)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PurchaseCooperativeId)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PurchaseCooperativeId)
-            @Html.ValidationMessageFor(model => model.PurchaseCooperativeId)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.LocationId)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.LocationId)
-            @Html.ValidationMessageFor(model => model.LocationId)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Created)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Created)
-            @Html.ValidationMessageFor(model => model.Created)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Updated)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Updated)
-            @Html.ValidationMessageFor(model => model.Updated)
-        </div>
-
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
 }

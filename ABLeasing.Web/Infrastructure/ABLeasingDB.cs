@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Web.Http.OData.Builder;
 using ABLeasing.Web.Models;
 using ABLeasing.Web.Models.Accounts;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -73,6 +74,13 @@ namespace ABLeasing.Web.Infrastructure
 
             return base.SaveChanges();
         }
-
     }
+
+    //    public class EquipmentMappings : EntityTypeConfiguration<Equipment>
+    //    {
+    //        public EquipmentMappings()
+    //        {
+    //            HasKey(e => e)
+    //        }
+    //    }
 }
