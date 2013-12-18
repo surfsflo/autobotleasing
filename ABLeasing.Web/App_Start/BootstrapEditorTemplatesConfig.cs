@@ -23,7 +23,8 @@ namespace ABLeasing.Web
                         "~/Scripts/globalize/cultures/globalize.culture." + System.Globalization.CultureInfo.CurrentCulture.ToString() + ".js",
                         "~/Scripts/bootstrap*",
                         "~/Scripts/filebutton.js",
-                        "~/Scripts/globalize-datepicker.js"
+                        "~/Scripts/globalize-datepicker.js",
+                        "~/Scripts/select2.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/Scripts/md").Include(
@@ -33,7 +34,8 @@ namespace ABLeasing.Web
 
             bundles.Add(new StyleBundle("~/Content/vendor").Include(
                  "~/Content/bootstrap.css",
-                 "~/Content/fontawesome/font-awesome.css"
+                 "~/Content/fontawesome/font-awesome.css",
+                 "~/Content/css/select2.css"
                  ));
 
             // By default it will exclude the MarkdownDeepLib.min.js file because of its .min.js extension.

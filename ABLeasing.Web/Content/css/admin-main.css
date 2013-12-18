@@ -69,6 +69,12 @@
   top: 11px;
 }
 
+/* line 35, ../sass/overrides/_select2.scss */
+.select2-container.form-control {
+  padding: 0;
+  border: none;
+}
+
 /* line 21, ../sass/_constants.scss */
 span.required {
   color: #b94a48;

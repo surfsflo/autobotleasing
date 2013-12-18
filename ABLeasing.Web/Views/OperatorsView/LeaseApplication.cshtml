@@ -1,54 +1,82 @@
-﻿@model ABLeasing.Web.Models.Lease
+﻿@using ABLeasing.Web.Models
+@using TwitterBootstrapMVC.Controls
+@model ABLeasing.Web.Models.Lease
 @{
-	ViewBag.Title = "Lease Application";
+    ViewBag.Title = "Lease Application";
 }
 
 <div id="lease-apply">
 
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="panel panel-info">
-				<div class="panel-heading text-center">Lease Application</div>
-				<div class="panel-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading text-center">Lease Application</div>
+                <div class="panel-body">
+                    <div class="row">
+                        
+                        @using (FormBuilder<Lease> form = Html.Bootstrap().Begin(new Form()))
+                        {
+                            <div class="col-sm-6">
+                                @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus().HelpText("Give this application a name to reference later.")
+                                @form.FormGroup().DropDownListFor(m => m.EquipmentId, ViewBag.EquipmentId as IEnumerable<SelectListItem>).Id("select-equipment")                            
+                                @form.FormGroup().TextAreaFor(m => m.Description).Rows(10)
+                                
+                                @(form.FormGroup().CustomControls(
+                                      Html.Bootstrap().SubmitButton()
+                                          .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
+
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">GPS Location</label>
+                                    @Html.EditorFor(m => m.Location.GpsLocation)        
+                                </div>
+                               
+                            </div>
+                        }
+
+                    </div>
 					
-					@using (var form = Html.Bootstrap().Begin(new Form()))
-					{
-						@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
-						@form.FormGroup().TextAreaFor(m => m.Description)
-						@form.FormGroup().DropDownListFor(m => m.EquipmentId, ViewBag.EquipmentId as IEnumerable<SelectListItem>)
-						
-                        @form.FormGroup().EditorFor(m => m.Location.GpsLocation)
-         
-	                    @(form.FormGroup().CustomControls(
-		                    Html.Bootstrap().SubmitButton()
-		                    .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
-         
-					}
+                  
 
-					@using (var form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
-					{
-						@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
-						@form.FormGroup().TextAreaFor(m => m.Description)
-						
-						var db = Database.Open("DefaultConnection");
-						var listItems = new List<string>();
-						foreach(var row in db.Query("SELECT * FROM Category")) {
-							listItems.Add(row.Name);
-						}
-						@form.FormGroup().DropDownListFor(m => m.Equipment,new SelectList(listItems));
-						
-						//Model.OperatorId = WebSecurity.CurrentUserId;
-						//Model.Operator = (Operator)User.Identity;//(Operator)User.Identity;
-						
-						@(form.FormGroup().CustomControls(
-							  Html.Bootstrap().SubmitButton()
-								  .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
-					}
+                    @using (FormBuilder<Lease> form = Html.Bootstrap().Begin(new Form().Type(FormType.Horizontal).LabelWidthSm(4)))
+                    {
+                        @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
+                        @form.FormGroup().TextAreaFor(m => m.Description)
+
+                        Database db = Database.Open("DefaultConnection");
+                        var listItems = new List<string>();
+                        foreach (dynamic row in db.Query("SELECT * FROM Category"))
+                        {
+                            listItems.Add(row.Name);
+                        }
+                        @form.FormGroup().DropDownListFor(m => m.Equipment, new SelectList(listItems))
+                        ;
+
+                        //Model.OperatorId = WebSecurity.CurrentUserId;
+                        //Model.Operator = (Operator)User.Identity;//(Operator)User.Identity;
+
+                        @(form.FormGroup().CustomControls(
+                              Html.Bootstrap().SubmitButton()
+                                  .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
+                    }
 
 
-				</div>
-			</div>
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
+
+
+<script type="text/javascript">
+    $(function() {
+        $("#select-equipment").select2({
+            allowClear: true,
+            minimunIn
+        });
+    });
+</script>
+<script type="text/javascript" src="~/Scripts/EFSpatialGoogleMaps.js"> </script>

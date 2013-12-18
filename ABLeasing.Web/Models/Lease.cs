@@ -36,6 +36,7 @@ namespace ABLeasing.Web.Models
         public decimal? ProfitShareRate { get; set; }
 
         [Required]
+        [Display(Name = "Equipment")]
         public int EquipmentId { get; set; }
         public virtual Equipment Equipment { get; set; }
 

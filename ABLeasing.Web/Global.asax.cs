@@ -9,6 +9,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using ABLeasing.Web.ModelBinders;
 using TwitterBootstrapMVC;
 using WebMatrix.WebData;
 
@@ -37,6 +38,9 @@ namespace ABLeasing.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
             BootstrapEditorTemplatesConfig.RegisterBundles();
+
+            //Add my MVC Provider
+            ModelBinderProviders.BinderProviders.Add(new EFModelBinderProviderMvc());
         }
     }
 }

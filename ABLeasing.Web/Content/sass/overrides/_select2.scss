@@ -31,3 +31,8 @@
 .select2-container .select2-choice abbr {
   top: 11px;
 }
+
+.select2-container.form-control {
+	padding: 0;
+	border: none;
+}
