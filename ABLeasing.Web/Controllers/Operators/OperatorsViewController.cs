@@ -9,6 +9,7 @@ using AttributeRouting;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models;
 using ABLeasing.Web.Infrastructure;
+using System.Data.Spatial;
 
 namespace ABLeasing.Web.Controllers.Operators
 {
@@ -20,7 +21,7 @@ namespace ABLeasing.Web.Controllers.Operators
         [GET("LeaseApplication")]
         public ActionResult LeaseApplication()
         {
-            ViewBag.EquipmentId
+            ViewBag.EquipmentId = new SelectList(_db.Equipment, "EquipmentId", "Name");
             return View();
         }
 

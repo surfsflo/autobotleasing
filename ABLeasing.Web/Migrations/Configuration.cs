@@ -53,7 +53,7 @@ namespace ABLeasing.Web.Migrations
                 new Staff { Name = "Frank", Email = "vivoon29@gmail.com"},
             };
 
-            string ADMIN = "Admin";
+            const string ADMIN = "Admin";
 
             if (!roles.RoleExists(ADMIN))
             {
