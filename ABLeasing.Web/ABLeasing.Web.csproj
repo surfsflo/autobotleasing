@@ -733,6 +733,7 @@
     <Content Include="Content\sass\site\_partialhelper.scss" />
     <Content Include="Content\sass\site\_slicebox.scss" />
     <Content Include="Content\sass\site\_contact.scss" />
+    <Content Include="Content\sass\site\client\_lease-app.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
@@ -1118,6 +1119,9 @@
     <Content Include="Scripts\libs\cycle2.js" />
     <Content Include="Scripts\libs\jquery.als-1.1.min.js" />
     <Content Include="Scripts\libs\jquery.alsEN-1.2.js" />
+    <Content Include="Scripts\libs\TwitterBootstrapMvcJs-3.0.4.js" />
+    <Content Include="Scripts\lodash.js" />
+    <Content Include="Scripts\lodash.min.js" />
     <Content Include="Scripts\markdown.js" />
     <Content Include="Scripts\MarkdownDeep License.txt" />
     <Content Include="Scripts\MarkdownDeep Quick Reference.txt" />

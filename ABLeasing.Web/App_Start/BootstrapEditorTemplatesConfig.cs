@@ -21,10 +21,12 @@ namespace ABLeasing.Web
             bundles.Add(new ScriptBundle("~/Scripts/bootstrap").Include(
                         "~/Scripts/globalize/globalize.js",
                         "~/Scripts/globalize/cultures/globalize.culture." + System.Globalization.CultureInfo.CurrentCulture.ToString() + ".js",
+                        "~/Scripts/lodash.js",
                         "~/Scripts/bootstrap*",
                         "~/Scripts/filebutton.js",
                         "~/Scripts/globalize-datepicker.js",
-                        "~/Scripts/select2.js"
+                        "~/Scripts/select2.js",
+                        "~/Scripts/libs/TwitterBootstrapMvcJs-3.0.4.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/Scripts/md").Include(

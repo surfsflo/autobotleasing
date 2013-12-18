@@ -7,3 +7,7 @@ $.validator.setDefaults({
         $(element).closest(".form-group").removeClass("has-error");
     }
 });
+
+_.extend($.fn.select2.defaults, {    
+    minimumResultsForSearch: 10
+});

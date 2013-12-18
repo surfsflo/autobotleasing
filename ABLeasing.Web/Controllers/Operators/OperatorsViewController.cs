@@ -29,12 +29,16 @@ namespace ABLeasing.Web.Controllers.Operators
         public ActionResult LeaseApplication(Lease lease)
         {
 
-            var onlineOrders =
+            var ops =
                 from s in _db.Operators
                 where s.Email == User.Identity.Name
                 select s;
-            int id = onlineOrders.First().UserId;
 
+            int opId = ops.First().UserId;
+
+            lease.OperatorId = opId;
+            lease.Pending = true;
+            lease.LeaseId = lease.EquipmentId;
             if (ModelState.IsValid)
             {
                 _db.Leases.Add(lease);
