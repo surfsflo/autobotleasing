@@ -56,9 +56,10 @@
 						{
 							@nav.ActionLink("Equipment", "Index", "Equipment").PrependIcon("fa fa-truck fa-fw")
 							@nav.ActionLink("Categories", "Index", "Categories").PrependIcon("fa fa-th-list fa-fw")
-                        
+                            @nav.ActionLink("Leases", "Index", "Lease").PrependIcon("fa fa-file-text fa-fw")
+                            
 						    <li>
-						        <a><i class="fa fa-users fa-fw"></i> Users</a>
+						        <a class="user-nav"><i class="fa fa-users fa-fw"></i> Users</a>
 						        <ul class="nav">
 						            <li>
 						                @Html.ActionLink("Staff", "Index", "Staff")

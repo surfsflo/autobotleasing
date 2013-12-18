@@ -276,6 +276,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     width: inherit;
   }
 }
+/* line 27, ../sass/admin-main.scss */
+.user-nav {
+  padding-bottom: 4px;
+}
+
 /* line 3, ../sass/admin/_nav.scss */
 .side-nav .nav .nav > li > a {
   padding-top: 3px;
