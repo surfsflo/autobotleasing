@@ -12,5 +12,7 @@ namespace ABLeasing.Web.Models
         public int CommentId { get; set; }
         public string Name { get; set; }
         public string Message { get; set; }
+
+        public virtual Lease Lease { get; set; }
     }
 }

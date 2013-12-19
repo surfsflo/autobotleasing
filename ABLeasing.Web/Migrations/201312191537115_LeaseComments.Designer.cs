@@ -5,18 +5,18 @@ namespace ABLeasing.Web.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class IdChange : IMigrationMetadata
+    public sealed partial class LeaseComments : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(IdChange));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(LeaseComments));
         
         string IMigrationMetadata.Id
         {
-            get { return "201312191347325_IdChange"; }
+            get { return "201312191537115_LeaseComments"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return null; }
+            get { return Resources.GetString("Source"); }
         }
         
         string IMigrationMetadata.Target

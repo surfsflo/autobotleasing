@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<ABLeasing.Web.Models.Lease>
+
+@{
     ViewBag.Title = "Client Index";
 }
 
@@ -8,49 +10,31 @@
         <div class="col-sm-8 media-normal">
 
             <div class="panel panel-info">
-                <div class="panel-heading"> Current CoOp lists </div>
+                <div class="panel-heading">Choose Technology! </div>
                 <div class="panel-body">
                     <div class="col-sm-12">
-                        <div class="media">
-                            <a class="pull-left">
-                                <img src="~/Images/Index/mining-equipment.jpg" />
-                            </a>
-                            <div class="media-body">
-                                <h4>Mining Project</h4>
-                                <p>	
-                                    Perhaps display some quick stats about the current state of the project 
-                                    here, stats from the sensors in the equipment, etc.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="media">
-                            <a class="pull-left">
-                                <img src="~/Images/Index/mining-equipment-1.jpg" />
-                            </a>
-                            <div class="media-body">
-                                <h4>Mining Project 1</h4>
-                                <p>
-                                    Perhaps display some quick stats about the current state of the project 
-                                    here, stats from the sensors in the equipment, etc.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="media">
-                            <a class="pull-left">
-                                <img src="~/Images/Index/space-mining.jpg" />
-                            </a>
-                            <div class="media-body">
-                                <h4>Asteroid Mining</h4>
-                                <p>
-                                    Perhaps display some quick stats about the current state of the project 
-                                    here, stats from the sensors in the equipment, etc.
-                                </p>
-                            </div>
-                        </div>
+                        
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                                <div class="media">
+                                    <a class="pull-left">
+                                        <img src="~/Images/Index/space-mining.jpg" />
+                                    </a>
+                                    <div class="media-body">
+                                        <h4>
+                                            @Html.Bootstrap().ActionLink(item.Name, "Join").PrependIcon("fa fa-chevron-right").RouteValues(new {id = item.LeaseId})
+                                        </h4>
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                        @Html.Bootstrap().ActionLinkButton("Start Funding", "Join").PrependIcon("fa fa-users").RouteValues(new {id = item.LeaseId}).Style(ButtonStyle.Primary)
+                                    </div>
+                                </div>
+                                <hr />
+                            }
+                        }
                     </div>
                 </div>
             </div>

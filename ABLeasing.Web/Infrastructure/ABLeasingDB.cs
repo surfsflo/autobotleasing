@@ -76,6 +76,12 @@ namespace ABLeasing.Web.Infrastructure
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Configurations.Add(new EquipmentMappings());
+
+            modelBuilder.Entity<Comment>()
+                        .HasRequired(b => b.Lease)
+                        .WithMany(b => b.Comments)
+                        .WillCascadeOnDelete(true);
+
             base.OnModelCreating(modelBuilder);
         }
     }

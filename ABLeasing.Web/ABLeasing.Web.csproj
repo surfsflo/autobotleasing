@@ -313,9 +313,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
-    <Compile Include="Migrations\201312191347325_IdChange.cs" />
-    <Compile Include="Migrations\201312191347325_IdChange.Designer.cs">
-      <DependentUpon>201312191347325_IdChange.cs</DependentUpon>
+    <Compile Include="Migrations\201312191537115_LeaseComments.cs" />
+    <Compile Include="Migrations\201312191537115_LeaseComments.Designer.cs">
+      <DependentUpon>201312191537115_LeaseComments.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelBinders\DbGeographyModelBinder.cs" />
@@ -1249,12 +1249,12 @@
     <Content Include="Views\Home\IndexPartials\_New.cshtml" />
     <Content Include="Views\OperatorsView\Index.cshtml" />
     <Content Include="Views\OperatorsView\LeaseApplication.cshtml" />
-    <Content Include="Views\OperatorsView\LeaseDetails.cshtml" />
     <Content Include="Views\Home\IndexPartials\_Contact.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DbGeography.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DbGeography.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Views\ClientsView\Join.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1269,8 +1269,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201312191347325_IdChange.resx">
-      <DependentUpon>201312191347325_IdChange.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201312191537115_LeaseComments.resx">
+      <DependentUpon>201312191537115_LeaseComments.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

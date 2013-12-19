@@ -26,12 +26,8 @@ namespace ABLeasing.Web.Models
         [Column(TypeName = "money")]
         public decimal? PrincipalAmount { get; set; }
 
-        [DataType(DataType.Currency)]
-        [Column(TypeName = "money")]
         public decimal? InterestRate { get; set; }
 
-        [DataType(DataType.Currency)]
-        [Column(TypeName = "money")]
         public decimal? ProfitShareRate { get; set; }
 
         [Display(Name = "Equipment")]
