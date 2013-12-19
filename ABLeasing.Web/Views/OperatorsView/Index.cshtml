@@ -141,7 +141,7 @@
         }
 
         $.ajax({
-            url: "LeaseDetails/" + $lease.data("id"),
+            url: "Operators/LeaseDetails/" + $lease.data("id"),
             type: 'GET',
             success: function (result) {
                 if (result.error) {

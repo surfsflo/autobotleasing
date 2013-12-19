@@ -30,7 +30,6 @@ namespace ABLeasing.Web.Models.Accounts
         public string Country { get; set; }
         public string Postal { get; set; }
 
-        [Email]
         public string Email { get; set; }
 
     }

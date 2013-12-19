@@ -313,10 +313,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
-    <Compile Include="Migrations\201312191537115_LeaseComments.cs" />
-    <Compile Include="Migrations\201312191537115_LeaseComments.Designer.cs">
-      <DependentUpon>201312191537115_LeaseComments.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelBinders\DbGeographyModelBinder.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
@@ -1267,11 +1263,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201312191537115_LeaseComments.resx">
-      <DependentUpon>201312191537115_LeaseComments.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -111,12 +111,23 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [POST("Edit/{id}")]
         public ActionResult Edit(Lease lease)
         {
+            var oldLease = _db.Leases.Find(lease.LeaseId);
+            lease.Equipment = oldLease.Equipment;
+            lease.Comments = oldLease.Comments;
+            lease.PurchaseCooperativeId = oldLease.PurchaseCooperativeId;
+            lease.LocationId = oldLease.LocationId;
+            lease.Location = oldLease.Location;
+            lease.Operator = oldLease.Operator;
+            lease.OperatorId = oldLease.OperatorId;
             if (ModelState.IsValid)
             {
                 _db.Entry(lease).State = EntityState.Modified;
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            var allErrors = ModelState.Values.SelectMany(v => v.Errors);
+
             return View(lease);
         }
 
