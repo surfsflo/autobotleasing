@@ -20,7 +20,7 @@ namespace ABLeasing.Web.Models
 
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
-        public decimal AmountFinanced { get; set; }
+        public decimal? AmountFinanced { get; set; }
 
         public virtual ICollection<Client> Clients { get; set; }
 

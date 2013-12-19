@@ -1,8 +1,95 @@
-﻿@model dynamic
+﻿@model ABLeasing.Web.Models.ViewModels.JoinLeaseViewModel
 
 @{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+    ViewBag.Title = "CrowdFunding";
 }
 
-<h2>title</h2>
+<div id="lease-join">
+    
+    <div class="row">
+        
+        <div class="col-sm-6 col-sm-offset-3 media-normal">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">You have selected <strong>@Model.Lease.Name</strong>.</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="alert alert-info">
+                                @if (ViewBag.PC)
+                                {
+                                    <p>
+                                        @ViewBag.Counts other members are currently funding this project! 
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p>
+                                        You are the first one to start this funding, way to be a pioneer!
+                                        Its time to make some money.
+                                    </p>
+                                }
+                            </div>                            
+                        </div>
+                    </div>
+                        
+                    @using (var form = Html.Bootstrap().Begin(new Form()))
+                    {
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Client Name</label>
+                                    <p class="form-control-static">@Model.Client.Name</p>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label class="control-label">Client Email</label>
+                                    <p class="form-control-static">@Model.Client.Email</p>
+                                </div>
+                                    
+                                @if (@Model.Client.Contact1 != null)
+                                {
+                                    <div class="form-group">
+                                        <label class="control-label">Client Phone Number</label>
+                                        <p class="form-control-static">@Model.Client.Contact1.PhoneNumber</p>
+                                    </div>                                        
+                                }
+                                    
+
+                            </div>
+                                
+                            <div class="col-sm-6">
+                                @form.FormGroup().TextBoxFor(m => m.Client.DepositAmount).Prepend("$").Placeholder("1,100,00.00")
+                                @form.FormGroup().TextBoxFor(m => m.Client.PeriodicDepositAmount).Prepend("$").Placeholder("100.00")
+                                @form.FormGroup().DropDownListFromEnumFor(model => model.Client.Frequency).Id("select-frequency")
+                                @form.FormGroup().CheckBoxFor(m => m.Client.AutoPay)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                @(form.FormGroup().CustomControls(
+                                      Html.Bootstrap().SubmitButton().Class("pull-right")
+                                          .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
+
+                            </div>
+                        </div>
+                        
+                        @Html.HiddenFor(x => x.Lease.LeaseId)
+                        @Html.HiddenFor(x => x.Client.UserId)
+                    }
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $('#select-frequency').prepend("<option></option>").select2({
+        placeholder: 'Deposit Frequency (Optional)',
+        allowClear: true
+    });
+
+</script>
