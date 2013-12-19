@@ -59,7 +59,7 @@ namespace ABLeasing.Web.Migrations
             {
                 WebSecurity.CreateUserAndAccount(op.Email, "12341234", new
                 {
-                    Discrimiator = "Operator",
+                    Discriminator = "Operator",
                     Name = op.Email,
                     TypeOfBusiness = op.TypeOfBusiness,
                     Description = op.Description
