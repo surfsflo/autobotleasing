@@ -19,8 +19,8 @@ namespace ABLeasing.Web.Controllers
             return View();
         }
 
-        [GET("Signup")]
-        public ActionResult Signup()
+        [GET("Join")]
+        public ActionResult Join()
         {
             ViewBag.Message = "Your contact page.";
             return View();

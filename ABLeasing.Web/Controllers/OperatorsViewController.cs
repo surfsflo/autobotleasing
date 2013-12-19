@@ -15,6 +15,7 @@ using System.Data.Spatial;
 
 namespace ABLeasing.Web.Controllers
 {
+    [RoutePrefix("Operators")]
     public class OperatorsViewController : ApplicationController
     {
         private readonly ABLeasingDB _db = new ABLeasingDB();

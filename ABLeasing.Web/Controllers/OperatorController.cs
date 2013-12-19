@@ -15,19 +15,20 @@ using System.Web.Security;
 
 namespace ABLeasing.Web.Controllers
 {
+    [RoutePrefix("Operator")]
     public class OperatorController : ApplicationController
     {
         private readonly ABLeasingDB _db = new ABLeasingDB();
 
 
-        [GET("Create")]
-        public ActionResult Create()
+        [GET("Signup")]
+        public ActionResult Signup()
         {
             return View();
         }
 
-        [POST("Create")]
-        public ActionResult Create(OperatorLogin viewModel)
+        [POST("Signup")]
+        public ActionResult Signup(OperatorLogin viewModel)
         {
             if (ModelState.IsValid)
             {

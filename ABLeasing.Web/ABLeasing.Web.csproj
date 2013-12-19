@@ -313,6 +313,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
+    <Compile Include="Migrations\201312191347325_IdChange.cs" />
+    <Compile Include="Migrations\201312191347325_IdChange.Designer.cs">
+      <DependentUpon>201312191347325_IdChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelBinders\DbGeographyModelBinder.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
@@ -736,6 +740,7 @@
     <Content Include="Content\sass\site\_slicebox.scss" />
     <Content Include="Content\sass\site\_contact.scss" />
     <Content Include="Content\sass\site\client\_lease-app.scss" />
+    <Content Include="Content\sass\site\operators\_operators.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
@@ -1211,7 +1216,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Signup.cshtml" />
+    <Content Include="Views\Home\Join.cshtml" />
     <Content Include="Views\Shared\_html5shiv.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TimeSpan.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Text.cshtml" />
@@ -1229,8 +1234,8 @@
     <Content Include="Views\Shared\_NavBar.BootstrapEditorTemplates.cshtml" />
     <Content Include="Views\Shared\_Layout.BootstrapEditorTemplates.cshtml" />
     <Content Include="Views\BootstrapEditorTemplates\Index.cshtml" />
-    <Content Include="Views\Client\Create.cshtml" />
-    <Content Include="Views\Operator\Create.cshtml" />
+    <Content Include="Views\Client\Signup.cshtml" />
+    <Content Include="Views\Operator\Signup.cshtml" />
     <Content Include="Views\PurchaseCooperative\Index.cshtml" />
     <Content Include="Views\PurchaseCooperative\Details.cshtml" />
     <Content Include="Views\PurchaseCooperative\Create.cshtml" />
@@ -1262,6 +1267,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201312191347325_IdChange.resx">
+      <DependentUpon>201312191347325_IdChange.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

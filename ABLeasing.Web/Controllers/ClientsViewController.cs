@@ -8,6 +8,7 @@ using AttributeRouting.Web.Mvc;
 
 namespace ABLeasing.Web.Controllers
 {
+    [RoutePrefix("Clients")]
     public class ClientsViewController : ApplicationController
     {
         [GET("")]

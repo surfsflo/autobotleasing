@@ -17,20 +17,20 @@ using ABLeasing.Web.Models.Accounts.ViewModels;
 
 namespace ABLeasing.Web.Controllers
 {
-
+    [RoutePrefix("Client")]
     public class ClientController : ApplicationController
     {
         private readonly ABLeasingDB _db = new ABLeasingDB();
 
 
-        [GET("Create")]
-        public ActionResult Create()
+        [GET("Signup")]
+        public ActionResult Signup()
         {
             return View();
         }
 
-        [POST("Create")]
-        public ActionResult Create(ClientLoginViewModel viewModel)
+        [POST("Signup")]
+        public ActionResult Signup(ClientLoginViewModel viewModel)
         {
             if (ModelState.IsValid)
             {

@@ -14,7 +14,7 @@ namespace ABLeasing.Web.Models
 
         [Key]
         [ForeignKey("Lease")]
-        public int PurchaseCooperativeID { get; set; }
+        public int PurchaseCooperativeId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
