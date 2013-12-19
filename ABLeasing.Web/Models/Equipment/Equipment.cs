@@ -11,8 +11,6 @@ namespace ABLeasing.Web.Models
     public class Equipment : BaseModelWithComment
     {
 
-        [Key]
-        [ForeignKey("Lease")]
         public int LeaseId { get; set; }
         public virtual Lease Lease { get; set; }
 

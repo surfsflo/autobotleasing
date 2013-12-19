@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Web;
-using System.Web.Http.OData.Builder;
+//using System.Web.Http.OData.Builder;
 using ABLeasing.Web.Models;
 using ABLeasing.Web.Models.Accounts;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -11,6 +12,7 @@ using ABLeasing.Web.Models.Transactions;
 using System.Data.Objects;
 using System.Data.Entity.Infrastructure;
 using System.Data;
+
 
 namespace ABLeasing.Web.Infrastructure
 {
@@ -35,11 +37,6 @@ namespace ABLeasing.Web.Infrastructure
         public DbSet<LeaseTransaction> LeaseTransactions { get; set; }
         public DbSet<ClientTransaction> ClientTransactions { get; set; }
         public DbSet<PurchaseCooperative> PurchaseCooperatives { get; set; }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
 
         public override int SaveChanges()
         {
@@ -74,13 +71,21 @@ namespace ABLeasing.Web.Infrastructure
 
             return base.SaveChanges();
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Configurations.Add(new EquipmentMappings());
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
-    //    public class EquipmentMappings : EntityTypeConfiguration<Equipment>
-    //    {
-    //        public EquipmentMappings()
-    //        {
-    //            HasKey(e => e)
-    //        }
-    //    }
+    public class EquipmentMappings : EntityTypeConfiguration<Equipment>
+    {
+        public EquipmentMappings()
+        {
+            HasKey(c => c.LeaseId);
+            HasRequired(c => c.Lease).WithOptional(cu => cu.Equipment).WillCascadeOnDelete(true);
+        }
+    }
 }
