@@ -35,12 +35,16 @@
 				<a class="navbar-brand" href="/">YourMCo Admin Coolness</a>
 			</div>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse">
-
-				<div class="navbar-form navbar-right">
-					@Html.Partial("_AdminLogin")
-				</div>
-			</div>
+		    <div class="collapse navbar-collapse" id="navbar-collapse">
+		        <ul class="nav navbar-nav">
+		            <li>
+                        <a href="/">Main Site</a>
+		            </li>
+		        </ul>
+		        <div class="navbar-form navbar-right">
+		            @Html.Partial("_AdminLogin")
+		        </div>
+		    </div>
 		</div>
 
 	</nav>

@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using AttributeRouting;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models;
@@ -43,7 +44,8 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [GET("Create")]
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
+            //            var cats = _db.Categories
+            ViewBag.CategoryId = new SelectList(_db.Categories.OrderBy(x => x.Name), "CategoryId", "Name");
             return View();
         }
 

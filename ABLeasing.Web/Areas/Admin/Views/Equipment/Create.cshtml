@@ -1,5 +1,4 @@
-﻿@using ABLeasing.Web.Utility
-@using ABLeasing.Web.HtmlHelpers
+﻿
 @model ABLeasing.Web.Models.Equipment
 
 @{
@@ -21,12 +20,12 @@
 	@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
 	@form.FormGroup().TextBoxFor(m => m.Manufacturer)
 
-	@form.FormGroup().DropDownListFromEnumFor(model => model.MonitorAttached)
+	@form.FormGroup().DropDownListFromEnumFor(model => model.MonitorAttached).Id("select-monitor");
 
 	@form.FormGroup().TextBoxFor(m => m.Model)
 
 	@form.FormGroup().TextBoxFor(m => m.RetailPrice).Prepend("$")
-	@form.FormGroup().DropDownListFor(m => m.CategoryId, ViewBag.CategoryId as IEnumerable<SelectListItem>)
+	@form.FormGroup().DropDownListFor(m => m.CategoryId, ViewBag.CategoryId as IEnumerable<SelectListItem>).Id("select-category");
 
 	@form.FormGroup().TextBoxFor(m => m.MaterialType)
 	@form.FormGroup().TextBoxFor(m => m.PartNumber)
@@ -36,3 +35,11 @@
 		.Style(ButtonStyle.Primary).LoadingText("Submitting...")))
 
 }
+
+<script type="text/javascript">
+    $('#select-monitor').select2();
+    $("#select-category").prepend("<option value='' selected='selected'></option>");
+    $('#select-category').select2({
+        placeholder: 'Choose Category'
+    });
+</script>
