@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using AttributeRouting;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models.Accounts;
 using ABLeasing.Web.Infrastructure;
-using ABLeasing.Web.Models;
 using WebMatrix.WebData;
-using System.Web.Security;
 using ABLeasing.Web.Models.Accounts.ViewModels;
+using System.Web.Security;
 
-namespace ABLeasing.Web.Controllers.Signup
+namespace ABLeasing.Web.Controllers
 {
-    [RoutePrefix("Signup/Client")]
-    public class ClientController : Controller
+    public class OperatorController : Controller
     {
         private ABLeasingDB db = new ABLeasingDB();
 
@@ -30,41 +27,38 @@ namespace ABLeasing.Web.Controllers.Signup
         }
 
         [POST("Create")]
-        public ActionResult Create(ClientLoginViewModel viewModel)
+        public ActionResult Create(OperatorLogin viewModel)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(viewModel.Client.Email, viewModel.RegisterModel.Password, new
+                    WebSecurity.CreateUserAndAccount(viewModel.Operator.Email, viewModel.RegisterModel.Password, new
                     {
-                        Discriminator = "Client",
-                        Name = viewModel.Client.Name
+                        Discriminator = "Operator",
+                        Name = viewModel.Operator.Name
                     });
-                    WebSecurity.Login(viewModel.Client.Email, viewModel.RegisterModel.Password);
+                    WebSecurity.Login(viewModel.Operator.Email, viewModel.RegisterModel.Password);
 
                 }
                 catch (MembershipCreateUserException e)
                 {
                     ModelState.AddModelError("", AccountController.ErrorCodeToString(e.StatusCode));
                 }
-
                 var cl =
-                    from s in db.Clients
-                    where s.Email == viewModel.Client.Email
+                    from s in db.Operators
+                    where s.Email == viewModel.Operator.Email
                     select s;
 
-                var client = cl.First();
+                var op = cl.First();
 
-                client.Name = viewModel.Client.Name;
-                client.Contact1 = viewModel.Client.Contact1;
-                client.Status = true;
-                client.Frequency = DepositFrequency.NotSet;
-                client.AutoPay = false;
-                db.Entry(client).State = EntityState.Modified;
+                op.Contact1 = viewModel.Operator.Contact1;
+                op.TypeOfBusiness = viewModel.Operator.TypeOfBusiness;
+                op.Description = viewModel.Operator.Description;
+                db.Entry(op).State = EntityState.Modified;
                 db.SaveChanges();
 
-                return RedirectToAction("Index", "ClientsView");
+                return RedirectToAction("Index", "OperatorsView");
             }
 
             return View(viewModel);

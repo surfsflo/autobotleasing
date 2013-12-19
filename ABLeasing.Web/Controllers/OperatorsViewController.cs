@@ -12,10 +12,9 @@ using ABLeasing.Web.Models;
 using ABLeasing.Web.Infrastructure;
 using System.Data.Spatial;
 
-namespace ABLeasing.Web.Controllers.Operators
+namespace ABLeasing.Web.Controllers
 {
-    [RoutePrefix("OperatorsView")]
-    public class OperatorsViewController : Controller
+    public class OperatorsViewController : ApplicationController
     {
         private readonly ABLeasingDB _db = new ABLeasingDB();
 

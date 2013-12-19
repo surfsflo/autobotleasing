@@ -29,6 +29,10 @@
                                         @form.FormGroup().TextAreaFor(m => m.Operator.Description)
                                         @form.FormGroup().PasswordFor(m => m.RegisterModel.Password)
                                         @form.FormGroup().PasswordFor(m => m.RegisterModel.ConfirmPassword)
+                                        
+                                        @(form.FormGroup().CustomControls(
+                                                Html.Bootstrap().SubmitButton()
+                                                    .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
 
                                     </div>
                                 </div>
@@ -51,13 +55,6 @@
                                     </div>
                                 </div>
                             </div>                     
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                @(form.FormGroup().CustomControls(
-                                        Html.Bootstrap().SubmitButton().Class("pull-right")
-                                            .Style(ButtonStyle.Primary).LoadingText("Submitting...")))
-                            </div>  
                         </div>
                     }  
 

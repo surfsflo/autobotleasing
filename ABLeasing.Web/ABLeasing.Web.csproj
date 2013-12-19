@@ -31,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -286,13 +287,14 @@
     <Compile Include="Areas\Admin\Controllers\Users\StaffController.cs" />
     <Compile Include="Areas\Admin\Models\ApproveLeaseViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
-    <Compile Include="Controllers\Clients\ClientsViewController.cs" />
+    <Compile Include="Controllers\ClientsViewController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Operators\OperatorsViewController.cs" />
+    <Compile Include="Controllers\OperatorsViewController.cs" />
     <Compile Include="Controllers\PurchaseCooperativeController.cs" />
-    <Compile Include="Controllers\Signup\ClientController.cs" />
-    <Compile Include="Controllers\Signup\OperatorController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\OperatorController.cs" />
     <Compile Include="DynamicData\FieldTemplates\DbGeography.ascx.cs">
       <DependentUpon>DbGeography.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1227,8 +1229,8 @@
     <Content Include="Views\Shared\_NavBar.BootstrapEditorTemplates.cshtml" />
     <Content Include="Views\Shared\_Layout.BootstrapEditorTemplates.cshtml" />
     <Content Include="Views\BootstrapEditorTemplates\Index.cshtml" />
-    <Content Include="Views\Signup\Client\Create.cshtml" />
-    <Content Include="Views\Signup\Operator\Create.cshtml" />
+    <Content Include="Views\Client\Create.cshtml" />
+    <Content Include="Views\Operator\Create.cshtml" />
     <Content Include="Views\PurchaseCooperative\Index.cshtml" />
     <Content Include="Views\PurchaseCooperative\Details.cshtml" />
     <Content Include="Views\PurchaseCooperative\Create.cshtml" />

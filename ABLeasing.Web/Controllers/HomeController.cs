@@ -19,21 +19,7 @@ namespace ABLeasing.Web.Controllers
             return View();
         }
 
-        [GET("how-it-works")]
-        public ActionResult HowItWorks()
-        {
-            ViewBag.Message = "Your app description page.";
-
-            return View();
-        }
-
-        [GET("autobot-info")]
-        public ActionResult Info()
-        {
-            return View();
-        }
-
-        [GET("signup")]
+        [GET("Signup")]
         public ActionResult Signup()
         {
             ViewBag.Message = "Your contact page.";
