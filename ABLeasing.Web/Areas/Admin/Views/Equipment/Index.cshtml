@@ -91,13 +91,7 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                @Html.Bootstrap().ActionLink("Edit", "Edit").RouteValues(new { id = item.EquipmentId }).PrependIcon("fa fa-edit fa-fw")
-                                            </li>
-                                            <li>
-                                                <a class="open-modal" data-modalid="action-modal" data-url="@Url.Action("Delete", new { id = item.EquipmentId })">
-                                                    <i class="fa fa-power-off fa-fw"></i>
-                                                    Delete
-                                                </a>
+                                                @Html.Bootstrap().ActionLink("Edit", "Edit").RouteValues(new { id = item.LeaseId }).PrependIcon("fa fa-edit fa-fw")
                                             </li>
                                         </ul>
                                     </div>

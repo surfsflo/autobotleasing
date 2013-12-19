@@ -85,7 +85,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(lease);
+            return PartialView(lease);
         }
 
         [POST("Delete/{id}")]

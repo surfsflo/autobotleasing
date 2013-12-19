@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ABLeasing.Web.Models.ViewModels;
 using AttributeRouting;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models;
@@ -26,7 +27,7 @@ namespace ABLeasing.Web.Controllers.Operators
         }
 
         [POST("LeaseApplication")]
-        public ActionResult LeaseApplication(Lease lease)
+        public ActionResult LeaseApplication(LeaseApp viewModel)
         {
 
             var ops =
@@ -36,17 +37,21 @@ namespace ABLeasing.Web.Controllers.Operators
 
             int opId = ops.First().UserId;
 
-            lease.OperatorId = opId;
-            lease.Pending = true;
-            lease.LeaseId = lease.EquipmentId;
+            viewModel.Lease.OperatorId = opId;
+            viewModel.Lease.Pending = true;
+
+
             if (ModelState.IsValid)
             {
-                _db.Leases.Add(lease);
+                _db.Leases.Add(viewModel.Lease);
+                viewModel.Equipment.LeaseId = viewModel.Lease.LeaseId;
+                _db.Equipment.Add(viewModel.Equipment);
+
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(lease);
+            return View(viewModel);
         }
 
         [GET("LeaseDetails")]

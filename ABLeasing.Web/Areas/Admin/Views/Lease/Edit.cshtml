@@ -17,26 +17,12 @@
         </div>
     </div>
     
-    
-    
 	@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
-	@form.FormGroup().TextBoxFor(m => m.Manufacturer)
-
-	@form.FormGroup().DropDownListFromEnumFor(model => model.MonitorAttached)
-
-	@form.FormGroup().TextBoxFor(m => m.Model)
-
-	@form.FormGroup().TextBoxFor(m => m.RetailPrice).Prepend("$")
-	@form.FormGroup().DropDownListFor(m => m.CategoryId, ViewBag.CategoryId as IEnumerable<SelectListItem>)
-
-	@form.FormGroup().TextBoxFor(m => m.MaterialType)
-	@form.FormGroup().TextBoxFor(m => m.PartNumber)
 	
 	@(form.FormGroup().CustomControls(
 		Html.Bootstrap().SubmitButton()
 		    .Style(ButtonStyle.Primary).LoadingText("logging...")))
     
-    @Html.HiddenFor(m => m.EquipmentId)
     @Html.HiddenFor(m => m.Created)
 
 }

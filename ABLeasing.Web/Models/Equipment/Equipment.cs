@@ -11,7 +11,10 @@ namespace ABLeasing.Web.Models
     public class Equipment : BaseModelWithComment
     {
 
-        public int EquipmentId { get; set; }
+        [Key]
+        [ForeignKey("Lease")]
+        public int LeaseId { get; set; }
+        public virtual Lease Lease { get; set; }
 
         [Display(Name = "Item Name")]
         [Required]
@@ -49,13 +52,8 @@ namespace ABLeasing.Web.Models
         public Contact SupplierContact { get; set; }
 
         [Display(Name = "Cateogory")]
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
         public virtual Category Category { get; set; }
-
-        [Key]
-        [ForeignKey("Lease")]
-        public int? LeaseId { get; set; }
-        public virtual Lease Lease { get; set; }
 
         public int? LocationId { get; set; }
         public virtual Location Location { get; set; }

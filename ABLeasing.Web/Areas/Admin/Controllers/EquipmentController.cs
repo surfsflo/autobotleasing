@@ -57,8 +57,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryId = new SelectList((IEnumerable<dynamic>)_db.Categories, "CategoryId", "Name", equipment.CategoryId);
-            ViewBag.EquipmentId = new SelectList(_db.Leases, "LeaseId", "Name", equipment.EquipmentId);
+            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name", equipment.CategoryId);
             ViewBag.LocationId = new SelectList(_db.Locations, "LocationId", "CellProvider", equipment.LocationId);
             return View(equipment);
         }
@@ -85,7 +84,6 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name", equipment.CategoryId);
-            ViewBag.EquipmentId = new SelectList(_db.Leases, "LeaseId", "Name", equipment.EquipmentId);
             ViewBag.LocationId = new SelectList(_db.Locations, "LocationId", "CellProvider", equipment.LocationId);
             return View(equipment);
         }

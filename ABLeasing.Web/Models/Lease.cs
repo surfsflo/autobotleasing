@@ -35,13 +35,14 @@ namespace ABLeasing.Web.Models
         public decimal? ProfitShareRate { get; set; }
 
         [Display(Name = "Equipment")]
-        public int EquipmentId { get; set; }
         public virtual Equipment Equipment { get; set; }
 
         [ForeignKey("Operator")]
+        [Display(Name = "Operator")]
         public int OperatorId { get; set; }
         public virtual Operator Operator { get; set; }
 
+        [Display(Name = "PurchaseCooperative")]
         public int? PurchaseCooperativeId { get; set; }
         public virtual PurchaseCooperative PurchaseCooperative { get; set; }
 

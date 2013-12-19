@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Lease Applications";
-    ViewBag.Header = "Lease Apps";
+    ViewBag.Header = "Lease Applications";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -38,7 +38,7 @@
                                 @Html.DisplayNameFor(model => model.ProfitShareRate)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.EquipmentId)
+                                @Html.DisplayNameFor(model => model.Equipment)
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.OperatorId)
@@ -78,7 +78,11 @@
                                     @Html.DisplayFor(modelItem => item.ProfitShareRate)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Equipment.Name)
+                                    @if (item.Equipment != null)
+                                    {
+                                        @Html.Bootstrap().ActionLink(item.Equipment.Name, "Edit", "Equipment").RouteValues(new {id = item.LeaseId}).PrependIcon("fa fa-edit fa-fw")
+                                    }
+                                    
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Operator.Name)
