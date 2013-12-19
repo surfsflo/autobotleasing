@@ -29,15 +29,6 @@
                                 @Html.DisplayNameFor(model => model.Pending)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.PrincipalAmount)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.InterestRate)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.ProfitShareRate)
-                            </th>
-                            <th>
                                 @Html.DisplayNameFor(model => model.Equipment)
                             </th>
                             <th>
@@ -48,6 +39,15 @@
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.Location.GpsLocation)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PrincipalAmount)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.InterestRate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ProfitShareRate)
                             </th>
                             <th>@Html.DisplayNameFor(model => model.Created)</th>
                             <th>@Html.DisplayNameFor(model => model.Updated)</th>
@@ -69,15 +69,6 @@
                                     @Html.DisplayFor(modelItem => item.Pending)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.PrincipalAmount)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.InterestRate)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ProfitShareRate)
-                                </td>
-                                <td>
                                     @if (item.Equipment != null)
                                     {
                                         @Html.Bootstrap().ActionLink(item.Equipment.Name, "Edit", "Equipment").RouteValues(new {id = item.LeaseId}).PrependIcon("fa fa-edit fa-fw")
@@ -92,6 +83,15 @@
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Location.GpsLocation)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PrincipalAmount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.InterestRate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProfitShareRate)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Created)
@@ -115,6 +115,9 @@
                                                     <i class="fa fa-power-off fa-fw"></i>
                                                     Delete
                                                 </a>
+                                            </li>
+                                            <li>
+                                                @Html.Bootstrap().ActionLink("Approve Lease", "Approve").RouteValues(new { id = item.LeaseId}).PrependIcon("fa fa-check-square-o")
                                             </li>
                                         </ul>
                                     </div>

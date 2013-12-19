@@ -284,6 +284,7 @@
     <Compile Include="Areas\Admin\Controllers\Users\ClientsController.cs" />
     <Compile Include="Areas\Admin\Controllers\Users\OperatorsController.cs" />
     <Compile Include="Areas\Admin\Controllers\Users\StaffController.cs" />
+    <Compile Include="Areas\Admin\Models\ApproveLeaseViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
     <Compile Include="Controllers\Clients\ClientsViewController.cs" />
@@ -310,10 +311,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ABLeasingDB.cs" />
-    <Compile Include="Migrations\201312190544037_Equipment.cs" />
-    <Compile Include="Migrations\201312190544037_Equipment.Designer.cs">
-      <DependentUpon>201312190544037_Equipment.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelBinders\DbGeographyModelBinder.cs" />
     <Compile Include="Models\Accounts\AccountModels.cs" />
@@ -572,10 +569,9 @@
     <Content Include="Areas\Admin\Views\Operators\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Operators\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Lease\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Lease\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Lease\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Lease\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Lease\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Lease\Approve.cshtml" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1255,7 +1251,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
@@ -1265,11 +1260,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201312190544037_Equipment.resx">
-      <DependentUpon>201312190544037_Equipment.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,34 @@
+﻿
+@model ABLeasing.Web.Areas.Admin.Models.ApproveLeaseViewModel
+
+@{
+    ViewBag.Title = "Lease Approval";
+    ViewBag.Header = "Lease Approval: " + @Model.LeaseName;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    
+    @using (var form = Html.Bootstrap().Begin(new Form("Approve")))
+    {
+        <div class="col-sm-12">
+            <div class="alert alert-info">
+                <p>
+                    Would you like to approve this Lease for Operator <strong>@Model.OpName</strong>?
+                </p>
+            </div>    
+            
+            <h4>Add comment for lease approval.</h4>
+            <hr />
+            @form.FormGroup().TextBoxFor(m => m.Comment.Name)
+            @form.FormGroup().TextAreaFor(m => m.Comment.Message)
+            
+            @(form.FormGroup().CustomControls(
+                      Html.Bootstrap().SubmitButton()
+                          .Style(ButtonStyle.Primary).LoadingText("logging...")))
+            
+@*            @Html.HiddenFor(m => m.Lease.Name)*@
+@*        *@
+        </div>    
+    }
+</div>

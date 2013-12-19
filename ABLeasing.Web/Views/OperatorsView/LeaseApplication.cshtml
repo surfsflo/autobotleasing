@@ -15,7 +15,7 @@
                         
                     @using (var form = Html.Bootstrap().Begin(new Form()))
                     {
-                        
+                            
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4>Equipment Information</h4>
@@ -75,8 +75,9 @@
 <script type="text/javascript">
     $(function() {
         $("#select-monitor").select2();
-        $("#select-category").prepend("<option value=''></option>").select2({
-            placeholder: "Choose Category"
+        $("#select-category").prepend("<option></option>").select2({
+            placeholder: "Choose Category",
+            allowClear: true
         });
     });
 </script>

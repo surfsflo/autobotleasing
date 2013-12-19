@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ABLeasing.Web.Areas.Admin.Models;
 using AttributeRouting;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models;
@@ -17,6 +18,40 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
     public class LeaseController : Controller
     {
         private readonly ABLeasingDB _db = new ABLeasingDB();
+
+
+        [GET("Approve/{id}")]
+        public ActionResult Approve(int id = 0)
+        {
+            var lease = _db.Leases.Find(id);
+            if (lease == null)
+            {
+                return HttpNotFound();
+            }
+            var viewModel = new ApproveLeaseViewModel
+            {
+                LeaseName = lease.Name,
+                Id = lease.LeaseId,
+                OpName = lease.Operator.Name
+            };
+            return View(viewModel);
+        }
+
+        [POST("Approve/{id}")]
+        public ActionResult Approve(ApproveLeaseViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                viewModel.Lease.Pending = false;
+                viewModel.Lease.Comments.Add(viewModel.Comment);
+                _db.Entry(viewModel.Lease).State = EntityState.Modified;
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+
+            return View(viewModel);
+        }
 
         [GET("")]
         public ActionResult Index()

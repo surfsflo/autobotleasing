@@ -1,4 +1,5 @@
-﻿@using Glimpse.Mvc.AlternateType
+﻿@using ABLeasing.Web.Models
+@using TwitterBootstrapMVC.Controls
 @model ABLeasing.Web.Models.Lease
 
 @{
@@ -6,23 +7,61 @@
     ViewBag.Header = "Edit Lease " + @Model.Name;
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
+<div class="row">
+    
+    @using (FormBuilder<Lease> form = Html.Bootstrap().Begin(new Form("Edit", "Lease")))
+    {
+        @Html.AntiForgeryToken()
 
-@using (var form = Html.Bootstrap().Begin(new Form("Edit", "Lease")))
-{
-	@Html.AntiForgeryToken()
-
-    <div class="form-group">
-        <div class="col-sm-offset-4 col-sm-7">
-            @Html.ValidationSummary(true)
+        <div class="col-sm-12">
+            <div class="form-group ">
+                @Html.ValidationSummary(true)
+            </div>
         </div>
-    </div>
+        
+        <div class="col-sm-6">
     
-	@form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
-	
-	@(form.FormGroup().CustomControls(
-		Html.Bootstrap().SubmitButton()
-		    .Style(ButtonStyle.Primary).LoadingText("logging...")))
-    
-    @Html.HiddenFor(m => m.Created)
+            @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus()
 
-}
+            @if (@Model.Equipment != null)
+            {
+                <div class="form-group">
+                    <label class="control-label">Equipment</label>
+                    <p class="form-control-static">
+                        @Html.Bootstrap().ActionLink(Model.Equipment.Name, "Edit", "Equipment").RouteValues(new {id = Model.LeaseId}).PrependIcon("fa fa-edit fa-fw")
+                    </p>
+                </div>
+               
+            }
+
+            @form.FormGroup().TextAreaFor(m => m.Description).Rows(12)
+
+            
+            
+            @(form.FormGroup().CustomControls(
+                  Html.Bootstrap().SubmitButton()
+                      .Style(ButtonStyle.Primary).LoadingText("logging...")))
+            
+        </div>
+        <div class="col-sm-6">
+
+            @form.FormGroup().TextBoxFor(m => m.Operator.Name)
+            @form.FormGroup().TextBoxFor(m => m.PurchaseCooperativeId)
+            
+            @form.FormGroup().TextBoxFor(m => m.PrincipalAmount).Prepend("$")
+            @form.FormGroup().TextBoxFor(m => m.InterestRate)
+            @form.FormGroup().TextBoxFor(m => m.ProfitShareRate).Prepend("$")
+
+            <div class="form-group">
+                <label class="control-label">GPS Location</label>
+                <p class="form-control-static"></p>@Html.DisplayFor(m => m.Location.GpsLocation)
+            </div>
+
+            
+        </div>
+
+
+        @Html.HiddenFor(m => m.Created)
+        @Html.HiddenFor(m => m.LeaseId)
+    }
+</div>

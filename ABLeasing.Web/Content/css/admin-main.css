@@ -131,11 +131,6 @@ th {
   color: white;
 }
 
-/* line 67, ../sass/_constants.scss */
-label {
-  font-weight: inherit;
-}
-
 /* line 71, ../sass/_constants.scss */
 .media-normal .media {
   margin-bottom: 10px;

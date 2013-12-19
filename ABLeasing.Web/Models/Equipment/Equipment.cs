@@ -49,7 +49,7 @@ namespace ABLeasing.Web.Models
         public int? SupplierContactId { get; set; }
         public Contact SupplierContact { get; set; }
 
-        [Display(Name = "Cateogory")]
+        [Display(Name = "Category")]
         public int? CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
