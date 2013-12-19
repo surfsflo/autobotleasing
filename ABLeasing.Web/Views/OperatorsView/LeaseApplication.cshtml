@@ -1,6 +1,5 @@
-﻿@using ABLeasing.Web.Models
-@using TwitterBootstrapMVC.Controls
-@model ABLeasing.Web.Models.Lease
+﻿
+@model ABLeasing.Web.Models.ViewModels.LeaseApp
 @{
     ViewBag.Title = "Lease Application";
 }
@@ -12,14 +11,42 @@
             <div class="panel panel-info">
                 <div class="panel-heading text-center">Lease Application</div>
                 <div class="panel-body">
-                    <div class="row">
+
                         
-                        @using (FormBuilder<Lease> form = Html.Bootstrap().Begin(new Form()))
-                        {
+                    @using (var form = Html.Bootstrap().Begin(new Form()))
+                    {
+                        
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Equipment Information</h4>
+                                <hr />
+                            </div>
                             <div class="col-sm-6">
-                                @form.FormGroup().TextBoxFor(m => m.Name).AutoFocus().HelpText("Give this application a name to reference later.").Placeholder("Combine #3")
-                                @form.FormGroup().DropDownListFor(m => m.EquipmentId, ViewBag.EquipmentId as IEnumerable<SelectListItem>).Id("select-equipment")                            
-                                @form.FormGroup().TextAreaFor(m => m.Description).Rows(13).Tooltip(new Tooltip("Please give a full description of the lease, and the related equipment Item. This will be reviewed during the approval process.").Placement("top"))
+                                @form.FormGroup().TextBoxFor(m => m.Equipment.Name).AutoFocus().Placeholder("Caterpillar 825G Soil Compactor")
+                                @form.FormGroup().TextBoxFor(m => m.Equipment.Manufacturer).Placeholder("Caterpillar")
+
+                                @form.FormGroup().DropDownListFromEnumFor(model => model.Equipment.MonitorAttached).Id("select-monitor")
+
+                                @form.FormGroup().TextBoxFor(m => m.Equipment.Model).Placeholder("825G")
+                            </div>
+                            <div class="col-sm-6">
+                                @form.FormGroup().TextBoxFor(m => m.Equipment.RetailPrice).Prepend("$").Placeholder("1,100,00.00")
+                                @form.FormGroup().DropDownListFor(m => m.Equipment.CategoryId, ViewBag.CategoryId as IEnumerable<SelectListItem>).Id("select-category")
+
+                                @form.FormGroup().TextBoxFor(m => m.Equipment.MaterialType).Placeholder("Heavy Equipment")
+                                @form.FormGroup().TextBoxFor(m => m.Equipment.PartNumber).Placeholder("234HS0")
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Lease Information</h4>
+                                <hr />
+                            </div>
+
+                            <div class="col-sm-6">
+                                @form.FormGroup().TextBoxFor(m => m.Lease.Name).HelpText("Give this application a name to reference later.").Placeholder("Soil Compator Utah County")
+                                @form.FormGroup().TextAreaFor(m => m.Lease.Description).Rows(15).Tooltip(new Tooltip("Please give a full description of the lease, and the related equipment Item. This will be reviewed during the approval process.").Placement("top"))
                                 
                                 @(form.FormGroup().CustomControls(
                                       Html.Bootstrap().SubmitButton()
@@ -30,14 +57,13 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="control-label">GPS Location</label>
-                                    @Html.EditorFor(m => m.Location.GpsLocation)        
+                                    <p class="help-block">Pick a location on the map to prefill this field.</p>
+                                    @Html.EditorFor(m => m.Lease.Location.GpsLocation)        
                                 </div>
                                
                             </div>
-                        }
-
-                    </div>
-
+                        </div>
+                    }
                 </div>
             </div>
         </div>
@@ -48,7 +74,7 @@
 
 <script type="text/javascript">
     $(function() {
-        $("#select-equipment").select2();
+        $("#select-category, #select-monitor").select2();
     });
 </script>
 <script type="text/javascript" src="~/Scripts/EFSpatialGoogleMaps.js"> </script>

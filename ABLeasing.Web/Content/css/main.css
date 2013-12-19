@@ -1906,4 +1906,5 @@ body:after {
 /* line 4, ../sass/site/client/_lease-app.scss */
 #lease-apply .g-map {
   margin-top: 10px;
+  height: 330px;
 }

@@ -8,8 +8,7 @@
         // Create the map div and insert it into the page.
         var $map = $('<div>', {
             css: {
-                width: '100%',
-                height: '400px'
+                width: '100%'
             },
             "class": "g-map"
         }).insertAfter($input);

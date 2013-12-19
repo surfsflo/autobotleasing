@@ -3,5 +3,5 @@
 @if (Model != null) {
   @Html.TextBox("", Model.Latitude.Value.ToString("G",CultureInfo.InvariantCulture) + "," + Model.Longitude.Value.ToString("G",CultureInfo.InvariantCulture), new { @class = "editor-for-dbgeography form-control", disabled = true })
 } else {
-  @Html.TextBox("", "", new { @class = "editor-for-dbgeography form-control" }) 
+  @Html.TextBox("", "", new { @class = "editor-for-dbgeography form-control", placeholder = "40.712914897234,-73.9964818954468" }) 
 }

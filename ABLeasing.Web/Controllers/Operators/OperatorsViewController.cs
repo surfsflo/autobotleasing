@@ -21,7 +21,7 @@ namespace ABLeasing.Web.Controllers.Operators
         [GET("LeaseApplication")]
         public ActionResult LeaseApplication()
         {
-            ViewBag.EquipmentId = new SelectList(_db.Equipment, "EquipmentId", "Name");
+            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
             return View();
         }
 
