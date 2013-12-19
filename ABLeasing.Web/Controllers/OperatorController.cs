@@ -15,9 +15,9 @@ using System.Web.Security;
 
 namespace ABLeasing.Web.Controllers
 {
-    public class OperatorController : Controller
+    public class OperatorController : ApplicationController
     {
-        private ABLeasingDB db = new ABLeasingDB();
+        private readonly ABLeasingDB _db = new ABLeasingDB();
 
 
         [GET("Create")]
@@ -46,7 +46,7 @@ namespace ABLeasing.Web.Controllers
                     ModelState.AddModelError("", AccountController.ErrorCodeToString(e.StatusCode));
                 }
                 var cl =
-                    from s in db.Operators
+                    from s in _db.Operators
                     where s.Email == viewModel.Operator.Email
                     select s;
 
@@ -55,8 +55,8 @@ namespace ABLeasing.Web.Controllers
                 op.Contact1 = viewModel.Operator.Contact1;
                 op.TypeOfBusiness = viewModel.Operator.TypeOfBusiness;
                 op.Description = viewModel.Operator.Description;
-                db.Entry(op).State = EntityState.Modified;
-                db.SaveChanges();
+                _db.Entry(op).State = EntityState.Modified;
+                _db.SaveChanges();
 
                 return RedirectToAction("Index", "OperatorsView");
             }
@@ -66,7 +66,7 @@ namespace ABLeasing.Web.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            _db.Dispose();
             base.Dispose(disposing);
         }
     }

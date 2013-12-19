@@ -18,7 +18,7 @@ using ABLeasing.Web.Models.Accounts.ViewModels;
 namespace ABLeasing.Web.Controllers
 {
 
-    public class ClientController : Controller
+    public class ClientController : ApplicationController
     {
         private readonly ABLeasingDB _db = new ABLeasingDB();
 

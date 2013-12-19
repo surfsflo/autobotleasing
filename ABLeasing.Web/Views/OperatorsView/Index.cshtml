@@ -1,11 +1,78 @@
-﻿@{
-    ViewBag.Title = "Operators Index";
+﻿@model IEnumerable<ABLeasing.Web.Models.Lease>
+
+@{
+    ViewBag.Title = "Operators View";
 }
 
 
 <div id="operators">
     
-    <div class=""></div>
+    <div class="row">
+        <div class="col-sm-8 media-normal">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    Current Leases
+                </div>
+                
+                <div class="panel-body">
+                    <div class="col-sm-12">
+                        
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                                <div class="media">
+                                    <a class="pull-left">
+                                        <img src="~/Images/Index/mining-equipment.jpg" />
+                                        <p class="help-block"><small>Add picuture upload.</small></p>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4>
+                                            @Html.ActionLink(item.Name, "LeaseDetails")
+                                        </h4>
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p>
+                                @Html.ActionLink("Create", "LeaseApplication") your first lease application today!
+                            </p>
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-4">
+            
+            <div class="panel panel-info">
+                <div class="panel-heading">Endless Opportunities</div>
+                <div class="panel-body">
+
+                    <div class="list-group">
+
+                        <a href="#" class="list-group-item">
+                            @Html.Bootstrap().ActionLinkButton("New Lease Application", "LeaseApplication")
+                            Need a new machine to help expand your business? Submit a new lease application.
+                        </a>
+                        <a href="#" class="list-group-item">
+                            What Else Should Go Here?
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
     <div class="row">
         <div class="col-sm-8 media-normal">
@@ -17,7 +84,7 @@
                         <div class="media">
                             <div class="media-body">
                                 <a class="btn btn-primary" href="/operatorsview/LeaseApplication">Apply now</a>
-                                Need a new machine to help expand your business? Submit a new lease application.
+                                
                             </div>
                         </div>
                     </div>

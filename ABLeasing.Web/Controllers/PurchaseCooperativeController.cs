@@ -12,21 +12,21 @@ using ABLeasing.Web.Infrastructure;
 
 namespace ABLeasing.Web.Controllers
 {
-	[RoutePrefix("PurchaseCooperative")]	
-    public class PurchaseCooperativeController : Controller
+
+    public class PurchaseCooperativeController : ApplicationController
     {
-        private ABLeasingDB db = new ABLeasingDB();
+        private readonly ABLeasingDB _db = new ABLeasingDB();
 
         [GET("")]
         public ActionResult Index()
         {
-            return View(db.PurchaseCooperatives.ToList());
+            return View(_db.PurchaseCooperatives.ToList());
         }
 
         [GET("Details/{id}")]
         public ActionResult Details(int id = 0)
         {
-            PurchaseCooperative purchasecooperative = db.PurchaseCooperatives.Find(id);
+            PurchaseCooperative purchasecooperative = _db.PurchaseCooperatives.Find(id);
             if (purchasecooperative == null)
             {
                 return HttpNotFound();
@@ -45,8 +45,8 @@ namespace ABLeasing.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.PurchaseCooperatives.Add(purchasecooperative);
-                db.SaveChanges();
+                _db.PurchaseCooperatives.Add(purchasecooperative);
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -56,7 +56,7 @@ namespace ABLeasing.Web.Controllers
         [GET("Edit/{id}")]
         public ActionResult Edit(int id = 0)
         {
-            PurchaseCooperative purchasecooperative = db.PurchaseCooperatives.Find(id);
+            PurchaseCooperative purchasecooperative = _db.PurchaseCooperatives.Find(id);
             if (purchasecooperative == null)
             {
                 return HttpNotFound();
@@ -69,8 +69,8 @@ namespace ABLeasing.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(purchasecooperative).State = EntityState.Modified;
-                db.SaveChanges();
+                _db.Entry(purchasecooperative).State = EntityState.Modified;
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(purchasecooperative);
@@ -79,7 +79,7 @@ namespace ABLeasing.Web.Controllers
         [GET("Delete/{id}")]
         public ActionResult Delete(int id = 0)
         {
-            PurchaseCooperative purchasecooperative = db.PurchaseCooperatives.Find(id);
+            PurchaseCooperative purchasecooperative = _db.PurchaseCooperatives.Find(id);
             if (purchasecooperative == null)
             {
                 return HttpNotFound();
@@ -90,15 +90,15 @@ namespace ABLeasing.Web.Controllers
         [POST("Delete/{id}")]
         public ActionResult DeleteConfirmed(int id)
         {
-            PurchaseCooperative purchasecooperative = db.PurchaseCooperatives.Find(id);
-            db.PurchaseCooperatives.Remove(purchasecooperative);
-            db.SaveChanges();
+            PurchaseCooperative purchasecooperative = _db.PurchaseCooperatives.Find(id);
+            _db.PurchaseCooperatives.Remove(purchasecooperative);
+            _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            _db.Dispose();
             base.Dispose(disposing);
         }
     }

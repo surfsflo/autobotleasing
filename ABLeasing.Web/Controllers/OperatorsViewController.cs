@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using ABLeasing.Web.Models.ViewModels;
 using AttributeRouting;
+using AttributeRouting.Helpers;
 using AttributeRouting.Web.Mvc;
 using ABLeasing.Web.Models;
 using ABLeasing.Web.Infrastructure;
@@ -62,7 +63,14 @@ namespace ABLeasing.Web.Controllers
         [GET("")]
         public ActionResult Index()
         {
-            return View();
+            int opId = (int)ViewData["UserId"];
+
+            var leases =
+                from l in _db.Leases
+                where l.OperatorId == opId
+                select l;
+
+            return View(leases);
         }
 
     }

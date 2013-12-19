@@ -29,6 +29,7 @@ namespace ABLeasing.Web.Controllers
 
                 CurrentUser = users.First();
                 ViewData["CurrentUser"] = CurrentUser;
+                ViewData["UserId"] = CurrentUser.UserId;
             }
             else
                 ViewData["CurrentUser"] = null;

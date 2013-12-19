@@ -42,6 +42,7 @@
 
                             if(ViewData["CurrentUser"].GetType() == typeof(Operator))
                             {
+                                @Html.MenuLink("View Leases", "", "OperatorsView")
                                 @Html.MenuLink("Create Lease", "LeaseApplication", "OperatorsView")
                             }
                             else if (ViewData["CurrentUser"].GetType() == typeof (Client))
@@ -71,7 +72,11 @@
             @RenderBody()
         </section>
     </div>
-    @Html.Partial("../Account/_LoginModalPartial")
+    @if (!Request.IsAuthenticated)
+    {
+        @Html.Partial("../Account/_LoginModalPartial")        
+    }
+
     <!-- CopyRight -->
     <div class="copyright">
         <div class="container">
