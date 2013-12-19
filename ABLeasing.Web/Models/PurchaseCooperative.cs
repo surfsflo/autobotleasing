@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ABLeasing.Web.Models
 {
-    public class PurchaseCooperative : BaseModelWithComment
+    public class PurchaseCooperative : BaseModel
     {
 
         [Key]
@@ -24,5 +24,20 @@ namespace ABLeasing.Web.Models
         public virtual ICollection<Client> Clients { get; set; }
 
         public Lease Lease { get; set; }
+
+        private ICollection<Comment> _comments;
+
+        public PurchaseCooperative()
+        {
+            _comments = new List<Comment>();
+        }
+
+        public ICollection<Comment> Comments
+        {
+            get { return _comments; }
+            set { _comments = value; }
+        }
+
+
     }
 }

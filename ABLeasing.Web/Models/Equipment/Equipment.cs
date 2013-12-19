@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ABLeasing.Web.Models
 {
-    public class Equipment : BaseModelWithComment
+    public class Equipment : BaseModel
     {
 
         public int LeaseId { get; set; }
@@ -55,7 +55,23 @@ namespace ABLeasing.Web.Models
 
         public int? LocationId { get; set; }
         public virtual Location Location { get; set; }
+
+        private ICollection<Comment> _comments;
+
+        public Equipment()
+        {
+            _comments = new List<Comment>();
+        }
+
+        public ICollection<Comment> Comments
+        {
+            get { return _comments; }
+            set { _comments = value; }
+        }
+
+
     }
+
 
     public enum AttachedMonitorState
     {

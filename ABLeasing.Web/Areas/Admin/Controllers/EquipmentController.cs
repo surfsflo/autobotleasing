@@ -72,7 +72,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name", equipment.CategoryId);
+            ViewBag.CategoryId = new SelectList(_db.Categories.OrderBy(m => m.Name), "CategoryId", "Name", equipment.CategoryId);
             return View(equipment);
         }
 
@@ -85,8 +85,7 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name", equipment.CategoryId);
-            ViewBag.LocationId = new SelectList(_db.Locations, "LocationId", "CellProvider", equipment.LocationId);
+            ViewBag.CategoryId = new SelectList(_db.Categories.OrderBy(m => m.Name), "CategoryId", "Name", equipment.CategoryId);
             return View(equipment);
         }
 

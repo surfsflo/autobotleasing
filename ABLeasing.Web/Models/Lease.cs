@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ABLeasing.Web.Models
 {
-    public class Lease : BaseModelWithComment
+    public class Lease : BaseModel
     {
 
         [Key]
@@ -48,6 +48,20 @@ namespace ABLeasing.Web.Models
 
         public int? LocationId { get; set; }
         public virtual Location Location { get; set; }
+
+        private ICollection<Comment> _comments;
+
+        public Lease()
+        {
+            _comments = new List<Comment>();
+        }
+
+        public ICollection<Comment> Comments
+        {
+            get { return _comments; }
+            set { _comments = value; }
+        }
+
 
 
     }

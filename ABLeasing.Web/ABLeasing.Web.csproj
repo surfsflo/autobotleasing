@@ -325,7 +325,6 @@
     <Compile Include="Models\Accounts\ViewModels\ClientLogin.cs" />
     <Compile Include="Models\Accounts\ViewModels\OperatorLogin.cs" />
     <Compile Include="Models\BaseModels\BaseModel.cs" />
-    <Compile Include="Models\BaseModels\BaseModelWithComment.cs" />
     <Compile Include="Models\Equipment\Category.cs" />
     <Compile Include="Models\General\Comment.cs" />
     <Compile Include="Models\Equipment\Equipment.cs" />

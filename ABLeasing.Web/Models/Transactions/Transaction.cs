@@ -8,8 +8,9 @@ using System.Web;
 
 namespace ABLeasing.Web.Models.Transactions
 {
-    public class Transaction : BaseModelWithComment
+    public class Transaction : BaseModel
     {
+
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int TransactionId { get; set; }
@@ -19,6 +20,19 @@ namespace ABLeasing.Web.Models.Transactions
         public decimal Amount { get; set; }
 
         public TransactionStatus Status { get; set; }
+
+        private ICollection<Comment> _comments;
+
+        public Transaction()
+        {
+            _comments = new List<Comment>();
+        }
+
+        public ICollection<Comment> Comments
+        {
+            get { return _comments; }
+            set { _comments = value; }
+        }
 
     }
 

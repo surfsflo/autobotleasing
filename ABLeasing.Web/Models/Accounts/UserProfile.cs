@@ -9,7 +9,7 @@ using System.Web;
 namespace ABLeasing.Web.Models.Accounts
 {
 
-    public class UserProfile : BaseModelWithComment
+    public class UserProfile : BaseModel
     {
 
         [Key]
@@ -29,6 +29,20 @@ namespace ABLeasing.Web.Models.Accounts
 
         public Contact Contact1 { get; set; }
         public Contact Contact2 { get; set; }
+
+        private ICollection<Comment> _comments;
+
+        public UserProfile()
+        {
+            _comments = new List<Comment>();
+        }
+
+        public ICollection<Comment> Comments
+        {
+            get { return _comments; }
+            set { _comments = value; }
+        }
+
 
     }
 

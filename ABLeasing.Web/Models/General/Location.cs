@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ABLeasing.Web.Models
 {
-    public class Location : BaseModelWithComment
+    public class Location : BaseModel
     {
         public int LocationId { get; set; }
         public int? ResearcherId { get; set; }
@@ -17,6 +17,20 @@ namespace ABLeasing.Web.Models
         public string CellServiceType { get; set; }
         public string Type { get; set; }
         public int? ProductRating { get; set; }
+
+        private ICollection<Comment> _comments;
+
+        public Location()
+        {
+            _comments = new List<Comment>();
+        }
+
+        public ICollection<Comment> Comments
+        {
+            get { return _comments; }
+            set { _comments = value; }
+        }
+
 
     }
 }
