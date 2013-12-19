@@ -6,9 +6,6 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-@section sectionButton {
-    @Html.Bootstrap().ActionLinkButton("Create New", "Create").Text("Create New").Style(ButtonStyle.Primary).PrependIcon("fa fa-edit")
-}
 
 <div class="row">
     <div class="col-sm-12">
@@ -17,7 +14,10 @@
         {
             using (Html.Bootstrap().Begin(new Alert().Style(AlertColor.Info)))
             {
-                <p>No Equipment items have been set up, click create to get started.</p>
+                <p>
+                    There are not any equipment items yet. When an operator creates a lease, the attached
+                    equipment item will list here.
+                </p>
             }
         } else { 
         

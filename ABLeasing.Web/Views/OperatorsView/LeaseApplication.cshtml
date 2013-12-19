@@ -74,7 +74,10 @@
 
 <script type="text/javascript">
     $(function() {
-        $("#select-category, #select-monitor").select2();
+        $("#select-monitor").select2();
+        $("#select-category").prepend("<option value=''></option>").select2({
+            placeholder: "Choose Category"
+        });
     });
 </script>
 <script type="text/javascript" src="~/Scripts/EFSpatialGoogleMaps.js"> </script>
