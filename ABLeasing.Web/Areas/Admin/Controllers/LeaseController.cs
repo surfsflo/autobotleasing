@@ -40,11 +40,19 @@ namespace ABLeasing.Web.Areas.Admin.Controllers
         [POST("Approve/{id}")]
         public ActionResult Approve(ApproveLeaseViewModel viewModel)
         {
+
+            var lease = _db.Leases.Find(viewModel.Id);
+            if (lease == null)
+            {
+                return HttpNotFound();
+            }
+
+
             if (ModelState.IsValid)
             {
-                viewModel.Lease.Pending = false;
-                viewModel.Lease.Comments.Add(viewModel.Comment);
-                _db.Entry(viewModel.Lease).State = EntityState.Modified;
+                lease.Pending = false;
+                lease.Comments.Add(viewModel.Comment);
+                _db.Entry(lease).State = EntityState.Modified;
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
