@@ -1,4 +1,5 @@
-﻿using ABLeasing.Web.Models.Accounts;
+﻿using System.Web.Script.Serialization;
+using ABLeasing.Web.Models.Accounts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,6 +13,8 @@ namespace ABLeasing.Web.Models
     {
 
         public int LeaseId { get; set; }
+
+        [ScriptIgnore]
         public virtual Lease Lease { get; set; }
 
         [Display(Name = "Item Name")]

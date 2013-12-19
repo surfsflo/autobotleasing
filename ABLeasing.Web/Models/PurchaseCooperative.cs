@@ -1,4 +1,5 @@
-﻿using ABLeasing.Web.Models.Accounts;
+﻿using System.Web.Script.Serialization;
+using ABLeasing.Web.Models.Accounts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -23,6 +24,7 @@ namespace ABLeasing.Web.Models
 
         public virtual ICollection<Client> Clients { get; set; }
 
+        [ScriptIgnore]
         public Lease Lease { get; set; }
 
         private ICollection<Comment> _comments;

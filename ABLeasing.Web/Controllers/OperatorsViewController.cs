@@ -54,10 +54,32 @@ namespace ABLeasing.Web.Controllers
             return View(viewModel);
         }
 
-        [GET("LeaseDetails")]
-        public ActionResult LeaseDetails()
+        [GET("LeaseDetails/{id}")]
+        public ActionResult LeaseDetails(int id = 0)
         {
-            return View();
+            var lease = _db.Leases.Find(id);
+            if (lease == null)
+            {
+                return Json(new
+                {
+                    error = new { msg = true }
+                }, JsonRequestBehavior.AllowGet);
+            }
+
+            var jsonLease = new
+            {
+                Name = lease.Name,
+                Leasers = "0",
+                Amount = "$0.0",
+                Equipment = lease.Equipment.Name,
+                Latitude = lease.Location.GpsLocation.Latitude,
+                Longitude = lease.Location.GpsLocation.Longitude,
+                PrincipalAmount = lease.PrincipalAmount,
+                InterestRaised = lease.InterestRate,
+                ProfitShareRate = lease.ProfitShareRate
+            };
+
+            return Json(jsonLease, JsonRequestBehavior.AllowGet);
         }
 
         [GET("")]

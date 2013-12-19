@@ -24,17 +24,18 @@
                                 <div class="media">
                                     <a class="pull-left">
                                         <img src="~/Images/Index/mining-equipment.jpg" />
-                                        <p class="help-block"><small>Add picuture upload.</small></p>
+                                        <p class="help-block"><small>Todo: Add picuture upload.</small></p>
                                     </a>
                                     <div class="media-body">
                                         <h4>
-                                            @Html.ActionLink(item.Name, "LeaseDetails")
+                                            @Html.Bootstrap().ActionLink(item.Name, "LeaseDetails").PrependIcon("fa fa-chevron-right").Class("lease-item").Data(new {id = item.LeaseId})
                                         </h4>
                                         <p>
                                             @item.Description
                                         </p>
                                     </div>
                                 </div>
+                                <hr />
                             }
                         }
                         else
@@ -55,15 +56,67 @@
             <div class="panel panel-info">
                 <div class="panel-heading">Endless Opportunities</div>
                 <div class="panel-body">
-
-                    <div class="list-group">
-
-                        <a href="#" class="list-group-item">
-                            @Html.Bootstrap().ActionLinkButton("New Lease Application", "LeaseApplication")
+                    
+                    <div class="well">
+                        <p>
                             Need a new machine to help expand your business? Submit a new lease application.
+                        </p>
+                        
+                        @Html.Bootstrap().ActionLinkButton("New Lease Application", "LeaseApplication").Style(ButtonStyle.Primary).PrependIcon("fa fa-thumbs-up")
+                    </div>
+
+                    <div class="well">
+                        <p>
+                            Add other cools items for Operators here.
+                        </p>
+                        <button class="btn btn-primary">
+                            <i class="fa fa-eur"></i>
+                            Awesome Action
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="panel panel-info">
+                <div class="panel-heading">Lease Details</div>
+                <div class="panel-body">
+                    <h4 class="details">
+                        <a>
+                            <i class="fa fa-cloud"></i> <span class="name"></span>
+                        </a>                        
+                    </h4>
+
+                    <div class="list-group details">
+                        <a class="list-group-item">
+                            <span class="badge l-leasers">14</span>
+                            Total Number of Leasers
+
                         </a>
                         <a href="#" class="list-group-item">
-                            What Else Should Go Here?
+                            <span class="badge l-amount">100</span>
+                            Amount Raised
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="badge l-equipment">23</span>
+                            Equipment
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="badge l-location">12</span>
+                            Location
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="badge l-principal">63</span>
+                            Principal Amount
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="badge l-interest">63</span>
+                            Interest Rate
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="badge l-profit">63</span>
+                            Profitshare Rate
                         </a>
                     </div>
 
@@ -71,52 +124,47 @@
             </div>
 
         </div>
-
     </div>
-
-    <div class="row">
-        <div class="col-sm-8 media-normal">
-
-            <div class="panel panel-info">
-                <div class="panel-heading"> New Lease Application </div>
-                <div class="panel-body">
-                    <div class="col-sm-12">
-                        <div class="media">
-                            <div class="media-body">
-                                <a class="btn btn-primary" href="/operatorsview/LeaseApplication">Apply now</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-sm-8 media-normal">
-
-            <div class="panel panel-info">
-                <div class="panel-heading"> My current leases </div>
-                <div class="panel-body">
-                    <div class="col-sm-12">
-                        <div class="media">
-                            <a class="pull-left">
-                                <img src="~/Images/Index/mining-equipment.jpg" />
-                            </a>
-                            <div class="media-body">
-                                <h4><a href="/operatorsview/LeaseDetails">Mining Project</a></h4>
-                                <p>	
-                                    Perhaps display some quick stats about the current state of the project 
-                                    here, stats from the sensors in the equipment, etc.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
 </div>
+
+<script type="text/javascript">
+
+    $('.lease-item').on('click', function(evt) {
+        var $lease = $(evt.target);
+        console.log($lease.text());
+        var $d = $('.details');
+        
+        if ($d.css('display') == 'none') {
+            $('.details').fadeIn();
+        } else {
+            $('.details').fadeOut();
+        }
+
+        $.ajax({
+            url: "LeaseDetails/" + $lease.data("id"),
+            type: 'GET',
+            success: function (result) {
+                if (result.error) {
+                    return console.log('error', result);
+                }
+
+                $('.details').fadeIn();
+                var geo = result.Latitude.toFixed(2) + "," + result.Longitude.toFixed(2);
+                $('.name').text(result.Name);
+                $('.l-leasers').text(result.Leasers);
+                $('.l-amount').text(result.Amount);
+                $('.l-equipment').text(result.Equipment);
+                $('.l-location').text(geo);
+                $('.l-principal').text(result.PrincipalAmount || 0);
+                $('.l-interest').text(result.InterestRaised || 0);
+                $('.l-profit').text(result.ProfitShareRate || 0);
+                console.log('result', result);
+
+            }
+        });
+
+
+        return false;
+    });
+
+</script>
